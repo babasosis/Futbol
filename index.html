@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#102722">
   <meta name="description" content="FeFa 2026: piksel futbol kariyeri, kadro yönetimi, lig, kupa ve oynanabilir kritik şutlar.">
-  <title>FeFa 2026 • Kariyer 4.28</title>
+  <title>FeFa 2026 • Kariyer 4.42</title>
   <style>
 :root{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#edf8e7;background:#0d1d1b;font-synthesis:none}*{box-sizing:border-box}body{min-height:100vh;margin:0;background:radial-gradient(circle at 50% -20%,#31644d 0%,#102823 55%,#0a1816 100%)}button{font:inherit;touch-action:manipulation}button:focus-visible,canvas:focus-visible{outline:3px solid #ffd66d;outline-offset:3px}.game-shell{width:min(1090px,100%);margin:0 auto;padding:clamp(10px,3vw,24px)}.topbar{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:12px}.brand{display:flex;align-items:center;gap:10px}.brand-icon{display:grid;place-items:center;background:#d0e94b;border:3px solid #20382b;border-radius:12px;width:44px;height:44px;font-size:25px}.brand strong{display:block;color:#fff4a8;font-weight:1000;font-size:clamp(17px,3vw,27px);letter-spacing:1.4px;text-shadow:2px 2px #0b1d16}.brand small{display:block;color:#8ccbb9;font-size:10px;font-weight:800;letter-spacing:1.8px}.scoreboard{display:flex;align-items:center;gap:14px;background:#10221f;border:2px solid #517f61;border-radius:9px;padding:10px 15px;font-weight:900;letter-spacing:1px}.scoreboard span{white-space:nowrap}.scoreboard strong{color:#f7d357;font-size:20px;margin-left:5px}.scoreboard i{width:1px;height:24px;background:#41614e}.stage{position:relative;aspect-ratio:8/5;overflow:hidden;border:5px solid #bdd677;border-radius:12px;box-shadow:0 10px 0 #07150f,0 16px 42px #0005;background:#2a8a45}canvas{display:block;width:100%;height:100%;image-rendering:pixelated;touch-action:none;cursor:crosshair}.stage-tip{position:absolute;bottom:12px;left:50%;transform:translateX(-50%);width:max-content;max-width:95%;padding:7px 12px;background:#0f241dd9;border:2px solid #c2dc9d;color:#fff9d0;border-radius:6px;font-size:clamp(10px,1.5vw,14px);font-weight:800;text-align:center;pointer-events:none}.feedback{position:absolute;top:12%;left:50%;transform:translateX(-50%) scale(.85);font-size:clamp(22px,5vw,53px);font-weight:1000;letter-spacing:3px;color:#f9e26f;text-shadow:4px 4px #18382b,-2px -2px #18382b;opacity:0;transition:opacity .15s,transform .2s;pointer-events:none;white-space:nowrap}.feedback.show{opacity:1;transform:translateX(-50%) scale(1)}.controls{display:flex;align-items:center;gap:clamp(12px,3vw,25px);background:#142d28;border:2px solid #335d47;border-radius:10px;padding:15px;margin-top:16px}.control-group{display:flex;flex-direction:column;gap:7px}.control-caption,.power-title{font-size:12px;font-weight:900;letter-spacing:1.2px;color:#b4dcc1}.spin-buttons{display:flex;gap:6px}.spin-buttons button,.reset-button{background:#294a3b;border:2px solid #63856a;border-bottom-width:4px;color:#f2f5db;border-radius:7px;min-height:44px;padding:6px 12px;font-weight:900;cursor:pointer}.spin-buttons button span{font-size:11px}.spin-buttons button.active{background:#f3d761;border-color:#fff3a0;color:#29392b}.spin-buttons button:active,.reset-button:active{transform:translateY(2px);border-bottom-width:2px}.power-group{flex:1;min-width:100px}.power-title{display:flex;justify-content:space-between}.power-title strong{color:#ffe174}.power-meter{height:17px;background:#091b17;border:2px solid #668973;border-radius:3px;overflow:hidden}.power-meter>div{height:100%;width:55%;background:linear-gradient(90deg,#4ecb6b,#deec53,#ffb347);transition:width .07s linear}.hint{font-size:11px;color:#9ebfac}.reset-button{margin-left:auto;white-space:nowrap;background:#456751}.footnotes{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;color:#a4bfae;font-size:12px;margin-top:17px}@media(max-width:650px){.controls{flex-wrap:wrap;padding:10px;gap:12px}.power-group{order:3;flex-basis:100%}.reset-button{margin-left:auto}.spin-buttons button{padding:7px 10px}.brand-icon{width:36px;height:36px;font-size:20px}.scoreboard{padding:7px 9px;gap:7px;font-size:12px}.scoreboard strong{font-size:16px}.stage-tip{bottom:6px;padding:4px 8px;line-height:1.2}.footnotes{font-size:11px}}@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
 /* V0.2: güç, yükseklik ve falso için birbirinden bağımsız hassas kontroller. */
@@ -134,7 +134,7 @@ dialog{color:#eaf2d1;background:#102d2b;border:3px solid #e6cc72;box-shadow:8px 
  .full-pitch .field-actions [data-field=exit] { grid-column:span 2; }
 }
 
-/* V4.32: smooth 3D perspective football - never pixelated pitch */
+/* V4.33: smooth 3D perspective football - never pixelated pitch */
 body.full-pitch .stage{aspect-ratio:16/9;border:3px solid #829b9b;border-radius:12px;box-shadow:0 16px 60px #0009;background:#263d4f}
 body.full-pitch .stage canvas{image-rendering:auto;image-rendering:smooth;cursor:grab}
 body.full-pitch .stage canvas:active{cursor:grabbing}
@@ -148,7 +148,7 @@ body.full-pitch .game-shell{max-width:1160px}
 body.full-pitch #careerMatchHUD{background:#08252b;border-color:#315956;font-family:system-ui,sans-serif}
 @media (max-width:760px){body.full-pitch .field-tactics{flex-wrap:wrap}body.full-pitch .field-tactics button{font-size:10px}}
 
-/* V4.32 touch-screen match placement: pitch and 11 action controls stay together */
+/* V4.33 touch-screen match placement: pitch and 11 action controls stay together */
 @media(max-width:600px) and (orientation:portrait){
  body.full-pitch .field-controls{position:relative!important;bottom:auto!important;left:auto!important;right:auto!important;width:100%;margin-top:8px;display:grid!important;grid-template-columns:90px minmax(0,1fr);padding:6px;gap:5px;z-index:2;}
  body.full-pitch .field-pad{position:relative!important;left:auto!important;top:auto!important;width:90px}
@@ -158,17 +158,80 @@ body.full-pitch #careerMatchHUD{background:#08252b;border-color:#315956;font-fam
  body.full-pitch .field-tactics button{font-size:9px}
 }
 @media(max-width:380px){body.full-pitch .field-controls{grid-template-columns:80px minmax(0,1fr)}body.full-pitch .field-pad{width:80px}body.full-pitch .field-joystick{width:74px;height:74px}body.full-pitch .field-joystick span{left:20px;top:20px}}
+/* V4.35 — iPad / tablet first, no keyboard requirement to resume a match. */
+.field-quickbar[hidden],.field-match-gate[hidden]{display:none!important}
+body.full-pitch .stage{position:relative;overflow:hidden}
+.field-quickbar{position:absolute;z-index:11;top:clamp(4px,1vw,10px);right:clamp(4px,1vw,10px);display:flex;align-items:center;gap:5px;max-width:calc(100% - 10px);padding:4px;border-radius:9px;background:rgba(5,27,25,.83);box-shadow:0 3px 12px #0006;touch-action:manipulation}
+.field-quickbar button{font:700 clamp(10px,1.4vw,13px) system-ui,sans-serif;background:#254d43;color:#f5ffed;border:1px solid #8da990;border-radius:7px;min-height:39px;min-width:62px;padding:7px 9px;white-space:nowrap;touch-action:manipulation;cursor:pointer}
+.field-quickbar button:first-child{background:#eacb72;color:#18322a;border-color:#f9e6b0}
+.field-quickbar button:focus-visible,.field-gate-panel button:focus-visible{outline:3px solid #fff;outline-offset:2px}
+.field-match-gate{position:absolute;z-index:15;inset:0;display:flex;align-items:center;justify-content:center;padding:12px;background:rgba(3,19,19,.79);touch-action:manipulation}
+.field-gate-panel{width:min(410px,95%);text-align:center;color:#fff;border:2px solid #c6e0ad;background:#112b29;border-radius:16px;padding:clamp(14px,2vw,26px);box-shadow:0 16px 40px #000b;font-family:system-ui,sans-serif}
+.field-gate-kicker{font-size:clamp(9px,1.3vw,12px);letter-spacing:.13em;color:#b6dfad;font-weight:700}
+.field-gate-panel h2{font-size:clamp(19px,3vw,29px);letter-spacing:.03em;margin:8px 0;color:#fff5d5}
+.field-gate-panel p{font-size:clamp(12px,1.7vw,15px);line-height:1.45;margin:7px auto 14px;max-width:320px;color:#dbebde}
+.field-gate-panel button{width:100%;display:block;min-height:53px;padding:11px 9px;border-radius:9px;border:2px solid #fff3c8;font:bold clamp(13px,2vw,17px) system-ui,sans-serif;touch-action:manipulation;cursor:pointer}
+#fieldGateResume{background:#e9d273;color:#17312b}
+#fieldGateExit{margin-top:9px;min-height:41px;font-size:12px;background:#27443d;color:#f1f8e9;border-color:#66847b}
+/* Landscape tablets: joystick and buttons stay beside the pitch, never off-screen. */
+@media (pointer:coarse) and (orientation:landscape) and (min-width:760px) and (max-height:1100px){
+ body.full-pitch{overflow:hidden;overscroll-behavior:none}
+ body.full-pitch .topbar{display:none!important}
+ body.full-pitch .game-shell{position:absolute;top:50%;transform:translateY(-50%);width:100%;max-width:none;padding:5px 188px 5px 138px}
+ body.full-pitch #careerMatchHUD{font-size:10px;max-height:41px;overflow:hidden;margin:0 0 5px;padding:4px 6px;line-height:1.25}
+ body.full-pitch .stage{width:100%;max-height:calc(100dvh - 82px);margin:auto;border-width:2px;aspect-ratio:16/9}
+ body.full-pitch .field-controls{position:static!important;display:block!important;width:0;padding:0!important;margin:0!important;border:0;box-shadow:none;background:none}
+ body.full-pitch .field-pad{position:fixed!important;left:max(8px,env(safe-area-inset-left));top:50%;transform:translateY(-50%);z-index:40;width:120px!important;min-width:0}
+ body.full-pitch .field-joystick{width:114px;height:114px;margin:0}
+ body.full-pitch .field-joystick span{left:37px;top:37px;width:36px;height:36px}
+ body.full-pitch .field-arrows,body.full-pitch .field-controls p{display:none!important}
+ body.full-pitch .field-actions{position:fixed!important;right:max(7px,env(safe-area-inset-right));top:50%;transform:translateY(-50%);z-index:40;display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;width:174px!important;min-width:0!important;gap:3px;padding:4px;border:1px solid #597f6f;border-radius:11px;background:#102a25e8}
+ body.full-pitch .field-actions button{margin:0!important;width:100%;min-width:0;min-height:45px!important;padding:3px!important;font:700 10px/1.1 system-ui,sans-serif!important;white-space:normal}
+ body.full-pitch .field-actions [data-field=exit]{grid-column:auto!important}
+ body.full-pitch .field-tactics{position:fixed!important;z-index:20;left:50%!important;right:auto!important;bottom:max(3px,env(safe-area-inset-bottom));top:auto!important;transform:translateX(-50%)!important;max-width:min(540px,calc(100vw - 360px));width:max-content!important;display:flex!important;flex-wrap:nowrap!important;overflow:auto;min-height:29px;padding:3px!important;gap:2px;background:#102a25e8}
+ body.full-pitch .field-tactics[hidden]{display:none!important}
+ body.full-pitch .field-tactics strong{display:none!important}
+ body.full-pitch .field-tactics button{flex-shrink:0!important;min-height:29px!important;font-size:9px!important;padding:2px 5px!important}
+}
+@media (pointer:coarse) and (orientation:portrait) and (min-width:601px){
+ body.full-pitch .field-controls{display:grid;grid-template-columns:135px minmax(0,1fr);gap:8px}
+ body.full-pitch .field-pad{min-width:0}
+ body.full-pitch .field-actions{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:4px}
+ body.full-pitch .field-actions button{min-height:48px;font-size:11px;margin:0;padding:4px}
+ body.full-pitch .field-controls p{display:none!important}
+}
+@media(pointer:coarse){body.full-pitch .field-controls p{display:none!important}}
+@media (max-width:490px){.field-quickbar{gap:2px;padding:2px}.field-quickbar button{font-size:9px;min-height:34px;min-width:0;padding:5px}.field-gate-panel{padding:12px}.field-gate-panel button{min-height:47px}}
+/* V4.42 – compact four-button quick menu for iPad and phones */
+body.full-pitch .field-quickbar{max-width:calc(100% - 8px);gap:3px}
+body.full-pitch .field-quickbar button{min-width:0;padding:6px 7px;font-size:clamp(9px,1.25vw,12px)}
+@media(max-width:500px){body.full-pitch .field-quickbar button{font-size:9px;padding:5px 4px}}
 </style>
 </head>
 <body>
   <section id="careerApp" aria-label="FeFa 2026 kariyer merkezi" aria-busy="true"><div class="c-wrap"><h1>FeFa 2026</h1><h2>TEKNİK DİREKTÖR KARİYERİ</h2><p>Kariyer merkezi hazırlanıyor…</p><noscript><p>Bu oyun JavaScript gerektirir. Dosyayı Safari veya Chrome'da aç. Dosyalar uygulamasının önizlemesinde oyun çalışmayabilir.</p></noscript></div></section>
   <main class="game-shell" hidden>
     <nav class="arcade-nav" aria-label="Oyun menüsü"><button id="menuButton">☰ ANA MENÜ</button><button id="careerButton">KARİYER MERKEZİ</button><button id="settingsButton">⚙ AYARLAR</button><button id="replayButton" disabled>↶ SON ŞUT</button></nav><header class="topbar">
-      <div class="brand"><span class="brand-icon" aria-hidden="true">⚽</span><div><strong>FeFa 2026</strong><small>KRİTİK POZİSYONLAR • V4.32</small></div></div>
+      <div class="brand"><span class="brand-icon" aria-hidden="true">⚽</span><div><strong>FeFa 2026</strong><small>KRİTİK POZİSYONLAR • V4.42</small></div></div>
       <div class="scoreboard" aria-live="polite"><span>GOL <strong id="goals">0</strong></span><i></i><span>ŞUT <strong id="shots">0</strong></span><i></i><span>PUAN <strong id="points">0</strong></span><i></i><span>REKOR <strong id="best">0</strong></span></div>
     </header>
     <section class="stage" aria-label="Retro penaltı oyun sahası">
       <canvas id="game" width="480" height="300" tabindex="0" aria-label="Futbolcunun gözünden veya arkasından oynanan 11e 11 üç boyutlu perspektif maç. Klavye, fare veya dokunmatik kontrollerle oynanabilir."></canvas>
+      <div id="fieldQuickBar" class="field-quickbar" hidden role="group" aria-label="Tablet maç menüsü">
+        <button id="fieldQuickPause" type="button" aria-label="Maçı duraklat">⏸ DURAKLAT</button>
+        <button id="fieldQuickCamera" type="button" aria-label="Kamerayı değiştir">◎ KAMERA</button>
+        <button id="fieldQuickDifficulty" type="button" aria-label="Rakip zorluk seviyesini değiştir">SEVİYE: NORMAL</button>
+        <button id="fieldQuickExit" type="button" aria-label="Kaydet ve maçtan çık">⌂ ÇIKIŞ</button>
+      </div>
+      <div id="fieldMatchGate" class="field-match-gate" hidden role="dialog" aria-modal="false" aria-labelledby="fieldGateTitle" aria-describedby="fieldGateText">
+        <div class="field-gate-panel">
+          <div class="field-gate-kicker">FeFa 2026 · DOKUNMATİK MAÇ</div>
+          <h2 id="fieldGateTitle">DEVRE ARASI</h2>
+          <p id="fieldGateText">İkinci devreye başlamak için aşağıdaki düğmeye dokun.</p>
+          <button id="fieldGateResume" type="button">▶ İKİNCİ DEVREYE BAŞLA</button>
+          <button id="fieldGateExit" type="button">KAYDET VE MERKEZE DÖN</button>
+        </div>
+      </div>
       <div id="feedback" class="feedback" role="status" aria-live="polite"></div>
       <div class="pause-overlay" id="paused" hidden>OYUN DURAKLATILDI<br><small>Devam etmek için DURDUR tuşuna bas.</small></div>
       <div class="stage-tip" id="stageTip">Hedefi sürükle • Basılı tutarak güç ekle • Bırakıp şut çek</div>
@@ -218,7 +281,7 @@ body.full-pitch #careerMatchHUD{background:#08252b;border-color:#315956;font-fam
       <span>Klavye: Oklar = nişan • Shift = hassas • Boşluk = şut • A/S/D = falso • Q/E = ince falso • Esc = iptal • R = yeni top • P = duraklat</span>
     </footer>
   </main>
-  <dialog id="mainMenu" aria-labelledby="menuTitle"><span class="menu-kicker">FeFa 2026 · FUTBOL KARİYERİ</span><h1 id="menuTitle">FeFa<br>2026</h1><div class="menu-pitch" aria-hidden="true"></div><p>Bir top. Bir kaleci. Bir an.<br>Gücünü ayarla, falsonu ver, köşeyi bul.</p><button class="primary" id="playMenu">▶ SAHAYA ÇIK</button><div class="mode-menu"><button id="newFree">SERBEST ŞUT</button><button id="newSeries">5 PENALTI</button><button id="newChallenge">HEDEF PARKURU</button><button id="newTimed">60 SANİYE HÜCUM</button></div><button id="statsButton">İSTATİSTİKLER / ROZETLER</button><button id="guideButton">NASIL OYNANIR / YENİLİKLER</button><button id="menuSettings">AYARLAR</button><p>Basılı tut → gücü biriktir → bırak.<br>1–4: şut tekniği. Falso uçuş boyunca kıvırır; plase daha çok döner.</p><small>Özgün chiptune • 16-bit ruhu • V4.32</small></dialog>
+  <dialog id="mainMenu" aria-labelledby="menuTitle"><span class="menu-kicker">FeFa 2026 · FUTBOL KARİYERİ</span><h1 id="menuTitle">FeFa<br>2026</h1><div class="menu-pitch" aria-hidden="true"></div><p>Bir top. Bir kaleci. Bir an.<br>Gücünü ayarla, falsonu ver, köşeyi bul.</p><button class="primary" id="playMenu">▶ SAHAYA ÇIK</button><div class="mode-menu"><button id="newFree">SERBEST ŞUT</button><button id="newSeries">5 PENALTI</button><button id="newChallenge">HEDEF PARKURU</button><button id="newTimed">60 SANİYE HÜCUM</button></div><button id="statsButton">İSTATİSTİKLER / ROZETLER</button><button id="guideButton">NASIL OYNANIR / YENİLİKLER</button><button id="menuSettings">AYARLAR</button><p>Basılı tut → gücü biriktir → bırak.<br>1–4: şut tekniği. Falso uçuş boyunca kıvırır; plase daha çok döner.</p><small>Özgün müzik • Kariyer modu • V4.42</small></dialog>
   <dialog id="settingsMenu" aria-labelledby="settingsTitle"><h2 id="settingsTitle">AYARLAR</h2><label>Kaleci<select id="settingDifficulty"><option value="easy">Kolay</option><option value="normal">Normal</option><option value="hard">Zor</option></select></label><label>Hava<select id="settingWeather"><option value="clear">Açık</option><option value="wind">Rüzgârlı</option><option value="rain">Yağmurlu</option></select></label><label>Hareketi azalt<input id="settingReduced" type="checkbox"></label><label>Müzik<select id="musicTrack"><option value="off">Kapalı</option><option value="stadium">Stadyum '94</option><option value="night">Gece Finali</option></select></label><label>Müzik sesi<input id="musicVolume" type="range" min="0" max="100" value="25"></label><label>Şut / maç sesleri<input id="settingSound" type="checkbox" checked></label><label>Falsolu rota yardımı<input id="settingPreview" type="checkbox" checked></label><label>Ekran titreşimi<input id="settingShake" type="checkbox" checked></label><label>CRT tarama çizgileri<input id="settingCRT" type="checkbox" checked></label><p>Serbest oyunda kaleci ve hava ayarı sonraki şutta uygulanır. Kariyerde hava maçtan gelir; zorluk maç başlamadan değiştirilebilir. Hareketi azalt: sarsıntı, uçuş izi, yağmur ve kutlama parçacıklarını kapatır. Temel oyuncu hareketleri korunur.</p><button class="primary" id="closeSettings">TAMAM</button></dialog>
 <dialog id="infoMenu" aria-labelledby="infoTitle"><h2 id="infoTitle">OYUN REHBERİ</h2><div id="infoContent"></div><button id="closeInfo" class="primary">GERİ</button></dialog>
   <script>
@@ -1432,10 +1495,43 @@ function playRush(duration=420,potential=false){
  }
  c.academyGame.duration??=90;c.academyGame.potential??=false;rushUpgrade(c.academyGame.pitch);if(replay.active)stopReplay();if(!active)preMatchOptions={weather:options.weather,difficulty:$('difficulty').value,foot:options.foot};
  active=true;fullActive=true;clearFieldInput();canvas.width=960;canvas.height=600;ctx.setTransform(2,0,0,2,0,0);fieldCamera.turn=0;fieldCamera.tilt=0;paused=false;hasStarted=true;app.hidden=true;hud.hidden=false;fieldControls.hidden=false;
- document.body.classList.add('career-match');document.body.classList.add('full-pitch');document.querySelector('.game-shell').hidden=false;document.querySelector('.game-shell').inert=false;document.querySelector('.brand strong').textContent='FeFa 2026 · ALTYAPI 5e5';document.querySelector('.brand small').textContent='3D AKADEMİ · V4.32';
- for(const d of document.querySelectorAll('dialog[open]'))d.close();fieldSaveClock=0;unlockAudio();rushHUD();syncMatchTactics();save();canvas.focus();return true;
+ document.body.classList.add('career-match');document.body.classList.add('full-pitch');document.querySelector('.game-shell').hidden=false;document.querySelector('.game-shell').inert=false;document.querySelector('.brand strong').textContent='FeFa 2026 · ALTYAPI 5e5';document.querySelector('.brand small').textContent='3D AKADEMİ · V4.42';
+ for(const d of document.querySelectorAll('dialog[open]'))d.close();fieldSaveClock=0;unlockAudio();rushHUD();syncMatchTactics();save();if(!matchMedia('(pointer:coarse)').matches)canvas.focus();return true;
 }
-function rushHUD(){const a=c?.academyGame,g=a?.pitch;if(!g)return;const p=g.players[g.control],name=c.youth.find(q=>q.id===p.id)?.name||'Akademi';hud.textContent='ALTYAPI 5e5 · '+(a.round?'FİNAL':'YARI FİNAL')+' · '+g.scores.join(' – ')+' · '+Math.floor(g.elapsed)+' / '+rushDuration(g)+' sn · '+name+' · '+g.message;}
+function syncFieldTabletUI(){
+ const on=!!fullActive;
+ const bar=document.getElementById('fieldQuickBar');
+ const gate=document.getElementById('fieldMatchGate');
+ bar.hidden=!on;gate.hidden=true;
+ if(!on)return;
+ const rush=c?.academyGame?.mode==='rush';
+ const g=rush?c.academyGame.pitch:c?.pending?.pitchGame;
+ if(!g)return;
+ const keeperPaused=!!(!rush&&g.keeperSeries?.paused);
+ const stage=keeperPaused?'paused':g.stage;
+ const resume=(stage==='paused'||stage==='half'||stage==='extra');
+ const labels={half:['DEVRE ARASI','İkinci devreye başlamak için dokun.','▶ İKİNCİ DEVREYE BAŞLA'],extra:['UZATMALAR','Uzatmalara başlamak için dokun.','▶ UZATMALARA BAŞLA'],paused:['MAÇ DURAKLATILDI','Maça devam etmek için dokun.','▶ MAÇA DEVAM ET']};
+ const a=labels[stage]||labels.paused;
+ gate.hidden=!resume;
+ if(resume){document.getElementById('fieldGateTitle').textContent=rush&&stage==='paused'&&c.academyGame.round?'FİNAL MAÇI':a[0];document.getElementById('fieldGateText').textContent=a[1];document.getElementById('fieldGateResume').textContent=a[2];}
+ document.getElementById('fieldQuickPause').textContent=resume?'▶ DEVAM':'⏸ DURAKLAT';
+ const difficultyButton=document.getElementById('fieldQuickDifficulty');
+ difficultyButton.hidden=!!rush||!c?.difficulty;
+ if(!difficultyButton.hidden){const label={easy:'KOLAY',normal:'NORMAL',hard:'ZOR'}[c.difficulty]||'NORMAL';difficultyButton.textContent='SEVİYE: '+label;difficultyButton.setAttribute('aria-label','Rakip zorluğu: '+label+'. Değiştirmek için dokun.');}
+ const p=fieldControls.querySelector('[data-field="pause"]');if(p)p.textContent=resume?'▶ MAÇA DEVAM ET':'⏸ DURAKLAT';
+}
+for(const [id,action] of [['fieldGateResume','pause'],['fieldQuickPause','pause'],['fieldGateExit','exit'],['fieldQuickExit','exit'],['fieldQuickCamera','camera']]){
+ document.getElementById(id).addEventListener('click',event=>{event.preventDefault();event.stopPropagation();if(!fullActive)return;fieldAction(action,true);syncFieldTabletUI();});
+}
+// V4.42 — Kariyer zorluğu maç içinde yalnızca kullanıcı komutuyla değiştirilir.
+document.getElementById('fieldQuickDifficulty').addEventListener('click',event=>{
+ event.preventDefault();event.stopPropagation();
+ if(!fullActive||!c?.pending?.pitchGame||c.pending.pitchGame.keeperSeries)return;
+ const levels=['easy','normal','hard'],next=levels[(levels.indexOf(c.difficulty)+1)%3];
+ c.difficulty=next;c.pending.pitchGame.message='RAKİP ZORLUĞU · '+{easy:'KOLAY',normal:'NORMAL',hard:'ZOR'}[next];
+ save();fieldHUD();
+});
+function rushHUD(){const a=c?.academyGame,g=a?.pitch;if(!g)return;const p=g.players[g.control],name=c.youth.find(q=>q.id===p.id)?.name||'Akademi';hud.textContent='ALTYAPI 5e5 · '+(a.round?'FİNAL':'YARI FİNAL')+' · '+g.scores.join(' – ')+' · '+Math.floor(g.elapsed)+' / '+rushDuration(g)+' sn · '+name+' · '+g.message;syncFieldTabletUI();}
 function rushFinish(won){
  const a=c?.academyGame;if(a?.mode!=='rush'||!a.pitch)return false;
  const g=a.pitch;a.results.push({scores:g.scores.slice(),won,shootout:g.shootout});
@@ -2059,7 +2155,7 @@ function importFile(){const input=document.createElement('input');input.type='fi
 function slotInfo(slot){try{const raw=localStorage.getItem(SAVE_PREFIX+slot);if(!raw)return null;const data=unpack(raw);return `${data.teams[data.club].name} · S${data.season} / ${data.week+1}. hafta`;}catch{return 'Bozuk veya uyumsuz kayıt';}}
 function heading(title,sub=''){return `<div class="c-kicker">${esc(sub)}</div><h2>${esc(title)}</h2>`;}
 function pitch(){const ps=c.lineup.map(id=>squad().find(p=>p.id===id)),rows=[ps.filter((p,i)=>p&&i>0&&formations[c.formation][i]==='FW'),ps.filter((p,i)=>p&&i>0&&formations[c.formation][i]==='MF'),ps.filter((p,i)=>p&&i>0&&formations[c.formation][i]==='DF'),ps.slice(0,1).filter(Boolean)];return `<div class="c-pitch" style="--kit:${team().color}">${rows.map(row=>`<div class="c-row">${row.map(p=>`<div class="c-player"><div class="c-shirt"></div><b>${p.rating}</b> ${esc(p.name.split(' ').pop())}<br>${p.energy}%</div>`).join('')}</div>`).join('')}</div>`;}
-function home(){if(careerMode==='player')return heading('Oyuncu kariyeri','KENDİ FUTBOL HİKÂYEN')+'<div class="c-card">'+btn(c?'OYUNCUMA DÖN':'OYUNCU OLUŞTUR','enterCareer','',true)+' '+btn('YENİ OYUNCU','new')+' '+btn('KAYITLAR','saves')+' '+btn('MOD SEÇİMİ','modes')+'</div>';return heading(modeName(),'KARİYER YOLUN')+ `<div class="c-hero"><div><div class="c-kicker">SEZONLAR DEĞİŞİR. HİKÂYEN KALIR.</div><h1>FeFa<br>2026<span style="color:#c1f17d">.</span></h1><p>Takımını kur. Oyuncularını geliştir.<br>Kritik anda sahaya çık.</p><div class="c-actions">${btn(c||slotInfo('auto')?'KARİYERE DEVAM':'KARİYER MODUNU AÇ','enterCareer','',true)}${btn('YENİ KARİYER','new')}</div><div class="c-actions">${btn('KAYITLAR','saves')}${btn('SERBEST ANTRENMAN','arcade')}${btn('NASIL OYNANIR','help')}</div><p><small>Piksel futbol • Kariyer sürümü 4.28<br>32 özgün kulüp · İki lig + ortak kupa · Oynanabilir kritik şutlar</small></p></div><div class="c-pitch" aria-hidden="true"><div class="c-row"><div class="c-player"><div class="c-shirt"></div>09</div><div class="c-player"><div class="c-shirt"></div>11</div><div class="c-player"><div class="c-shirt"></div>07</div></div><div class="c-row"><div class="c-player"><div class="c-shirt"></div>08</div><div class="c-player"><div class="c-shirt"></div>06</div></div><div class="c-row"><div class="c-player"><div class="c-shirt"></div>01</div></div></div></div>`;}
+function home(){if(careerMode==='player')return heading('Oyuncu kariyeri','KENDİ FUTBOL HİKÂYEN')+'<div class="c-card">'+btn(c?'OYUNCUMA DÖN':'OYUNCU OLUŞTUR','enterCareer','',true)+' '+btn('YENİ OYUNCU','new')+' '+btn('KAYITLAR','saves')+' '+btn('MOD SEÇİMİ','modes')+'</div>';return heading(modeName(),'KARİYER YOLUN')+ `<div class="c-hero"><div><div class="c-kicker">SEZONLAR DEĞİŞİR. HİKÂYEN KALIR.</div><h1>FeFa<br>2026<span style="color:#c1f17d">.</span></h1><p>Takımını kur. Oyuncularını geliştir.<br>Kritik anda sahaya çık.</p><div class="c-actions">${btn(c||slotInfo('auto')?'KARİYERE DEVAM':'KARİYER MODUNU AÇ','enterCareer','',true)}${btn('YENİ KARİYER','new')}</div><div class="c-actions">${btn('KAYITLAR','saves')}${btn('SERBEST ANTRENMAN','arcade')}${btn('NASIL OYNANIR','help')}</div><p><small>Perspektifli futbol • Kariyer sürümü 4.42<br>32 özgün kulüp · İki lig + ortak kupa · Oynanabilir kritik şutlar</small></p></div><div class="c-pitch" aria-hidden="true"><div class="c-row"><div class="c-player"><div class="c-shirt"></div>09</div><div class="c-player"><div class="c-shirt"></div>11</div><div class="c-player"><div class="c-shirt"></div>07</div></div><div class="c-row"><div class="c-player"><div class="c-shirt"></div>08</div><div class="c-player"><div class="c-shirt"></div>06</div></div><div class="c-row"><div class="c-player"><div class="c-shirt"></div>01</div></div></div></div>`;}
 function setup(){if(careerMode==='player')return proSetup();return heading('Senin kulübün. Senin hikâyen.','YENİ KARİYER')+`<div class="c-two"><form id="careerNew" class="c-card c-form"><label>Teknik direktör adı<input name="manager" maxlength="30" value="Ali" required></label><label>Kulübün<select name="club">${clubs.map((t,i)=>`<option value="${i}">${t[0]} · ${i<16?'Süper Lig':'1. Lig'} · Güç ${t[2]}</option>`).join('')}</select></label><label>Maç zorluğu<select name="difficulty"><option value="normal">Dengeli</option><option value="easy">Rahat</option><option value="hard">Usta</option></select></label><button class="primary" type="submit">KARİYERİ BAŞLAT</button>${btn('GERİ','home')}</form><div class="c-card"><h3>Sezon planın</h3><p>32 kulüp, 16 takımlı iki lig ve her ligde 30 haftalık çift devre. Ardından tüm kulüplerin katıldığı beş turlu kupa. Üst ligin son iki takımı düşer, alt ligin ilk ikisi yükselir. Alt ligde gişe ve sezon sonu sıralama / sponsorluk geliri üst ligin %65’i düzeyindedir. Her maçta 2–5 kritik şutu oynarsın; diğer pozisyonlar kadro gücü ve taktiklere göre hesaplanır.</p><p>20 kişilik kadro, 2,5 milyon € bütçe ve üç uzman antrenörle başlarsın. Lig hedefin seçtiğin kulübün gücüne göre ilk 4, 8 veya 12 olarak belirlenir.</p><p class="c-warn">Yeni kariyer otomatik kaydı değiştirir. Eski kariyerini Kayıtlar ekranından ayrı bir alana veya dosyaya kaydedebilirsin.</p></div></div>`;}
 function office(){const f=nextFixture(),r=rank().findIndex(x=>x.id===c.club)+1;return heading('Kulüp merkezi',`${c.season}. SEZON · ${c.week<leagueRounds()?(c.week+1)+'. LİG HAFTASI':'KUPA DÖNEMİ'}`)+`<div class="c-grid"><div class="c-card">LİG SIRASI<strong class="c-stat">${r} / ${leagueSize()}</strong>${c.table[c.club].pts} puan</div><div class="c-card">KULÜP BÜTÇESİ<strong class="c-stat" style="font-size:25px">${money(c.budget)}</strong>Haftalık oyuncu maaşı: ${money(squad().reduce((s,p)=>s+p.wage,0))}</div><div class="c-card">YÖNETİM GÜVENİ<strong class="c-stat">%${c.confidence}</strong>Hedef: ilk ${c.detail.boardTarget} · ${c.confidence<35?'Yönetim sonuç bekliyor.':'Kulübün geleceğini inşa et.'}</div></div><div class="c-two" style="margin-top:20px"><div class="c-card">${f?`<div class="c-kicker">${f.type==='cup'?'PİKSEL KUPASI':divisionName()} · MAÇ GÜNÜ</div><h3>${esc(c.teams[f.home].name)}<br><span class="c-muted">karşı</span><br>${esc(c.teams[f.away].name)}</h3><p>${c.pending?(c.pending.shootout?'Penaltı serisi devam ediyor: '+c.pending.shootout.us+'–'+c.pending.shootout.them:'Maç kaydı mevcut: '+(c.pending.pitchGame?fieldMinute(c.pending.pitchGame)+'′ · '+c.pending.pitchGame.scores.join('–')+' · Tam saha':c.pending.index+'/'+c.pending.count+' şut tamamlandı.')):`Takım gücü ${strength(c.club).toFixed(0)} · ${c.formation} · ${c.tactic==='attack'?'Hücum':c.tactic==='defense'?'Savunma':'Dengeli'}`}</p><div class="c-actions">${btn(c.pending?'MAÇA DEVAM':'KRİTİK ŞUTLARI OYNA','play','',false)}${btn('TAM SAHA · 11v11','fullPlay','',true,!!c.pending&&!c.pending.pitchGame&&c.pending.index>0)}${btn('HIZLI SİMÜLASYON','sim','',false,!!c.pending)}${squad().filter(available).length<11?btn('EKSİK KADRO: HÜKMEN 0–3','forfeit'):''}</div>`:c.cup.winner===null?`<h3>Kupa devam ediyor</h3><p>Takımın elendi. Kalan karşılaşmaların sonuçlarını ilerletebilirsin.</p>${btn('KUPA TURUNU İLERLET','skip','',true)}`:`<h3>Sezon tamamlandı</h3><p>Kupa şampiyonu: ${esc(c.teams[c.cup.winner].name)}</p>${btn('YENİ SEZONA GEÇ','season','',true)}`}<p><small>${c.trained?'✓ Haftalık antrenman yapıldı':'○ Haftalık antrenman bekliyor'} · ${c.talked?'✓ Koç konuşması yapıldı':'○ Koç konuşması bekliyor'}</small></p></div><div class="c-card"><div class="c-kicker">KULÜPTEN HABERLER</div>${c.news.slice(0,4).map(n=>`<div class="c-log"><small>S${n.season} · Hafta ${n.week+1}</small><br>${esc(n.text)}</div>`).join('')}</div></div>`;}
 function squadView(){return heading('Kadro & oyun planı','TAKIMIN KARAKTERİNİ BELİRLE')+`<div class="c-two"><div>${pitch()}<div class="c-actions">${btn('EN UYGUN 11','auto','',false,!!c.pending)}</div><p>Değiştirmek için tablodan bir ilk 11 oyuncusu, ardından bir yedek seç. Mevki dışı kullanım takım gücünü düşürür.</p></div><div class="c-card c-form"><label>Diziliş<select data-change="formation" ${c.pending?'disabled':''}>${Object.keys(formations).map(f=>`<option ${c.formation===f?'selected':''}>${f}</option>`).join('')}</select></label><label>Takım yaklaşımı<select data-change="tactic" ${c.pending?'disabled':''}>${[['balanced','Dengeli'],['attack','Hücum: daha çok fırsat, daha çok yorgunluk'],['defense','Savunma: daha az risk ve fırsat']].map(([v,t])=>`<option value="${v}" ${c.tactic===v?'selected':''}>${t}</option>`).join('')}</select></label><label>Şutları kullanacak oyuncu<select data-change="taker" ${c.pending?'disabled':''}>${starters().filter(p=>p.role!=='GK').map(p=>`<option value="${p.id}" ${c.taker===p.id?'selected':''}>${esc(p.name)} · ${p.rating}</option>`).join('')}</select></label><p>Şutörün şut/teknik niteliği, kondisyonu ve keskinliği vuruş hassasiyetine etki eder. Rol değiştirmek aşinalığı 20 azaltır; antrenmanla geri kazanılır. Antrenörler gelişim ve takım gücünü artırır.</p><p class="c-warn">${selected?'Seçili: '+esc(squad().find(p=>p.id===selected)?.name):'Sakat ve cezalı oyuncular maça çıkamaz.'}</p></div></div><div class="c-card c-table" style="margin-top:20px"><table><thead><tr><th>SEÇ</th><th>OYUNCU</th><th>MEVKİ</th><th>GÜÇ / POT.</th><th>ROL / AŞİNALIK</th><th>KOND. / KESKİNLİK</th><th>MORAL</th><th>DURUM</th><th>GOL / MAÇ</th></tr></thead><tbody>${squad().map(p=>`<tr class="${c.lineup.includes(p.id)?'mine':''}"><td>${btn(selected===p.id?'SEÇİLİ':c.lineup.includes(p.id)?'İLK 11':'YEDEK','select',p.id,false,!!c.pending)}</td><td>${esc(p.name)}<br><small>${p.age} yaş</small></td><td>${roleName[p.role]}</td><td>${p.rating} / ${p.potential}<br><small>Şut ${p.skills.shot} · Teknik ${p.skills.technique}</small></td><td><select aria-label="${esc(p.name)} oyuncu rolü" data-role="${p.id}" ${c.pending?'disabled':''}>${Object.entries(playerRoles[p.role]).map(([v,n])=>`<option value="${v}" ${p.tacticalRole===v?'selected':''}>${n}</option>`).join('')}</select><br><small>%${p.familiarity} aşinalık</small></td><td>${p.energy}% / ${p.sharpness}%</td><td>${p.morale}</td><td>${p.injury?'Sakat: '+p.injury+' maç':p.ban?'Cezalı: '+p.ban+' maç':'Hazır'}<br><small>${p.yellows} sarı kart</small></td><td>${p.goals} / ${p.apps}</td></tr>`).join('')}</tbody></table></div>`;}
@@ -2069,13 +2165,13 @@ function transferView(){return heading('Transfer & sözleşmeler',windowOpen()?'
 function youthView(){return heading('Altyapı akademisi','YARININ TAKIMINI BUGÜN BUL')+`<div class="c-card"><p>Mevki seçerek haftada bir gözlem yap. Akademi oyuncuları takım antrenmanıyla da gelişir. Akademide en fazla 6 aday; A takımda yer varsa ücretsiz yükseltme.</p><label>Gözlem bölgesi<select data-change="scoutRegion" ${c.pending||c.scouted?'disabled':''}>${Object.entries(regions).map(([id,r])=>`<option value="${id}" ${id===c.scoutRegion?'selected':''}>${r.name} · ${money(r.cost)}</option>`).join('')}</select></label><label>Aranan mevki <select data-change="scoutRole" ${c.pending||c.scouted?'disabled':''}>${[['all','Tüm mevkiler'],...Object.entries(roleName)].map(([v,n])=>`<option value="${v}" ${c.scoutRole===v?'selected':''}>${n}</option>`).join('')}</select></label>${btn('YETENEK ARA · '+money(regions[c.scoutRegion].cost),'scout','',true,c.scouted||c.youth.length>=6||!!c.pending)}</div><div class="c-grid" style="margin-top:20px">${c.youth.map(p=>`<div class="c-card"><h3>${esc(p.name)}</h3><p>${roleName[p.role]} · ${p.age} yaş · ${regions[p.nationality].name}<br>Reyting ${p.rating} · Potansiyel ${p.potential}</p>${btn('A TAKIMA YÜKSELT','promote',p.id,false,rosterLoad()>=25||!!c.pending)}</div>`).join('')}</div>`;}
 function reportView(){const r=lastReport||c.lastResult;if(!r)return heading('Henüz maç raporu yok')+'<p>İlk karşılaşmanı tamamla.</p>';return heading('Maç sonu',r.fullPitch?'TAM SAHA · 11v11':r.sim?'SİMÜLASYON':'KRİTİK POZİSYONLAR')+fullReport()+`<div class="c-card"><div class="c-kicker">${esc(team().name)} / ${esc(c.teams[r.opponent].name)}</div><div class="c-score">${r.own} – ${r.opp}</div><p>${r.won?'GALİBİYET':r.drew?'BERABERLİK':'MAĞLUBİYET'} ${esc(r.penalties||'')}</p><p>Gelir ve maaşlar sonrası: ${money(r.net)}</p>${r.shootout?`<p>Penaltı sonucu: ${r.shootout.us}–${r.shootout.them}</p>`:''}${r.events.map(e=>`<div class="c-log">${e.minute}′ · ${e.goal?'GOL!':'Fırsat kaçtı'} · ${esc(e.player)}</div>`).join('')}<div class="c-actions">${btn('KULÜBE DÖN','tab','office',true)}</div></div><div class="c-card" style="margin-top:20px"><h3>Diğer karşılaşmalar</h3>${r.results.map(x=>`<p>${esc(c.teams[x.home].name)} ${x.x} – ${x.y} ${esc(c.teams[x.away].name)}${x.winner!==undefined&&x.x===x.y?' · Penaltılar: '+esc(c.teams[x.winner].name):''}</p>`).join('')}</div>`;}
 function savesView(){return heading('Kayıt & yedekleme',modeName().toLocaleUpperCase('tr-TR'))+`<p>Otomatik kayıt her işlem ve tamamlanan şut sonrası güncellenir. Tarayıcı verileri silinirse yerel kayıtlar da silinir; cihaz değiştirmek için dosya yedeğini kullan.</p><div class="c-grid">${['auto','backup','1','2','3',...Array.from({length:20},(_,i)=>'retirement'+(i+1)).filter(s=>localStorageValue(SAVE_PREFIX+s)!==null)].map(s=>`<div class="c-card"><h3>${s==='auto'?'Otomatik kayıt':s==='backup'?'Önceki sağlam kayıt':s.startsWith('retirement')?'Geçiş öncesi teknik direktör yedeği '+s.slice(10):'Kayıt alanı '+s}</h3><p>${esc(slotInfo(s)||'Boş')}</p><div class="c-actions">${btn('YÜKLE','load',s,false,!slotInfo(s))}${(['auto','backup'].includes(s)||s.startsWith('retirement'))?'':btn(slotInfo(s)?'ÜZERİNE KAYDET':'BURAYA KAYDET','save',s,false,!c)}</div></div>`).join('')}</div><div class="c-actions">${btn('DOSYA YEDEĞİ İNDİR','export','',true,!c)}${btn('DOSYADAN GERİ YÜKLE','import')}${btn('GERİ',c?'club':'home')}</div>`;}
-function help(){return heading('Kariyer rehberi','FeFa 2026 4.28')+`<div class="c-card"><p>1. Kadrodan ilk 11’i, şutörünü ve taktiğini seç. Sakat/cezalıları değiştir.</p><p>2. Haftalık antrenmanını ve koç konuşmanı yap. Yoğun çalışma yorar; dinlenme kondisyonu artırır.</p><p>3. Sahaya çık: kalede hedefi sürükle, basılı tutup güç biriktir ve bırak. Şut düğmesiyle de vurabilirsin. Oklar nişan, Boşluk şut, 1–4 teknik, A/S/D falso.</p><p>4. 2–5 kritik şutun, takımın simüle edilen pozisyonlarına eklenir. Diziliş, mevkiler, kondisyon, moral, taktik ve antrenörler maç hesabına katılır. Alternatif olarak 3 dakikalık tam saha 11’e 11 maç oynayabilirsin. WASD/oklar hareket, Z yönlü pas, E ara pas, Boşluk basılı tutup bırakınca şut, X top kapma, Q oyuncu değiştirme, Shift depar, P duraklat/devam. Oyuncu kariyerinde kontrol kendi futbolcunda kalır; Z ile takım arkadaşından pas isteyebilirsin.</p><p>5. Ligden sonra kupa oynanır. Tam saha kupasında eşitlik varsa iki 15 dakikalık uzatma devresi (gerçek sürede toplam 1 dakika), ardından 5 penaltı ve gerekirse ani ölüm oynanır. Kritik şut modunda doğrudan penaltılara geçilir. Hızlı simülasyonda penaltılar da simüle edilir. Sezon sonunda ödül, yaş ve sözleşmeler işlenir.</p><p>6. Üç manuel kayıt alanı, önceki sağlam otomatik kayıt ve JSON dosya yedeği kullanabilirsin. Yarım kalan maçın tamamlanan şutları korunur; uçuş hâlindeki şut tekrar başlar.</p><p>7. Takım ve futbolcu isimleri kurgusaldır. Mod seçiminde oyuncu veya teknik direktör kariyerini açabilirsin. Oyuncu modunda kendi futbolcunu; teknik direktör modunda seçtiğin şutörü kontrol edersin.</p><p>8. Yönetim güveni sezon sonu sponsorluk gelirini belirler (100.000 € + güven × 4.400 €); işten çıkarılma açıksa güven 15 ve altına düşmesi veya ağır borç, görevdeki ilk dört haftadan sonra işini kaybetmene neden olabilir. Teknik ekip uzmanlık yükseltmesiyle geliştirilir.</p><p>9. YEDEK KULÜBESİ düğmesiyle kritik pozisyonlar arasında veya tam sahada top kontrol altındayken / devre arasında 5 oyuncu değişikliği yapabilir ve şutörünü değiştirebilirsin. Çıkan oyuncu geri giremez; önceki golleri kendi istatistiklerinde kalır.</p><p>10. Sağlık ekibi sakatlık riskini azaltır. Rehabilitasyon süreci en az bir hafta sürer. Sezon hedeflerinin primini kupa sonunda alabilirsin; yeni sezona geçerken de otomatik ödenir. Kiralık oyuncular sezon bitiminde ayrılır. Tam sahada ikinci sarı 1 maç, doğrudan kırmızı 2 maç ceza getirir; her 3 sarıda 1 maç ceza uygulanır. Oyuncu kariyerinde kırmızıdan sonra takımını izlersin; penaltı serisine katılamazsın.</p><p>11. Kadro ekranındaki oyun kimliği; kısa pas, baskı ve kontra planlarını fırsat, savunma riski ve yorgunluğa yansıtır. Antrenmanda oyuncuya kişisel toparlanma veya keskinlik planı verebilirsin.</p><p>12. Transferde bonservis ve maaşın yüzde teklifini, sözleşme süresini ve kadro vaadini seç. Her oyuncuya haftada üç teklif verebilirsin. Önemli oyuncu vaadi verilen futbolcu yedek kalırsa daha çok moral kaybeder. Gelişim oyuncusu vaadi yalnızca 23 yaş ve altına verilir.</p><p>13. Altyapıda Türkiye, İspanya ve Brezilya gözlem bölgeleri var. 4, 8, 12 ve 16. haftalarda en az üç akademi oyuncusuyla simüle edilen gelişim turnuvasına katılabilirsin.</p>${btn('GERİ',c?'club':'home')}</div>`;}
+function help(){return heading('Kariyer rehberi','FeFa 2026 4.42')+`<div class="c-card"><p>1. Kadrodan ilk 11’i, şutörünü ve taktiğini seç. Sakat/cezalıları değiştir.</p><p>2. Haftalık antrenmanını ve koç konuşmanı yap. Yoğun çalışma yorar; dinlenme kondisyonu artırır.</p><p>3. Sahaya çık: kalede hedefi sürükle, basılı tutup güç biriktir ve bırak. Şut düğmesiyle de vurabilirsin. Oklar nişan, Boşluk şut, 1–4 teknik, A/S/D falso.</p><p>4. 2–5 kritik şutun, takımın simüle edilen pozisyonlarına eklenir. Diziliş, mevkiler, kondisyon, moral, taktik ve antrenörler maç hesabına katılır. Alternatif olarak 3 dakikalık tam saha 11’e 11 maç oynayabilirsin. WASD/oklar hareket, Z yönlü pas, E ara pas, Boşluk basılı tutup bırakınca şut, X top kapma, Q oyuncu değiştirme, Shift depar, P duraklat/devam. Oyuncu kariyerinde kontrol kendi futbolcunda kalır; Z ile takım arkadaşından pas isteyebilirsin.</p><p>5. Ligden sonra kupa oynanır. Tam saha kupasında eşitlik varsa iki 15 dakikalık uzatma devresi (gerçek sürede toplam 1 dakika), ardından 5 penaltı ve gerekirse ani ölüm oynanır. Kritik şut modunda doğrudan penaltılara geçilir. Hızlı simülasyonda penaltılar da simüle edilir. Sezon sonunda ödül, yaş ve sözleşmeler işlenir.</p><p>6. Üç manuel kayıt alanı, önceki sağlam otomatik kayıt ve JSON dosya yedeği kullanabilirsin. Yarım kalan maçın tamamlanan şutları korunur; uçuş hâlindeki şut tekrar başlar.</p><p>7. Takım ve futbolcu isimleri kurgusaldır. Mod seçiminde oyuncu veya teknik direktör kariyerini açabilirsin. Oyuncu modunda kendi futbolcunu; teknik direktör modunda seçtiğin şutörü kontrol edersin.</p><p>8. Yönetim güveni sezon sonu sponsorluk gelirini belirler (100.000 € + güven × 4.400 €); işten çıkarılma açıksa güven 15 ve altına düşmesi veya ağır borç, görevdeki ilk dört haftadan sonra işini kaybetmene neden olabilir. Teknik ekip uzmanlık yükseltmesiyle geliştirilir.</p><p>9. YEDEK KULÜBESİ düğmesiyle kritik pozisyonlar arasında veya tam sahada top kontrol altındayken / devre arasında 5 oyuncu değişikliği yapabilir ve şutörünü değiştirebilirsin. Çıkan oyuncu geri giremez; önceki golleri kendi istatistiklerinde kalır.</p><p>10. Sağlık ekibi sakatlık riskini azaltır. Rehabilitasyon süreci en az bir hafta sürer. Sezon hedeflerinin primini kupa sonunda alabilirsin; yeni sezona geçerken de otomatik ödenir. Kiralık oyuncular sezon bitiminde ayrılır. Tam sahada ikinci sarı 1 maç, doğrudan kırmızı 2 maç ceza getirir; her 3 sarıda 1 maç ceza uygulanır. Oyuncu kariyerinde kırmızıdan sonra takımını izlersin; penaltı serisine katılamazsın.</p><p>11. Kadro ekranındaki oyun kimliği; kısa pas, baskı ve kontra planlarını fırsat, savunma riski ve yorgunluğa yansıtır. Antrenmanda oyuncuya kişisel toparlanma veya keskinlik planı verebilirsin.</p><p>12. Transferde bonservis ve maaşın yüzde teklifini, sözleşme süresini ve kadro vaadini seç. Her oyuncuya haftada üç teklif verebilirsin. Önemli oyuncu vaadi verilen futbolcu yedek kalırsa daha çok moral kaybeder. Gelişim oyuncusu vaadi yalnızca 23 yaş ve altına verilir.</p><p>13. Altyapıda Türkiye, İspanya ve Brezilya gözlem bölgeleri var. 4, 8, 12 ve 16. haftalarda en az üç akademi oyuncusuyla simüle edilen gelişim turnuvasına katılabilirsin.</p>${btn('GERİ',c?'club':'home')}</div>`;}
 
 function scorerView(){const all=[...c.teams.flatMap(t=>t.players.map(p=>({...p,clubName:t.name}))),...c.departedStats.map(p=>({...p,clubName:c.teams[p.club].name+' · Ayrıldı'}))].filter(p=>p.goals>0).sort((a,b)=>b.goals-a.goals||a.apps-b.apps||a.name.localeCompare(b.name,'tr')).slice(0,10);return `<div class="c-card c-table" style="margin-top:20px"><h3>Sezon gol krallığı</h3><small>Lig ve kupa golleri birlikte sayılır; penaltı serisi golleri eklenmez. Sezon içinde ayrılan oyuncuların istatistikleri korunur.</small><table><thead><tr><th>OYUNCU</th><th>KULÜP</th><th>GOL</th><th>MAÇ</th></tr></thead><tbody>${all.map(p=>`<tr><td>${esc(p.name)}</td><td>${esc(p.clubName)}</td><td>${p.goals}</td><td>${p.apps}</td></tr>`).join('')||'<tr><td colspan="4">Henüz gol kaydı yok.</td></tr>'}</tbody></table></div>`;}
 function financeView(){return heading('Finans & yönetim','GELİRLERİNİ VE HEDEFLERİNİ TAKİP ET')+`<div class="c-grid"><div class="c-card">NAKİT<strong class="c-stat" style="font-size:24px">${money(c.budget)}</strong></div><div class="c-card">LİG HEDEFİ<strong class="c-stat">İLK ${c.detail.boardTarget}</strong>Şu an ${rank().findIndex(r=>r.id===c.club)+1}. sıradasın.</div><div class="c-card">TAHMİNİ SPONSORLUK<strong class="c-stat" style="font-size:24px">${money(Math.round((100000+c.confidence*4000)*leagueIncome()))}</strong>Sezon sonu güvenine göre ödenir. Yeni iki ligli kariyerde alt lig gelir katsayısı %65’tir.</div></div><div class="c-card c-table" style="margin-top:20px"><table><thead><tr><th>DÖNEM</th><th>İŞLEM</th><th>GELİR</th><th>GİDER</th><th>BAKİYE</th></tr></thead><tbody>${c.ledger.map(r=>`<tr><td>S${r.season} / H${r.week+1}</td><td>${esc(r.label)}</td><td>${money(r.income)}</td><td>${money(r.expense)}</td><td>${money(r.balance)}</td></tr>`).join('')||'<tr><td colspan="5">Yeni işlemler burada görünür.</td></tr>'}</tbody></table></div>`;}
 function opponentView(){const model=matchModel();if(!model)return '';const opponent=c.teams[model.opponent],gk=opponent.players.filter(p=>p.role==='GK').sort((a,b)=>b.skills.keeping-a.skills.keeping)[0];return `<div class="c-card" style="margin-top:20px"><div class="c-kicker">RAKİP ANALİZİ</div><h3>${esc(opponent.name)}</h3><p>Rakip gücü: ${strength(opponent.id).toFixed(0)} · Senin gücün: ${strength(c.club).toFixed(0)}</p><p>Kaleci: ${esc(gk?.name||'—')} · Kalecilik ${gk?.skills.keeping||'—'}</p><p>Mevcut plan: ${model.count} kritik fırsat. Simülasyon beklentisi: ${model.own.toFixed(1)} gol / ${model.against.toFixed(1)} yenilen gol.</p><small>Bunlar olasılık ortalamalarıdır; garanti skor değildir. Taktik, ev sahibi avantajı, kondisyon, keskinlik ve rol uyumu hesaba katılır.</small></div>`;}
 
-function render(){app.hidden=false;document.querySelector('.game-shell').inert=true;document.querySelector('.game-shell').hidden=true;app.setAttribute('aria-busy','false');paused=true;cancelCharge();keys.clear();if(c?.academyGame&&screen==='club'&&tab!=='saves'){app.innerHTML='<div class="c-wrap">'+heading('Altyapı turnuvası sürüyor','GENÇ YETENEKLER')+'<div class="c-card"><p>Turnuvayı tamamla veya çekil. 5e5 maçında konumlar ve skor kayıtla korunur. Kritik şut modunda uçuşta çıkarsan aynı vuruş yeniden başlar.</p>'+btn('TURNUVAYA DEVAM','academyPlay','',true)+' '+btn('TURNUVADAN ÇEKİL','academyWithdraw')+' '+btn('KAYITLAR','saves')+'</div></div>';return;}if(screen==='modes'){app.innerHTML='<div class="c-wrap">'+modePicker()+'</div>';return;}if(isPro()&&screen==='club'){proRender();return;}if(jobBlocked()&&screen==='club'&&!['jobs','saves','scope'].includes(tab))tab='jobs';const inClub=screen==='club'&&c;const tabs=[['office','MERKEZ'],['squad','KADRO'],['training','ANTRENMAN'],['medical','SAĞLIK'],['league','LİG & KUPA'],['transfers','TRANSFER'],['youth','ALTYAPI'],['finance','FİNANS'],['report','MAÇ RAPORU'],['press','BASIN'],['jobs','İŞ MERKEZİ'],['rules','KURALLAR'],['scope','KAPSAM'],['saves','KAYITLAR']];app.innerHTML=`<div class="c-top"><div class="c-logo">FeFa <b>2026</b> <small> / CAREER 4.28</small></div><div>${inClub?`${esc(team().name)} · ${esc(c.manager)} · S${c.season}`:'KENDİ FUTBOL HİKÂYENİ YAZ'}</div><div>${btn('MOD SEÇİMİ','modes')} ${btn('ANA EKRAN','home')}${inClub?' '+btn('REHBER','help'):''} ${btn('AYARLAR','settings')}</div></div>${inClub?`<nav class="c-nav" aria-label="Kariyer bölümleri">${tabs.map(([k,n])=>`<button data-action="tab" data-arg="${k}" class="${tab===k?'active':''}" ${tab===k?'aria-current="page"':''}>${n}</button>`).join('')}</nav>`:''}<div class="c-wrap">${screen==='home'?home():screen==='new'?setup():screen==='saves'?savesView():screen==='help'?help():({office,jobs:jobsView,press:pressView,rules:rulesView,scope:scopeView,squad:squadView,training:trainingView,medical:medicalView,league:leagueView,transfers:transferView,youth:youthView,report:reportView,finance:financeView,saves:savesView}[tab]||office)()}${inClub&&tab==='office'?retiredPlayerView()+taskList()+opponentView()+touchlineView()+objectivesView():''}${inClub&&tab==='finance'?financeForecast()+objectivesView()+contractWarnings():''}${inClub&&tab==='league'?scorerView()+cupHistory()+seasonArchiveView():''}${inClub&&tab==='squad'?tacticalSummary()+setPieceView():''}${inClub&&tab==='youth'?academyExtras()+developmentReport(true):''}${inClub&&tab==='transfers'?clubMarketView()+loansView()+loanActionsView()+saleOffersView()+negotiationView()+scoutReportView()+freeAgentsView():''}${inClub&&tab==='training'?coachView()+developmentReport()+potentialView():''}${inClub?`<p><small>${esc(saveMessage)}${c.pending?' · Maç sürerken kadro işlemleri kilitli.':''}</small></p>`:''}</div>`;}
+function render(){app.hidden=false;document.querySelector('.game-shell').inert=true;document.querySelector('.game-shell').hidden=true;app.setAttribute('aria-busy','false');paused=true;cancelCharge();keys.clear();if(c?.academyGame&&screen==='club'&&tab!=='saves'){app.innerHTML='<div class="c-wrap">'+heading('Altyapı turnuvası sürüyor','GENÇ YETENEKLER')+'<div class="c-card"><p>Turnuvayı tamamla veya çekil. 5e5 maçında konumlar ve skor kayıtla korunur. Kritik şut modunda uçuşta çıkarsan aynı vuruş yeniden başlar.</p>'+btn('TURNUVAYA DEVAM','academyPlay','',true)+' '+btn('TURNUVADAN ÇEKİL','academyWithdraw')+' '+btn('KAYITLAR','saves')+'</div></div>';return;}if(screen==='modes'){app.innerHTML='<div class="c-wrap">'+modePicker()+'</div>';return;}if(isPro()&&screen==='club'){proRender();return;}if(jobBlocked()&&screen==='club'&&!['jobs','saves','scope'].includes(tab))tab='jobs';const inClub=screen==='club'&&c;const tabs=[['office','MERKEZ'],['squad','KADRO'],['training','ANTRENMAN'],['medical','SAĞLIK'],['league','LİG & KUPA'],['transfers','TRANSFER'],['youth','ALTYAPI'],['finance','FİNANS'],['report','MAÇ RAPORU'],['press','BASIN'],['jobs','İŞ MERKEZİ'],['rules','KURALLAR'],['scope','KAPSAM'],['saves','KAYITLAR']];app.innerHTML=`<div class="c-top"><div class="c-logo">FeFa <b>2026</b> <small> / CAREER 4.33</small></div><div>${inClub?`${esc(team().name)} · ${esc(c.manager)} · S${c.season}`:'KENDİ FUTBOL HİKÂYENİ YAZ'}</div><div>${btn('MOD SEÇİMİ','modes')} ${btn('ANA EKRAN','home')}${inClub?' '+btn('REHBER','help'):''} ${btn('AYARLAR','settings')}</div></div>${inClub?`<nav class="c-nav" aria-label="Kariyer bölümleri">${tabs.map(([k,n])=>`<button data-action="tab" data-arg="${k}" class="${tab===k?'active':''}" ${tab===k?'aria-current="page"':''}>${n}</button>`).join('')}</nav>`:''}<div class="c-wrap">${screen==='home'?home():screen==='new'?setup():screen==='saves'?savesView():screen==='help'?help():({office,jobs:jobsView,press:pressView,rules:rulesView,scope:scopeView,squad:squadView,training:trainingView,medical:medicalView,league:leagueView,transfers:transferView,youth:youthView,report:reportView,finance:financeView,saves:savesView}[tab]||office)()}${inClub&&tab==='office'?retiredPlayerView()+taskList()+opponentView()+touchlineView()+objectivesView():''}${inClub&&tab==='finance'?financeForecast()+objectivesView()+contractWarnings():''}${inClub&&tab==='league'?scorerView()+cupHistory()+seasonArchiveView():''}${inClub&&tab==='squad'?tacticalSummary()+setPieceView():''}${inClub&&tab==='youth'?academyExtras()+developmentReport(true):''}${inClub&&tab==='transfers'?clubMarketView()+loansView()+loanActionsView()+saleOffersView()+negotiationView()+scoutReportView()+freeAgentsView():''}${inClub&&tab==='training'?coachView()+developmentReport()+potentialView():''}${inClub?`<p><small>${esc(saveMessage)}${c.pending?' · Maç sürerken kadro işlemleri kilitli.':''}</small></p>`:''}</div>`;}
 app.addEventListener('submit',e=>{if(e.target.id==='playerNew'){e.preventDefault();const f=e.target.elements,get=n=>String(f.namedItem(n)?.value||'');newPlayer(get('manager'),Number(get('club')),get('difficulty'),get('role'),get('origin'),get('foot'),{age:Number(get('age')||18),rating:Number(get('rating')||60),number:Number(get('number')||9),skin:get('skin')||'medium',hair:get('hair')||'dark'},32);return;}if(e.target.id!=='careerNew')return;e.preventDefault();const f=e.target.elements;newCareer(String(f.namedItem('manager')?.value||''),Number(f.namedItem('club')?.value),String(f.namedItem('difficulty')?.value||''),null,32);});
 app.addEventListener('change',e=>{if(!c||c.pending||jobBlocked())return;const d=e.target.dataset,value=e.target.value;if(d.duty){setPieceDuty(d.duty,value);return;}if(d.cornerRoutine){setCornerRoutine(value);return;}if(d.conversion){setConversion(d.conversion,value);return;}if(d.deep==='rule'){setRule(d.key,['injuries','embargo','sacking'].includes(d.key)?value==='true':value);return;}if(d.deep==='coach'){setCoachVision(d.department,value);return;}if(d.deep==='matchGoal'){setMatchGoal(value);return;}if(isPro())return;const el=e.target,k=el.dataset.change;if(k==='vision'){setVision(el.value);return;}if(k==='scoutRegion'){if(!c.scouted&&Object.hasOwn(regions,el.value)){c.scoutRegion=el.value;save();render();}return;}if(k==='clubSwap'){clubOfferDraft={career:c,id:clubNegotiationId,feePercent:Number($('clubFee').value),wagePercent:Number($('clubWage').value),contract:Number($('clubYears').value),squadRole:$('clubRole').value,swapId:el.value||null};render();return;}if(k==='clubMarket'){const id=Number(el.value);if(Number.isInteger(id)&&(id===-1||c.teams[id]&&id!==c.club)){clubMarketFilter=id;clubMarketPage=0;clubNegotiationId=null;render();}return;}if(k==='marketRole'){clubMarketPage=0;if(['all','GK','DF','MF','FW'].includes(el.value))marketRole=el.value;render();return;}if((k==='training'&&c.trained)||(k==='scoutRole'&&c.scouted))return;if(k==='formation'&&!Object.hasOwn(formations,el.value)||k==='tactic'&&!['balanced','attack','defense'].includes(el.value)||k==='training'&&!['balanced','intense','rest'].includes(el.value)||k==='scoutRole'&&!['all','GK','DF','MF','FW'].includes(el.value)||k==='taker'&&!starters().some(p=>p.id===el.value&&p.role!=='GK'))return;if(el.dataset.role){const p=squad().find(x=>x.id===el.dataset.role);if(p&&playerRoles[p.role][el.value]){p.tacticalRole=el.value;p.familiarity=Math.max(0,p.familiarity-20);}}else if(el.dataset.plan){const p=squad().find(x=>x.id===el.dataset.plan);if(p&&['balanced','role','recovery','sharpness'].includes(el.value))p.plan=el.value;}else if(['formation','tactic','training','taker','scoutRole'].includes(k)){c[k]=el.value;if(k==='formation')autoLineup();}save();render();});
 app.addEventListener('click',e=>{const b=e.target.closest('[data-action]');if(!b||b.disabled)return;const a=b.dataset.action,v=b.dataset.arg;if(c?.academyGame&&!['academyPlay','academyWithdraw','saves','load','save','export','import','club','home','modes','chooseMode','enterCareer','continue','tab'].includes(a))return;if(jobBlocked()&&!['acceptJob','modes','chooseMode','new','home','enterCareer','continue','settings','club','tab','saves','load','save','export','import','arcade','help'].includes(a))return;if(isPro()&&!['modes','chooseMode','new','home','enterCareer','continue','settings','club','tab','saves','load','save','export','import','play','fullPlay','sim','skip','season','retireConfirm','proTrain','spendPoint','proTransfer','proActivity','equipStyle','agentTarget','renewPro','contractChoice','arcade','help'].includes(a))return;switch(a){case 'clubSearch':clubMarketQuery=$('clubSearch').value.slice(0,60);clubMarketPage=0;render();break;case 'clubPage':clubMarketPage+=Number(v)===1?1:-1;render();break;case 'clubNegotiate':if(clubCanNegotiate(v)){clubNegotiationId=v;render();}break;case 'clubOfferClose':clubNegotiationId=null;render();break;case 'clubOffer':offerClubPlayer(v,Number($('clubFee').value),Number($('clubWage').value),Number($('clubYears').value),$('clubRole').value,$('clubSwap').value||null);break;case 'recallLoan':recallLoan(v);break;case 'purchaseLoan':purchaseLoan(v);break;case 'loanOut':loanOut(v,Number($('loanTo_'+v).value));break;case 'saleCounter10':counterSaleOffer(v,10);break;case 'saleCounter25':counterSaleOffer(v,25);break;case 'saleList':listForSale(v);break;case 'saleAccept':respondSaleOffer(v,true);break;case 'saleReject':respondSaleOffer(v,false);break;case 'freeSign':signFreeAgent(v);break;case 'academyRush':playRush(420);break;case 'academyRushQuick':playRush(90);break;case 'academyRushPotential':playRush(420,true);break;case 'convertComplete':completeConversion(v);break;case 'retireConfirm':retireToManager();break;case 'academyPlay':playAcademy();break;case 'academyWithdraw':academyFinish(false);break;case 'fullPlay':playFull();break;case 'acceptJob':acceptJob(Number(v));break;case 'contractChoice':contractChoice(v);break;case 'pressAnswer':pressAnswer(v);break;case 'assignScout':assignScout($('reportRole').value,$('reportVision').value);break;case 'shortlist':shortlist(v);break;case 'proActivity':proActivity(v);break;case 'equipStyle':equipStyle(v);break;case 'agentTarget':setAgentTarget(Number($('agentClub').value),Number($('agentWage').value));break;case 'renewPro':renewPro();break;case 'modes':if(active){save();stopMatchView();}screen='modes';render();break;case 'chooseMode':chooseMode(v);break;case 'proTrain':proTrain(v);break;case 'spendPoint':spendPoint(v);break;case 'proTransfer':proTransfer(v);break;case 'enterCareer':enterCareer();break;case 'settings':careerSettingsOpen=true;openSettings();break;case 'continue':if(c){screen='club';tab='office';render();}else load('auto');break;case 'home':screen='home';render();break;case 'new':screen='new';render();break;case 'help':screen='help';render();break;case 'club':screen='club';render();break;case 'tab':tab=v;selected=null;render();break;case 'saves':screen='saves';render();break;case 'load':load(v);break;case 'save':if(save(v))tell('Kayıt alanı '+v+' güncellendi.');render();break;case 'export':download();break;case 'import':importFile();break;case 'play':if(c.pending?.index===c.pending?.count&&c.pending&&(!c.pending.shootout||c.pending.shootout.decided))settleMatch(c.pending.goals+c.pending.supportGoals,c.pending.against);else playMatch();break;case 'forfeit':forfeit();break;case 'sim':simulateMatch();break;case 'skip':skipCup();break;case 'season':nextSeason();break;case 'train':train();break;case 'talk':talk(v);break;case 'substitute':substitute($('matchOut').value,$('matchIn').value);break;case 'matchTaker':changeMatchTaker($('matchTaker').value);break;case 'hire':hire(v);break;case 'loan':loan(v);break;case 'treat':treat(v);break;case 'medical':hireMedical();break;case 'objectives':claimObjectives();render();break;case 'buy':if(!c.pending&&windowOpen()){negotiationId=v;tab='transfers';render();}break;case 'offer':offerTransfer(v,Number($('offerFee').value),Number($('offerWage').value),Number($('offerYears').value),$('offerRole').value);break;case 'closeOffer':negotiationId=null;render();break;case 'academyTournament':academyTournament();break;case 'sell':sell(v);break;case 'renew':renew(v);break;case 'scout':scout();break;case 'promote':promote(v);break;case 'auto':if(!c.pending){autoLineup();save();render();}break;case 'facility':if(!c.pending&&c.facilities<5){if(c.budget>=c.facilities*200000){book('Tesis geliştirme',0,c.facilities*200000);c.facilities++;save();render();}else tell('Tesis için bütçe yetersiz.');}break;case 'select':if(c.pending)break;if(!selected){selected=v;render();break;}if(selected===v){selected=null;render();break;}const i=c.lineup.indexOf(selected),j=c.lineup.indexOf(v),p=squad().find(x=>x.id===v),q=squad().find(x=>x.id===selected);if((i>=0&&!available(p))||(j>=0&&!available(q))){tell('Sakat/cezalı oyuncu ilk 11’e alınamaz.');break;}if(i>=0&&j>=0)[c.lineup[i],c.lineup[j]]=[c.lineup[j],c.lineup[i]];else if(i>=0)c.lineup[i]=v;else if(j>=0)c.lineup[j]=selected;else tell('Bir ilk 11 oyuncusu seçmelisin.');if(!c.lineup.includes(c.taker)||squad().find(x=>x.id===c.taker)?.role==='GK')c.taker=starters().find(x=>x.role==='FW')?.id||starters().find(x=>x.role!=='GK')?.id;selected=null;save();render();break;case 'arcade':stopMatchView();app.hidden=true;document.querySelector('.game-shell').hidden=false;document.querySelector('.game-shell').inert=false;document.querySelector('.brand strong').textContent='FeFa 2026 · ANTRENMAN';resetShot(true);originalOpenMenu();break;}});
@@ -2118,7 +2214,7 @@ const prefixes={manager:'retroFootballCareerV1_',player:'retroFootballPlayerV1_'
 const isPro=()=>c?.mode==='player';
 const pro=()=>isPro()?squad().find(p=>p.id===c.pro.id):null;
 const modeName=()=>careerMode==='player'?'Oyuncu kariyeri':'Teknik direktör kariyeri';
-function modePicker(){return heading('İki yol. Tek futbol tutkusu.','KARİYER 4.32')+`<p>Her modun otomatik kaydı, yedeği ve üç manuel kayıt alanı ayrıdır.</p><div class="c-two"><div class="c-card"><div class="c-kicker">01 / SAHANIN İÇİNDE</div><h2>Oyuncu kariyeri</h2><p>Kendi futbolcunu oluştur. Antrenmanla geliş, teknik direktörün güvenini kazan, maç hedeflerini tamamla ve yeni kulüplere yüksel.</p>${btn('OYUNCU KARİYERİNİ AÇ','chooseMode','player',true)}</div><div class="c-card"><div class="c-kicker">02 / KULÜBÜN BAŞINDA</div><h2>Teknik direktör kariyeri</h2><p>Kadro, taktik, transfer, teknik ekip, altyapı ve bütçeyi yönet. Mevcut teknik direktör kaydın bu bölümde devam eder.</p>${btn('TEKNİK DİREKTÖR KARİYERİNİ AÇ','chooseMode','manager',true)}</div></div><p>Maçlar oynanabilir kritik şutlar ve takım simülasyonundan oluşur. Tam saha seçeneğinde takımını; oyuncu kariyerinde kendi futbolcunu kontrol edersin.</p><div class="c-actions">${btn('SERBEST ANTRENMAN','arcade')}</div>`;}
+function modePicker(){return heading('İki yol. Tek futbol tutkusu.','KARİYER 4.42')+`<p>Her modun otomatik kaydı, yedeği ve üç manuel kayıt alanı ayrıdır.</p><div class="c-two"><div class="c-card"><div class="c-kicker">01 / SAHANIN İÇİNDE</div><h2>Oyuncu kariyeri</h2><p>Kendi futbolcunu oluştur. Antrenmanla geliş, teknik direktörün güvenini kazan, maç hedeflerini tamamla ve yeni kulüplere yüksel.</p>${btn('OYUNCU KARİYERİNİ AÇ','chooseMode','player',true)}</div><div class="c-card"><div class="c-kicker">02 / KULÜBÜN BAŞINDA</div><h2>Teknik direktör kariyeri</h2><p>Kadro, taktik, transfer, teknik ekip, altyapı ve bütçeyi yönet. Mevcut teknik direktör kaydın bu bölümde devam eder.</p>${btn('TEKNİK DİREKTÖR KARİYERİNİ AÇ','chooseMode','manager',true)}</div></div><p>Maçlar oynanabilir kritik şutlar ve takım simülasyonundan oluşur. Tam saha seçeneğinde takımını; oyuncu kariyerinde kendi futbolcunu kontrol edersin.</p><div class="c-actions">${btn('SERBEST ANTRENMAN','arcade')}</div>`;}
 function chooseMode(mode){retirementPreview=null;if(!Object.hasOwn(prefixes,mode))return false;if(c&&!save())return false;stopMatchView();c=null;careerMode=mode;SAVE_PREFIX=prefixes[mode];autoBaseline=localStorageValue(SAVE_PREFIX+'auto');lastReport=null;enterCareer();return true;}
 function checkMode(next){if((next.mode||'manager')!==careerMode)throw Error('Bu kayıt '+(next.mode==='player'?'oyuncu':'teknik direktör')+' kariyerine ait. Önce doğru modu aç.');return next;}
 function proSetup(){return heading('Kendi futbolcunu oluştur','OYUNCU KARİYERİ')+`<div class="c-two"><form id="playerNew" class="c-card c-form"><label>Futbolcu adı<input name="manager" maxlength="30" value="Ali" required></label><label>Mevki<select name="role"><option value="FW">Forvet · Bitiricilik</option><option value="MF">Hücumcu orta saha · Teknik</option><option value="DF">Savunmacı · Top kapma</option><option value="GK">Kaleci · Kurtarış</option></select></label><label>Güçlü ayak<select name="foot"><option value="right">Sağ</option><option value="left">Sol</option></select></label><label>Başlangıç hikâyesi<select name="origin"><option value="academy">Zirveye tırmanış · 18 yaş / 62 güç</option><option value="talent">Büyük beklentiler · 20 yaş / 69 güç</option><option value="comeback">İhtişama dönüş · 26 yaş / 73 güç, düşük kondisyon</option><option value="slate">Temiz sayfa · 18 yaş / 60 güç</option><option value="custom">Özel başlangıç · Yaş ve gücü kendin belirle</option></select></label><label>Özel başlangıç yaşı<input name="age" type="number" min="16" max="35" value="18"></label><label>Özel başlangıç gücü<input name="rating" type="number" min="50" max="85" value="60"></label><small>Yaş ve güç alanları yalnızca Özel başlangıçta uygulanır.</small><label>Forma numarası<input name="number" type="number" min="1" max="99" value="9"></label><label>Ten<select name="skin"><option value="light">Açık</option><option value="medium" selected>Orta</option><option value="dark">Koyu</option></select></label><label>Saç<select name="hair"><option value="dark">Siyah</option><option value="brown">Kahverengi</option><option value="blond">Sarı</option></select></label><label>Kulüp<select name="club">${clubs.map((t,i)=>`<option value="${i}">${t[0]} · ${i<16?'Süper Lig':'1. Lig'} · Güç ${t[2]}</option>`).join('')}</select></label><label>Zorluk<select name="difficulty"><option value="normal">Dengeli</option><option value="easy">Rahat</option><option value="hard">Usta</option></select></label><button class="primary" type="submit">OYUNCU KARİYERİNİ BAŞLAT</button>${btn('MOD SEÇİMİ','modes')}</form><div class="c-card"><h3>Formanı kazan</h3><p>İlk 11 seçimini teknik direktör yapar. Güven, kondisyon ve mevkindeki rekabet belirleyicidir. İlk 11 dışında kalırsan tam saha maçını yedekten izleyebilirsin. 55. dakikadan sonra güven en az 35, kondisyon en az 30 ise uygun mevki ve değişiklik hakkı bulunduğunda koç seni oyuna alabilir. Sakat veya cezalıyken oynayamazsın.</p><p>Forvet, orta saha ve savunmacı olarak oynayabilirsin. Savunmacı için tam saha modu önerilir: X ile top kap, Z ile pas ver. Kaleci kariyerinde oklar / WASD ile konum al, yön + X ile dal, Z ile pas ver, C ile uzun top gönder. Penaltı serilerinde yön + X ile rakibin şutlarına dal; takımının vuruşları simüle edilir.</p><p>Başlangıç hikâyen yaşını, gücünü ve gelişim potansiyelini değiştirir. Güçlü ayağın şut animasyonuna yansır.</p><p class="c-warn">Yeni oyun yalnızca oyuncu modunun otomatik kaydını değiştirir. Önce Kayıtlar’dan yedek alabilirsin.</p></div></div>`;}
@@ -2175,7 +2271,7 @@ function proOffice(){const p=pro(),s=c.pro,f=nextFixture(),chosen=c.lineup.inclu
 function proDevelopment(){const p=pro(),s=c.pro;return heading('Gelişim & antrenman','FORMANI KAZAN')+`<div class="c-two"><div class="c-card"><h3>Haftalık çalışma</h3><p>Haftada bir seçim. Teknik çalışma: +1 özellik, +${Math.round(24*({slow:.75,normal:1,fast:1.5}[c.detail.rules.development]))} deneyim, +6 güven, −9 kondisyon. Toparlanma: +${c.detail.rules.recovery==='realistic'?15:25} kondisyon, +2 güven. Sakatlıkta yalnızca toparlanma yapılır.</p>${['shot','technique','defense','keeping','recovery'].map((k,i)=>btn(['BİTİRİCİLİK','TOP TEKNİĞİ','SAVUNMA','KALECİLİK','TOPARLANMA'][i],'proTrain',k,false,!!c.pending||c.trained||c.week>=seasonWeeks()||!!p.injury&&k!=='recovery')).join(' ')}<p>Gelişim: ${p.xp}/100 · Güç ${p.rating} → Potansiyel ${p.potential}</p></div><div class="c-card"><h3>Yetenek puanı: ${s.points}</h3><p>Seçtiğin maç hedefine göre 1 veya 2 puan kazan. Her puan seçilen özelliğe +2 verir; üst sınır 99.</p>${['shot','technique','defense','keeping'].map((k,i)=>'<p>'+['Şut','Teknik','Savunma','Kalecilik'][i]+': '+p.skills[k]+' '+btn('+2','spendPoint',k,false,!!c.pending||!s.points||p.skills[k]>=99)+'</p>').join('')}</div></div>`;}
 function proAgent(){const p=pro(),offers=proOffers();return heading('Menajerin & sözleşmen','BİR SONRAKİ ADIM')+`<div class="c-card"><h3>${esc(team().name)}</h3><p>Maaş: ${money(p.wage)} / hafta · Sözleşme: ${p.contract} sezon · Toplam kazanç: ${money(c.pro.wallet)}</p><p>Her yeni sezonun ilk haftasında, ilk sezonundan sonra teklif alabilirsin. Kulüp gücü, oyuncu gücün ve teknik direktör güveninle eşleşir. Sezonda bir kulüp değişikliği yapılabilir. Sözleşmen bitiyorsa sezon sonunda kalma veya transfer kararını sen verirsin; karar vermeden yeni sezon başlamaz.</p></div><div class="c-grid" style="margin-top:20px">${offers.map(o=>'<div class="c-card"><h3>'+esc(c.teams[o.id].name)+'</h3><p>'+money(o.wage)+'/hafta · '+o.years+' sezon</p>'+btn('SÖZLEŞMEYİ İMZALA','proTransfer',o.id,true)+'</div>').join('')||'<div class="c-card">Şu an uygun teklif yok. Yeni sezonun ilk haftasında tekrar kontrol et.</div>'}</div>`;}
 function proSquad(){return heading('Takım & ilk 11','SEÇİMİ TEKNİK DİREKTÖR YAPAR')+pitch()+`<div class="c-card"><p>İlk 11 için en az %45 güven, %30 kondisyon ve uygun sağlık durumu gerekir. Mevkindeki rekabet de hesaba katılır. Kadroyu, bütçeyi ve transferleri teknik ekip yönetir.</p>${squad().map(p=>'<p>'+esc(p.name)+' · '+roleName[p.role]+' · '+p.rating+' · '+(c.lineup.includes(p.id)?'İlk 11':'Yedek')+(p.id===c.pro.id?' · SEN':'')+'</p>').join('')}</div>`;}
-function proRender(){const tabs=[['office','OYUNCUM'],['development','GELİŞİM'],['squad','TAKIM'],['league','LİG & KUPA'],['agent','MENAJERİM'],['retirement','EMEKLİLİK'],['personality','KİŞİLİK'],['news','GÜNDEM'],['rules','KURALLAR'],['scope','KAPSAM'],['report','MAÇ RAPORU'],['saves','KAYITLAR']];if(!tabs.some(([k])=>k===tab))tab='office';app.innerHTML=`<div class="c-top"><div class="c-logo">FeFa <b>2026</b> / 4.28</div><div>OYUNCU KARİYERİ · ${esc(pro().name)}</div><div>${btn('MOD SEÇİMİ','modes')} ${btn('YENİ OYUNCU','new')} ${btn('AYARLAR','settings')}</div></div><nav class="c-nav" aria-label="Oyuncu kariyeri">${tabs.map(([k,n])=>btn(n,'tab',k,k===tab)).join('')}</nav><div class="c-wrap">${({office:()=>contractDecisionView()+proOffice()+playerTasks(),personality:personalityView,news:newsView,rules:rulesView,scope:scopeView,development:()=>proDevelopment()+potentialView(),squad:proSquad,league:()=>leagueView()+scorerView()+cupHistory()+seasonArchiveView(),agent:()=>contractDecisionView()+proAgent()+agentTargetsView(),retirement:retirementView,report:()=>proOffice()+reportView()+'<div class="c-card"><h3>Son maçların</h3>'+c.pro.history.slice(0,10).map(r=>'<p>S'+r.season+' / H'+(r.week+1)+' · '+esc(c.teams[r.club].name)+' · '+(r.played?r.goals+' gol / '+r.rating.toFixed(1)+' not':'Kadro dışı')+'</p>').join('')+'</div>',saves:savesView}[tab])()}<p><small>${esc(saveMessage)} · Oyuncu modu kayıt alanı</small></p></div>`;}
+function proRender(){const tabs=[['office','OYUNCUM'],['development','GELİŞİM'],['squad','TAKIM'],['league','LİG & KUPA'],['agent','MENAJERİM'],['retirement','EMEKLİLİK'],['personality','KİŞİLİK'],['news','GÜNDEM'],['rules','KURALLAR'],['scope','KAPSAM'],['report','MAÇ RAPORU'],['saves','KAYITLAR']];if(!tabs.some(([k])=>k===tab))tab='office';app.innerHTML=`<div class="c-top"><div class="c-logo">FeFa <b>2026</b> / 4.33</div><div>OYUNCU KARİYERİ · ${esc(pro().name)}</div><div>${btn('MOD SEÇİMİ','modes')} ${btn('YENİ OYUNCU','new')} ${btn('AYARLAR','settings')}</div></div><nav class="c-nav" aria-label="Oyuncu kariyeri">${tabs.map(([k,n])=>btn(n,'tab',k,k===tab)).join('')}</nav><div class="c-wrap">${({office:()=>contractDecisionView()+proOffice()+playerTasks(),personality:personalityView,news:newsView,rules:rulesView,scope:scopeView,development:()=>proDevelopment()+potentialView(),squad:proSquad,league:()=>leagueView()+scorerView()+cupHistory()+seasonArchiveView(),agent:()=>contractDecisionView()+proAgent()+agentTargetsView(),retirement:retirementView,report:()=>proOffice()+reportView()+'<div class="c-card"><h3>Son maçların</h3>'+c.pro.history.slice(0,10).map(r=>'<p>S'+r.season+' / H'+(r.week+1)+' · '+esc(c.teams[r.club].name)+' · '+(r.played?r.goals+' gol / '+r.rating.toFixed(1)+' not':'Kadro dışı')+'</p>').join('')+'</div>',saves:savesView}[tab])()}<p><small>${esc(saveMessage)} · Oyuncu modu kayıt alanı</small></p></div>`;}
 
 // Detailed career layer. Numeric balancing is original to this retro game.
 const personalityNames={maverick:'Bireysel yıldız',virtuoso:'Teknik virtüöz',heartbeat:'Takımın kalbi'};
@@ -2285,8 +2381,12 @@ function validateOffices(o,fail){const integer=(x,a,b)=>Number.isInteger(x)&&x>=
 // Compact 11v11 pitch engine: independent deterministic state, shared career settlement.
 let fullActive=false,fieldHeld=new Set(),fieldCharge=0,fieldUIClock=0,fieldSaveClock=0;
 let fieldRadarVisible=true,fieldSkillTimer=0,fieldSkillCooldown=0;
-const fieldControls=document.createElement('div');fieldControls.id='fieldControls';fieldControls.hidden=true;fieldControls.className='field-controls';fieldControls.innerHTML='<div class="field-pad"><div id="fieldJoystick" class="field-joystick" role="group" aria-label="Hareket joysticki: sürükleyerek yön ve hız seç"><span id="fieldStickKnob"></span></div><div class="field-arrows"><button data-field="up" aria-label="Yukarı">▲</button><div><button data-field="left" aria-label="Sol">◀</button><button data-field="down" aria-label="Aşağı">▼</button><button data-field="right" aria-label="Sağ">▶</button></div></div></div><div class="field-actions"><button data-field="pass">YÖNLÜ PAS / İSTE</button><button data-field="through">ARA PAS</button><button data-field="shot">BASILI TUT: ŞUT</button><button data-field="cross">ORTA</button><button data-field="tackle">TOP KAP / DAL</button><button data-field="switch">OYUNCU DEĞİŞTİR</button><button data-field="sprint">DEPAR</button><button data-field="skill" aria-label="Teknik çalım yap">ÇALIM</button><button data-field="pause">DURAKLAT / DEVAM</button><button data-field="bench">YEDEK KULÜBESİ</button><button data-field="exit">KAYDET & MERKEZ</button></div><p>Mobil: sol joystick hareket / hız; sağ tuşlarla pas, şut ve dalış. Aynı anda iki parmak kullanabilirsin. WASD / oklar: hareket · Z: yönlü pas · E: ara pas · C: orta · Boşluk: şut · X: top kap / kaleci dalışı · Q: oyuncu değiştir · F: çalım · Shift: depar · P: duraklat. 11v11 maç 3 dakika; altyapı 5e5 maç seçimine göre 7 dakika veya 90 saniyedir. 5e5: dört genci sen, kaleciyi AI yönetir; ORTA güçlü vuruş, YEDEK KULÜBESİ akademiye dönüş olur. 11v11 duran top hazırlığında saat durur. Kupa uzatması 1 dakika ekler. Devre arasında devam düğmesine bas. Teknik direktör modunda YEDEK KULÜBESİ ile 5 değişiklik yapabilirsin. Kamera futbolcunun gözünden veya arkasındandır: V tuşuyla değiştir; [ / ] ile sola/sağa bak; mobilde sahaya parmağınla sürükleyerek bak. W ileri, S geri, A/D yana hareket, tümü kamera yönüne göredir. Pas yönünü hareket tuşuyla belirle. E ile ara pas ver; takım arkadaşın savunma arkasına koşar. Maç sürerken 1 / 2 / 3 tuşlarıyla savunma, dengeli ve hücum taktiklerini değiştirebilirsin. M tuşu saha radarını açıp kapatır. Oyuncu kariyerinde kendi futbolcunu yönetirsin; koç oyuncu değişikliklerini yönetir. Kaleciyken yön + X ile dalabilir, Z ile pas ve C ile uzun top verebilirsin. Oyuncular ivmelenir, birbirleriyle fiziksel temas eder; top yerden seker ve uygun durumlarda falso alır. Rakipler boş pas koridorunu ve savunma markajını değerlendirir. Kondisyon koşu hızını etkiler. Duran toplarda oklarla nişan al; PAS / ORTA / ŞUT seç. 8 saniye içinde kullanmazsan otomatik vuruş yapılır.</p>';
-fieldControls.insertAdjacentHTML('beforeend', `<div id="fieldTactics" class="field-tactics" hidden role="group" aria-label="Maç içi taktikler"><strong>CANLI TAKTİK</strong><button type="button" data-field="tactic-defense" aria-pressed="false">1 · SAVUNMA</button><button type="button" data-field="tactic-balanced" aria-pressed="false">2 · DENGELİ</button><button type="button" data-field="tactic-attack" aria-pressed="false">3 · HÜCUM</button><button type="button" data-field="radar" aria-pressed="true" aria-label="Saha radarını aç veya kapat">RADAR: AÇIK</button><button type="button" data-field="camera" aria-label="Görüşü değiştir">KAMERA: ARKADAN</button><button type="button" data-field="camera-left" aria-label="Kamerayı sola çevir">↶ SOLA BAK</button><button type="button" data-field="camera-right" aria-label="Kamerayı sağa çevir">↷ SAĞA BAK</button></div>`);
+// V4.34 optional player assistance. It never moves a player while directional keys are held.
+let fieldAssistEnabled=true,fieldInactiveSeconds=0;
+function fieldAssistAllowed(g){return fieldAssistEnabled&&!isPro()&&g?.stage==='play'&&fieldInactiveSeconds>1.2&&fieldStick.id===null&&!['up','down','left','right','sprint','shot'].some(a=>fieldHeld.has(a));}
+
+const fieldControls=document.createElement('div');fieldControls.id='fieldControls';fieldControls.hidden=true;fieldControls.className='field-controls';fieldControls.innerHTML='<div class="field-pad"><div id="fieldJoystick" class="field-joystick" role="group" aria-label="Hareket joysticki: sürükleyerek yön ve hız seç"><span id="fieldStickKnob"></span></div><div class="field-arrows"><button data-field="up" aria-label="Yukarı">▲</button><div><button data-field="left" aria-label="Sol">◀</button><button data-field="down" aria-label="Aşağı">▼</button><button data-field="right" aria-label="Sağ">▶</button></div></div></div><div class="field-actions"><button data-field="pass">YÖNLÜ PAS / İSTE</button><button data-field="through">ARA PAS</button><button data-field="shot">BASILI TUT: ŞUT</button><button data-field="cross">ORTA</button><button data-field="tackle">TOP KAP / DAL</button><button data-field="switch">OYUNCU DEĞİŞTİR</button><button data-field="sprint">DEPAR</button><button data-field="skill" aria-label="Teknik çalım yap">ÇALIM</button><button data-field="pause">DURAKLAT / DEVAM</button><button data-field="bench">YEDEK KULÜBESİ</button><button data-field="exit">KAYDET & MERKEZ</button></div><p>Mobil: sol joystick hareket / hız; sağ tuşlarla pas, şut ve dalış. Aynı anda iki parmak kullanabilirsin. WASD / oklar: hareket · Z: yönlü pas · E: ara pas · C: orta · Boşluk: şut · X: top kap / kaleci dalışı · Q: oyuncu değiştir · F: çalım · Shift: depar · P: duraklat. 11v11 maç 3 dakika; altyapı 5e5 maç seçimine göre 7 dakika veya 90 saniyedir. 5e5: dört genci sen, kaleciyi AI yönetir; ORTA güçlü vuruş, YEDEK KULÜBESİ akademiye dönüş olur. 11v11 duran top hazırlığında saat durur. Kupa uzatması 1 dakika ekler. Devre arasında sahadaki büyük DEVAM düğmesine dokun. Teknik direktör modunda YEDEK KULÜBESİ ile 5 değişiklik yapabilirsin. Kamera futbolcunun gözünden veya arkasındandır: V tuşuyla değiştir; [ / ] ile sola/sağa bak; mobilde sahaya parmağınla sürükleyerek bak. W ileri, S geri, A/D yana hareket, tümü kamera yönüne göredir. Pas yönünü hareket tuşuyla belirle. E ile ara pas ver; takım arkadaşın savunma arkasına koşar. Maç sürerken 1 / 2 / 3 tuşlarıyla savunma, dengeli ve hücum taktiklerini değiştirebilirsin. M tuşu saha radarını açıp kapatır. Oyuncu kariyerinde kendi futbolcunu yönetirsin; koç oyuncu değişikliklerini yönetir. Kaleciyken yön + X ile dalabilir, Z ile pas ve C ile uzun top verebilirsin. Oyuncular ivmelenir, birbirleriyle fiziksel temas eder; top yerden seker ve uygun durumlarda falso alır. Rakipler boş pas koridorunu ve savunma markajını değerlendirir. Teknik direktör modunda H tuşu / DESTEK ile kontrol edilen futbolcunun tuşa basılmadığında destek koşusu yapmasını açıp kapatabilirsin; yön tuşunu kullanınca kontrol anında sende olur. Kondisyon koşu hızını etkiler. Duran toplarda oklarla nişan al; PAS / ORTA / ŞUT seç. 8 saniye içinde kullanmazsan otomatik vuruş yapılır.</p>';
+fieldControls.insertAdjacentHTML('beforeend', `<div id="fieldTactics" class="field-tactics" hidden role="group" aria-label="Maç içi taktikler"><strong>CANLI TAKTİK</strong><button type="button" data-field="tactic-defense" aria-pressed="false">1 · SAVUNMA</button><button type="button" data-field="tactic-balanced" aria-pressed="false">2 · DENGELİ</button><button type="button" data-field="tactic-attack" aria-pressed="false">3 · HÜCUM</button><button type="button" data-field="assist" aria-pressed="true" aria-label="Boştayken kontrollü futbolcunun pozisyon almasını aç veya kapat">DESTEK: AÇIK</button><button type="button" data-field="radar" aria-pressed="true" aria-label="Saha radarını aç veya kapat">RADAR: AÇIK</button><button type="button" data-field="camera" aria-label="Görüşü değiştir">KAMERA: ARKADAN</button><button type="button" data-field="camera-left" aria-label="Kamerayı sola çevir">↶ SOLA BAK</button><button type="button" data-field="camera-right" aria-label="Kamerayı sağa çevir">↷ SAĞA BAK</button></div>`);
 document.querySelector('.stage').after(fieldControls);
 const fieldTactics=document.getElementById('fieldTactics');document.querySelector('.stage').before(fieldTactics);fieldTactics.addEventListener('click',e=>{const action=e.target.closest('button[data-field]')?.dataset.field;if(action)fieldAction(action,true);});
 const fieldPointers=new Map(),fieldStick={id:null,x:0,y:0},joystick=$('fieldJoystick'),stickKnob=$('fieldStickKnob');
@@ -2313,11 +2413,11 @@ function updateFieldStick(id,x,y){if(!fullActive||fieldStick.id!==id)return;cons
 function releaseFieldStick(id){if(fieldStick.id!==id)return;updateFieldStick(id,0,0);fieldStick.id=null;}
 function pauseFieldInput(){if(!fullActive)return;clearFieldInput();if(c?.academyGame?.mode==='rush'){c.academyGame.pitch.stage='paused';save();rushHUD();return;}const g=c.pending?.pitchGame;if(!g)return;if(g.keeperSeries)g.keeperSeries.paused=true;else if(g.stage==='play')g.stage='paused';save();fieldHUD();}
 function stickEvent(e){const r=joystick.getBoundingClientRect(),radius=Math.max(1,Math.min(r.width,r.height)*.36);updateFieldStick(e.pointerId,(e.clientX-r.left-r.width/2)/radius,(e.clientY-r.top-r.height/2)/radius);}
-joystick.addEventListener('pointerdown',e=>{if(!fullActive||fieldStick.id!==null)return;e.preventDefault();e.stopPropagation();fieldStick.id=e.pointerId;joystick.setPointerCapture?.(e.pointerId);stickEvent(e);});
+joystick.addEventListener('pointerdown',e=>{if(!fullActive||fieldStick.id!==null)return;e.preventDefault();e.stopPropagation();fieldStick.id=e.pointerId;try{joystick.setPointerCapture?.(e.pointerId);}catch{}stickEvent(e);});
 joystick.addEventListener('pointermove',e=>{if(fieldStick.id===e.pointerId){e.preventDefault();stickEvent(e);}});
 for(const type of ['pointerup','pointercancel','lostpointercapture'])joystick.addEventListener(type,e=>{if(fieldStick.id===e.pointerId){e.preventDefault();releaseFieldStick(e.pointerId);}});
 
-function upgradePitch(g){if(g.version===1){g.version=2;g.cards={};if(g.stage==='half')g.elapsed=90;}g.cards??={};g.stats.through??=[0,0];g.run??=null;fieldCoachInit(g);}
+function upgradePitch(g){if(g.version===1){g.version=2;g.cards={};if(g.stage==='half')g.elapsed=90;}g.cards??={};g.stats.through??=[0,0];g.stats.onTarget??=[0,0];g.run??=null;fieldCoachInit(g);}
 function fieldProStatus(g){if(!isPro())return 'playing';const p=g.players.find(p=>p.id===c.pro.id);return p?(fieldEligible(g,p)?'playing':'sentoff'):c.pending.participants.includes(c.pro.id)?'off':'bench';}
 function fieldCoachInit(g){g.coach??={opponentParticipants:g.players.filter(p=>p.side===1).map(p=>p.id),opponentOff:[],nextCheck:[90,90],plans:['balanced','balanced'],events:[],exitEnergy:{}};}
 function fieldMembers(g,side){return side===0?c.pending.participants:g.coach.opponentParticipants;}
@@ -2383,11 +2483,11 @@ function fieldDirection(g,side){return (side===0?1:-1)*(g.half%2===1?1:-1);}
 function fieldPlayers(){const m=c.pending;return [starters(),balancedXI(m.opponent)].flatMap((ps,side)=>ps.map((p,i)=>({id:p.id,side,role:p.role,rating:p.rating,shot:p.skills.shot,technique:p.skills.technique,defense:p.skills.defense,keeping:p.skills.keeping,energy:p.energy,x:0,y:0,bx:0,by:0,dx:side===0?1:-1,dy:0,cool:0,anim:0})));}
 function fieldPlace(g,kickoff=0){g.setPiece=null;g.run=null;for(const side of [0,1]){const ps=g.players.filter(p=>p.side===side&&fieldEligible(g,p)),dir=fieldDirection(g,side);for(const role of ['GK','DF','MF','FW']){const group=ps.filter(p=>p.role===role);group.forEach((p,i)=>{const bx=role==='GK'?4:role==='DF'?23:role==='MF'?40:49;p.bx=dir===1?bx:105-bx;p.by=68*(i+1)/(group.length+1);p.x=p.bx;p.y=p.by;p.cool=.5;p.anim=0;p.vx=0;p.vy=0;p.gait=0;p.moveSpeed=0;p.contact=.0;});}}
  const forwards=g.players.map((p,i)=>({p,i})).filter(x=>x.p.side===kickoff&&x.p.role!=='GK'&&fieldEligible(g,x.p)).sort((a,b)=>Math.abs(a.p.x-52.5)-Math.abs(b.p.x-52.5));const ix=forwards[0].i;for(const p of g.players)if(p.side!==kickoff&&Math.hypot(p.x-52.5,p.y-34)<9.15)p.x=52.5-fieldDirection(g,p.side)*10;g.players[ix].x=52.5;g.players[ix].y=34;g.ball={x:52.5,y:34,z:0,vx:0,vy:0,vz:0,owner:ix,last:ix,lock:.5,passer:-1};g.restart=.7;g.message='SANTRA';}
-function newPitchGame(){const g={version:2,cards:{},elapsed:0,half:1,stage:'play',restart:0,message:'SANTRA',scores:[0,0],players:fieldPlayers(),ball:null,control:0,rng:integer(1,4294967295),goals:[],stats:{shots:[0,0],passes:[0,0],through:[0,0],possession:[0,0],fouls:[0,0],offsides:[0,0]},individual:{},finished:false};for(const p of g.players)g.individual[p.id]={goals:0,assists:0,shots:0,passes:0,tackles:0,saves:0,seconds:0};fieldPlace(g,0);g.restart=0;g.players[g.ball.owner].cool=0;g.control=isPro()?Math.max(0,g.players.findIndex(p=>p.id===c.pro.id)):g.ball.owner;fieldCoachInit(g);return g;}
+function newPitchGame(){const g={version:2,cards:{},elapsed:0,half:1,stage:'play',restart:0,message:'SANTRA',scores:[0,0],players:fieldPlayers(),ball:null,control:0,rng:integer(1,4294967295),goals:[],stats:{shots:[0,0],onTarget:[0,0],passes:[0,0],completed:[0,0],through:[0,0],possession:[0,0],fouls:[0,0],offsides:[0,0]},individual:{},finished:false};for(const p of g.players)g.individual[p.id]={goals:0,assists:0,shots:0,passes:0,tackles:0,saves:0,seconds:0};fieldPlace(g,0);g.restart=0;g.players[g.ball.owner].cool=0;g.control=isPro()?Math.max(0,g.players.findIndex(p=>p.id===c.pro.id)):g.ball.owner;fieldCoachInit(g);return g;}
 function playFull(){if(c?.academyGame)return playAcademy();if(jobBlocked())return false;if(isPro()&&!c.pending){proSelect();if(!available(pro())){tell('Sakat veya cezalı olduğun için takım maçı simüle ediliyor.');simulateMatch();return false;}}
  if(c.pending&&!c.pending.pitchGame&&(c.pending.index>0||c.pending.shootout)){tell('Başlamış kritik pozisyon maçını önce tamamla.');return false;}
  if(!c.pending&&!makePending())return false;const m=c.pending;if(!m.pitchGame)m.pitchGame=newPitchGame();upgradePitch(m.pitchGame);if(m.pitchGame.finished&&!m.pitchGame.keeperSeries){playMatch();return true;}
- if(replay.active)stopReplay();if(!active)preMatchOptions={weather:options.weather,difficulty:$('difficulty').value,foot:options.foot};active=true;fullActive=true;clearFieldInput();fieldCharge=0;fieldSkillTimer=0;fieldSkillCooldown=0;canvas.width=960;canvas.height=600;ctx.setTransform(2,0,0,2,0,0);fieldCamera.turn=0;fieldCamera.tilt=0;paused=false;hasStarted=true;app.hidden=true;hud.hidden=false;fieldControls.hidden=false;document.body.classList.add('career-match');document.body.classList.add('full-pitch');document.querySelector('.game-shell').hidden=false;document.querySelector('.game-shell').inert=false;document.querySelector('.brand strong').textContent='FeFa 2026 · 3D ARENA';document.querySelector('.brand small').textContent='3D MAÇ · V4.32';for(const d of document.querySelectorAll('dialog[open]'))d.close();unlockAudio();fieldHUD();save();canvas.focus();return true;
+ if(replay.active)stopReplay();if(!active)preMatchOptions={weather:options.weather,difficulty:$('difficulty').value,foot:options.foot};active=true;fullActive=true;clearFieldInput();fieldCharge=0;fieldSkillTimer=0;fieldSkillCooldown=0;fieldInactiveSeconds=0;canvas.width=960;canvas.height=600;ctx.setTransform(2,0,0,2,0,0);fieldCamera.turn=0;fieldCamera.tilt=0;paused=false;hasStarted=true;app.hidden=true;hud.hidden=false;fieldControls.hidden=false;document.body.classList.add('career-match');document.body.classList.add('full-pitch');document.querySelector('.game-shell').hidden=false;document.querySelector('.game-shell').inert=false;document.querySelector('.brand strong').textContent='FeFa 2026 · 3D ARENA';document.querySelector('.brand small').textContent='3D MAÇ · V4.42';for(const d of document.querySelectorAll('dialog[open]'))d.close();unlockAudio();fieldHUD();save();if(!matchMedia('(pointer:coarse)').matches)canvas.focus();return true;
 }
 function fieldSound(kind){if(!options.sound||!audio||document.hidden)return;try{const now=audio.currentTime;if(kind==='pass'||kind==='shot'){impactTone(now,kind==='shot'?150:110,45,.10,kind==='shot'?.17:.08);texture(now,.06,kind==='shot'?.18:.08,1000);}else if(kind==='whistle'){tone(2300,now,.13,.035,'sine',effectsBus());tone(2700,now+.06,.16,.025,'sine',effectsBus());}else playEventSound(kind,true);}catch{}}
 function fieldMinute(g){return Math.min(120,Math.floor(g.elapsed/2));}
@@ -2397,11 +2497,12 @@ function syncMatchTactics(){
  for(const b of el.querySelectorAll('[data-field^="tactic-"]')){
    b.hidden=isPro()||academy;b.setAttribute('aria-pressed',String(c.tactic===b.dataset.field.slice(7)));
  }
+ const assist=el.querySelector('[data-field="assist"]');assist.hidden=isPro()||academy;assist.textContent='DESTEK: '+(fieldAssistEnabled?'AÇIK':'KAPALI');assist.setAttribute('aria-pressed',String(fieldAssistEnabled));
  const radar=el.querySelector('[data-field="radar"]');radar.hidden=academy;radar.textContent='RADAR: '+(fieldRadarVisible?'AÇIK':'KAPALI');radar.setAttribute('aria-pressed',String(fieldRadarVisible));
  const camera=el.querySelector('[data-field="camera"]');camera.textContent='KAMERA: '+(fieldCamera.mode==='first'?'1. ŞAHIS':'ARKADAN');camera.setAttribute('aria-pressed',String(fieldCamera.mode==='first'));
 }
-function fieldHUD(){const g=c.pending?.pitchGame;if(!g||!fullActive)return;syncMatchTactics();if(g.keeperSeries){const p=c.pending.shootout;hud.textContent='KALECİ PENALTILARI · '+p.us+' – '+p.them+' · '+(p.taken<5?'Tur '+(Math.min(5,p.taken+1))+'/5':'Ani ölüm')+' · ← / → konum · X / ŞUT dalış · P duraklat';return;}const p=g.players[g.control],name=c.teams.flatMap(t=>t.players).find(x=>x.id===p.id)?.name||'Oyuncu';hud.textContent=team().name+' '+g.scores[0]+' – '+g.scores[1]+' '+c.teams[c.pending.opponent].name+' · '+fieldMinute(g)+'′ · '+name+' · '+({bench:'YEDEK KULÜBESİ · Koçun kararını bekliyorsun',off:'OYUNDAN ALINDIN · Takımını izliyorsun',sentoff:'KIRMIZI KART · Takımını izliyorsun'}[fieldProStatus(g)]||g.message)+' · '+(g.ball.owner===g.control?'TOP SENDE':g.ball.owner<0?'TOP BOŞTA':g.players[g.ball.owner].side===0?'TOP TAKIMINDA':'TOP RAKİPTE')+' · Kond. %'+Math.round(p.energy)+' · Planın: '+({attack:'Hücum',defense:'Savunma',balanced:'Dengeli'}[fieldPlan(g,0)])+' · Rakip plan: '+({attack:'Hücum',defense:'Savunma',balanced:'Dengeli'}[fieldPlan(g,1)]);}
-function leaveField(){clearFieldInput();fieldCharge=0;fieldSkillTimer=0;fieldSkillCooldown=0;fullActive=false;fieldControls.hidden=true;fieldTactics.hidden=true;document.body.classList.remove('full-pitch');canvas.width=W;canvas.height=H;ctx.setTransform(1,0,0,1,0,0);}
+function fieldHUD(){const g=c.pending?.pitchGame;if(!g||!fullActive)return;syncMatchTactics();syncFieldTabletUI();if(g.keeperSeries){const p=c.pending.shootout;hud.textContent='KALECİ PENALTILARI · '+p.us+' – '+p.them+' · '+(p.taken<5?'Tur '+(Math.min(5,p.taken+1))+'/5':'Ani ölüm')+' · Joystick ile konum · TOP KAP / ŞUT dalış · ekranda DURAKLAT';return;}const p=g.players[g.control],name=c.teams.flatMap(t=>t.players).find(x=>x.id===p.id)?.name||'Oyuncu';hud.textContent=team().name+' '+g.scores[0]+' – '+g.scores[1]+' '+c.teams[c.pending.opponent].name+' · '+fieldMinute(g)+'′ · '+name+' · '+({bench:'YEDEK KULÜBESİ · Koçun kararını bekliyorsun',off:'OYUNDAN ALINDIN · Takımını izliyorsun',sentoff:'KIRMIZI KART · Takımını izliyorsun'}[fieldProStatus(g)]||g.message)+' · '+(g.ball.owner===g.control?'TOP SENDE':g.ball.owner<0?'TOP BOŞTA':g.players[g.ball.owner].side===0?'TOP TAKIMINDA':'TOP RAKİPTE')+' · '+(!isPro()?'Destek '+(fieldAssistEnabled?'açık':'kapalı')+' · ':'')+'Kond. %'+Math.round(p.energy)+' · Zorluk: '+({easy:'Kolay',normal:'Normal',hard:'Zor'}[c.difficulty]||'Normal')+' · Planın: '+({attack:'Hücum',defense:'Savunma',balanced:'Dengeli'}[fieldPlan(g,0)])+' · Rakip plan: '+({attack:'Hücum',defense:'Savunma',balanced:'Dengeli'}[fieldPlan(g,1)]);}
+function leaveField(){document.getElementById('fieldQuickBar').hidden=true;document.getElementById('fieldMatchGate').hidden=true;clearFieldInput();fieldCharge=0;fieldSkillTimer=0;fieldSkillCooldown=0;fullActive=false;fieldControls.hidden=true;fieldTactics.hidden=true;document.body.classList.remove('full-pitch');canvas.width=W;canvas.height=H;ctx.setTransform(1,0,0,1,0,0);}
 const fieldPieceNames={corner:'KORNER',free:'SERBEST VURUŞ',penalty:'PENALTI',throw:'TAÇ ATIŞI',goal:'KALE VURUŞU'};
 
 const setPieceDuties={penalty:'Penaltı',free:'Serbest vuruş',corner:'Korner'};
@@ -2443,7 +2544,7 @@ function fieldPieceStep(g,dt){const s=g.setPiece;if(!s)return false;s.age=Math.m
  fieldHUD();return true;
 }
 function fieldCross(g,index){const p=g.players[index],b=g.ball,s=g.setPiece;if(!fieldEligible(g,p)||b.owner!==index||g.restart>0||p.cool>0||s&&(s.taker!==index||s.age<.5))return false;if(s?.type==='throw')return fieldKick(g,index,'pass');if(s?.type==='corner'&&s.routine==='short')return fieldKick(g,index,'pass',Number.isInteger(s.receiver)&&fieldEligible(g,g.players[s.receiver])?s.receiver:null);if(s?.type==='penalty')return fieldKick(g,index,'shot',null,.65);
- const dir=fieldDirection(g,p.side),corner=s?.type==='corner'?fieldCornerTarget(g):null,tx=corner?.x??(dir===1?89:16),ty=corner?.y??34,dist=Math.hypot(tx-p.x,ty-p.y),speed=clamp(dist/1.6,16,40);b.shotSide=null;b.wall=[];b.owner=-1;b.x=p.x;b.y=p.y;b.z=.2;b.vx=(tx-p.x)/Math.max(.1,dist)*speed;b.vy=(ty-p.y)/Math.max(.1,dist)*speed;b.vz=clamp(dist/speed*4.9,4,12);b.last=index;b.passer=index;b.lock=.2;p.cool=.5;p.anim=.3;g.stats.passes[p.side]++;g.individual[p.id].passes++;g.setPiece=null;fieldHeld.delete('shot');fieldCharge=0;g.message='ORTA';fieldSound('shot');return true;
+ const dir=fieldDirection(g,p.side),corner=s?.type==='corner'?fieldCornerTarget(g):null,tx=corner?.x??(dir===1?89:16),ty=corner?.y??34,dist=Math.hypot(tx-p.x,ty-p.y),speed=clamp(dist/1.6,16,40);b.shotSide=null;b.wall=[];b.owner=-1;b.x=p.x;b.y=p.y;b.z=.2;b.vx=(tx-p.x)/Math.max(.1,dist)*speed;b.vy=(ty-p.y)/Math.max(.1,dist)*speed;b.vz=clamp(dist/speed*4.9,4,12);b.last=index;b.passer=index;b.kind='cross';b.lock=.2;p.cool=.5;p.anim=.3;g.stats.passes[p.side]++;g.individual[p.id].passes++;g.setPiece=null;fieldHeld.delete('shot');fieldCharge=0;g.message='ORTA';fieldSound('shot');return true;
 }
 function validateFieldPiece(g,fail){const s=g.setPiece;if(s===undefined||s===null)return;const n=(x,a,b)=>Number.isFinite(x)&&x>=a&&x<=b;if(s.receiver!==undefined&&(!Number.isInteger(s.receiver)||s.receiver<0||s.receiver>=22||s.receiver===s.taker||g.players[s.receiver].side!==s.side||s.routine!=='short'))fail();if(s.routine!==undefined&&(s.type!=='corner'||!Object.hasOwn(cornerRoutines,s.routine)))fail();if(!s||!Object.hasOwn(fieldPieceNames,s.type)||![0,1].includes(s.side)||!Number.isInteger(s.taker)||s.taker<0||s.taker>=22||g.players[s.taker].side!==s.side||!fieldEligible(g,g.players[s.taker])||g.ball.owner!==s.taker||!n(s.age,0,8)||!n(s.targetY,29.4,38.6)||!Array.isArray(s.wall)||s.wall.length>3||new Set(s.wall).size!==s.wall.length||s.wall.some(i=>!Number.isInteger(i)||i<0||i>=22||g.players[i].side===s.side)||g.finished)fail();}
 function drawFieldPiece(g,c2,X,Y){const s=g.setPiece;if(!s)return;const dir=fieldDirection(g,s.side);c2.strokeStyle='#ffe67c';c2.lineWidth=1;c2.beginPath();const short=s.routine==='short'&&Number.isInteger(s.receiver)?g.players[s.receiver]:null,tx=short?.x??(s.type==='corner'?fieldCornerTarget(g).x:(dir===1?105:0)),x=X(tx),y=Y(short?.y??s.targetY);c2.moveTo(x-4,y);c2.lineTo(x+4,y);c2.moveTo(x,y-4);c2.lineTo(x,y+4);c2.stroke();for(const i of s.wall){const p=g.players[i];if(fieldEligible(g,p)){c2.fillStyle='#e3e9d5';c2.fillRect(X(p.x)-4,Y(p.y)+7,9,1);}}}
@@ -2462,18 +2563,116 @@ function fieldOffside(g,p,q){
  const dir=fieldDirection(g,p.side),line=g.players.filter(a=>a.side!==p.side&&fieldEligible(g,a)).map(a=>dir*a.x).sort((a,b)=>b-a);
  return dir*q.x>dir*52.5&&dir*q.x>dir*g.ball.x+.5&&dir*q.x>line[1]+.5;
 }
+// V4.38 — 3. aşama: pas kararları ve pas isabeti.
+// Pas koridorunda topa erişebilen rakipleri hedef değerlendirmesine kat.
+function fieldPassLane(g,p,tx,ty,targetIndex=-1){
+ const dx=tx-p.x,dy=ty-p.y,length=Math.max(.01,Math.hypot(dx,dy));
+ let obstruction=0,nearest=30;
+ for(let i=0;i<g.players.length;i++){
+  const rival=g.players[i];if(i===targetIndex||rival.side===p.side||!fieldEligible(g,rival))continue;
+  const progress=((rival.x-p.x)*dx+(rival.y-p.y)*dy)/(length*length);
+  if(progress<.08||progress>1.04)continue;
+  const sideDistance=Math.hypot(rival.x-(p.x+dx*progress),rival.y-(p.y+dy*progress));
+  nearest=Math.min(nearest,sideDistance);
+  // Rakip tam pas hattındaysa diğer pas seçeneği tercih edilir.
+  obstruction+=Math.max(0,3.0-sideDistance)*(progress<.9?1.6:1.2);
+ }
+ return {obstruction:Math.min(18,obstruction),nearest};
+}
+function fieldPassPressure(g,p){
+ let near=40;
+ for(const q of g.players)if(q.side!==p.side&&fieldEligible(g,q))near=Math.min(near,Math.hypot(q.x-p.x,q.y-p.y));
+ return clamp((6-near)/5,0,1);
+}
 function fieldPassReceiver(g,index,through=false){
  const p=g.players[index],dir=fieldDirection(g,p.side),aim=index===g.control?fieldAim():null;
- const mates=g.players.map((q,i)=>({q,i})).filter(a=>a.i!==index&&a.q.side===p.side&&a.q.role!=='GK'&&fieldEligible(g,a.q));
- let available=mates;
- if(through){available=mates.filter(a=>dir*(a.q.x-p.x)>3&&!fieldOffside(g,p,a.q));if(!available.length)return null;}
+ const mates=g.players.map((q,i)=>({q,i})).filter(a=>a.i!==index&&a.q.side===p.side&&a.q.role!=='GK'&&fieldEligible(g,a.q)&&!fieldOffside(g,p,a.q));
+ let available=through?mates.filter(a=>dir*(a.q.x-p.x)>3):mates;
+ if(!available.length)return null;
  if(aim){const aligned=available.filter(({q})=>{const dx=q.x-p.x,dy=q.y-p.y,d=Math.hypot(dx,dy)||1;return (dx*aim.x+dy*aim.y)/d>.25;});if(aligned.length)available=aligned;}
- available.sort((a,b)=>{
-  const score=({q})=>{const dx=q.x-p.x,dy=q.y-p.y,d=Math.hypot(dx,dy)||1;
-   if(aim){const cosine=(dx*aim.x+dy*aim.y)/d;return cosine*18-Math.abs(d-(through?19:13))*.23+dir*dx*(through?.17:.04);}
-   return -Math.abs(d-(through?21:10))*(through?.57:1.05)+dir*dx*(through?.35:.12);
-  };return score(b)-score(a);
- });return available[0]?.i??null;
+ const score=({q})=>{
+  const dx=q.x-p.x,dy=q.y-p.y,d=Math.hypot(dx,dy)||1;
+  const lane=fieldPassLane(g,p,q.x,q.y);
+  const nearestRival=g.players.filter(r=>r.side!==p.side&&fieldEligible(g,r)).reduce((n,r)=>Math.min(n,Math.hypot(r.x-q.x,r.y-q.y)),30);
+  const safeReceiver=Math.min(4,nearestRival)*.6;
+  if(aim){const cosine=(dx*aim.x+dy*aim.y)/d;return cosine*23-Math.abs(d-(through?19:13))*.23+dir*dx*(through?.17:.04)-lane.obstruction*1.6+safeReceiver;}
+  return -Math.abs(d-(through?21:10))*(through?.57:1.05)+dir*dx*(through?.35:.23)-lane.obstruction*1.55+safeReceiver;
+ };
+ available.sort((a,b)=>score(b)-score(a));return available[0]?.i??null;
+}
+// V4.40 · 5. aşama — beceri, açı, baskı ve güce bağlı şut.
+// Yardımcı hesap futbolcunun kamera yönünü korur; otomatik şutlarda kalecinin
+// bulunduğu tarafa körlemesine vurmak yerine uzak direk hedeflenebilir.
+function fieldShotPlan(g,p,index,power,setPiece=null){
+ const dir=fieldDirection(g,p.side),goalX=dir===1?105:0;
+ const distance=Math.hypot(goalX-p.x,34-p.y),forward=Math.max(1,Math.abs(goalX-p.x));
+ const angle=Math.atan2(Math.abs(34-p.y),forward);
+ const pressure=fieldPassPressure(g,p),fatigue=clamp((55-p.energy)/55,0,1);
+ const strength=clamp(p.shot/99,.05,1),controlled=p.side===0&&index===g.control&&!setPiece;
+ const keeper=g.players.find(q=>q.side!==p.side&&q.role==='GK'&&fieldEligible(g,q));
+ const farPost=p.y<34?1:-1;
+ let x=goalX+dir*3,y=34;
+ if(setPiece)y=setPiece.targetY;
+ else if(controlled){
+  const face=fieldVector(g),input=fieldAim();
+  if(face.fx*dir<.28){x=p.x+face.fx*65;y=p.y+face.fy*65+(input?input.y*1.5:0);}
+  else{
+   const cameraY=p.y+(goalX-p.x)*face.fy/(Math.abs(face.fx)<.1?.1:face.fx);
+   y=34+clamp(cameraY-34,-16,16)*.55+(input?input.y*1.25:0);
+  }
+ }else{
+  const keeperOffset=keeper?clamp(keeper.y-34,-3.5,3.5):0;
+  y=34+farPost*(1.0+strength*1.35)-keeperOffset*.24;
+ }
+ // Uzak mesafede, dar açıda, koşarken ve pres altında hata payı artar.
+ const movement=Math.min(1,Math.hypot(p.vx||0,p.vy||0)/9);
+ const scatter=(.60+(1-strength)*1.8+Math.max(0,distance-16)*.12+
+   angle*2.6+pressure*1.2+fatigue*.9+movement*.40+Math.max(0,power-.78)*1.5);
+ const randomError=((fieldRandom(g)+fieldRandom(g)+fieldRandom(g))/3-.5)*3.5*scatter;
+ y+=randomError;
+ const speed=clamp(23+power*16+(p.shot-55)*.038,22,44);
+ const dx=x-p.x,dy=y-p.y,t=Math.hypot(dx,dy)/speed;
+ // Parabolik uçuş: güç ve teknik yüksekliği belirler; aşırı güçte üstten aut olabilir.
+ const height=clamp(.35+power*.80+(fieldRandom(g)-.5)*(1-strength)*2.8+
+   Math.max(0,power-.82)*2.3,.10,3.5);
+ const lift=clamp((height-.2+4.9*t*t)/Math.max(.20,t),.65,13.8);
+ return {x,y,speed,lift,quality:clamp(1-scatter/6,0,1),message:pressure>.6?'BASKI ALTINDA ŞUT':'ŞUT'};
+}
+function fieldShotProjection(g,b,side){
+ const goalX=fieldDirection(g,side)===1?0:105,dx=goalX-b.x;
+ if(Math.abs(b.vx)<.1||dx/b.vx<=0)return null;
+ const t=dx/b.vx;
+ if(t>2.5)return null;
+ const y=b.y+b.vy*t,z=Math.max(0,b.z+b.vz*t-4.9*t*t);
+ return {time:t,y,z,inGoal:y>=34-3.66&&y<=34+3.66&&z<=2.44};
+}
+function fieldOnTarget(g,b){if(![0,1].includes(b.shotSide)||b.onTargetCounted)return;
+ g.stats.onTarget??=[0,0];g.stats.onTarget[b.shotSide]++;b.onTargetCounted=true;
+}
+// Kaleci yalnızca yetişebildiği topa temas eder: reaksiyon, yükseklik,
+// hız ve beceri kurtarış ile sektirme kararlarını etkiler.
+function fieldKeeperTouch(g,p,b,d){
+ const shot=b.shotSide===1-p.side;
+ const speed=Math.hypot(b.vx,b.vy),diving=(p.dive||0)>0;
+ const reach=diving?2.83:1.62+(p.keeping/99)*.38;
+ const high=diving?2.50:1.78+(p.keeping/99)*.40;
+ if(d>reach||b.z>high)return 'none';
+ const projection=shot?fieldShotProjection(g,b,p.side):null;
+ const genuineOnTarget=shot&&!!projection?.inGoal;
+ const positionSkill=clamp(1-d/Math.max(reach,.1),0,1);
+ const base=.31+p.keeping*.005+positionSkill*.12+(diving?.08:0)-Math.max(0,speed-24)*.009;
+ const saveChance=clamp(base,.15,.94),roll=fieldRandom(g);
+ if(shot&&roll>saveChance){p.cool=.28;p.anim=.28;return 'miss';}
+ if(shot&&genuineOnTarget){fieldOnTarget(g,b);g.individual[p.id].saves=(g.individual[p.id].saves||0)+1;}
+ if(shot&&speed>18&&fieldRandom(g)>(.43+p.keeping*.003+(diving?.06:0))){
+  const away=fieldDirection(g,p.side),wide=b.y<34?-1:1;
+  b.owner=-1;b.shotSide=null;b.onTargetCounted=true;b.passer=-1;b.kind='rebound';
+  b.vx=away*(8+fieldRandom(g)*6);b.vy=wide*(6+fieldRandom(g)*5);
+  b.vz=1.6+fieldRandom(g)*1.8;b.z=Math.max(.35,b.z);b.lock=.43;b.bounces=0;
+  p.cool=.55;p.anim=.65;p.dive=0;g.message='KALECİ SEKTİRDİ';fieldSound('save');
+  return 'parry';
+ }
+ return 'catch';
 }
 function fieldKick(g,index,kind,target=null,power=.6){
  const p=g.players[index],b=g.ball,s=g.setPiece;
@@ -2490,37 +2689,53 @@ function fieldKick(g,index,kind,target=null,power=.6){
   if(!['corner','throw','goal'].includes(s?.type)&&fieldOffside(g,p,q)){
    g.stats.offsides[p.side]++;fieldRestart(g,1-p.side,q.x,q.y,'OFSAYT');return false;
   }
+  // Öngörülü pas: hareket halindeki oyuncunun varacağı noktayı hedefle.
+  const pressure=fieldPassPressure(g,p);
+  const lane=fieldPassLane(g,p,q.x,q.y,target);
   if(kind==='through'){
-   const lead=clamp(7+(q.rating-50)*.07,5,10),accuracy=(100-p.technique)*.014;
+   const lead=clamp(6.0+(q.rating-50)*.06,4.5,8.5);
    x=clamp(q.x+dir*lead,2,103);
-   y=clamp(q.y+q.dy*2+(fieldRandom(g)-.5)*accuracy*8,3,65);
+   y=clamp(q.y+(q.vy||0)*.28,3,65);
    speed=27+p.technique*.09;
-  }else{x=q.x+q.dx*.7;y=q.y+q.dy*.7;speed=19+p.technique*.055;}
+  }else{
+   const travel=Math.hypot(q.x-p.x,q.y-p.y)/(19+p.technique*.055);
+   x=clamp(q.x+(q.vx||0)*Math.min(.45,travel*.45),2,103);
+   y=clamp(q.y+(q.vy||0)*Math.min(.45,travel*.45),3,65);
+   speed=19+p.technique*.055;
+  }
+  // İyi pasörler serbest pozisyonda isabetli, baskı altındayken herkes hata yapabilir.
+  const length=Math.hypot(x-p.x,y-p.y);
+  const techniqueRisk=(100-p.technique)/100;
+  const fatigue=clamp((60-p.energy)/60,0,1);
+  const risk=clamp(.14+techniqueRisk*.55+pressure*.72+fatigue*.24+
+    Math.max(0,length-18)*.013+Math.min(1,lane.obstruction/7)*.22,0,2.5);
+  const jitter=(fieldRandom(g)-.5)*2;
+  const lateral=(fieldRandom(g)-.5)*2;
+  const error=(kind==='through'?1.35:.76)*risk;
+  x=clamp(x+jitter*error,2,103);
+  y=clamp(y+lateral*error,3,65);
+  // Engellenmiş pasın kendiliğinden rakibin içinden geçmesini önleme, alıcı seçimi
+  // çizgiyi hesaba katar; fizik motoru topun yolunda oyuncuyla teması yönetir.
   g.stats.passes[p.side]++;g.individual[p.id].passes++;b.passer=index;
   if(kind==='through'){g.stats.through??=[0,0];g.stats.through[p.side]++;g.run={id:q.id,x,y,remaining:2.7};}else g.run=null;
  }else{
-  g.run=null;x=dir===1?108:-3;
-  const input=index===g.control?fieldAim():null;
-  const aimY=p.side===0&&index===g.control?(input?input.y*4.3:0):0;
-  const error=(fieldRandom(g)-.5)*(100-p.shot)*.10;
-  y=(s?s.targetY:34+aimY)+error;speed=24+power*15;
-  if(index===g.control&&!s){
-   const facing=fieldVector(g);
-   x=p.x+facing.fx*65;
-   y=p.y+facing.fy*65+(input?input.y*1.5:0)+error;
-  }
+  g.run=null;
+  const shot=fieldShotPlan(g,p,index,power,s);
+  x=shot.x;y=shot.y;speed=shot.speed;
   g.stats.shots[p.side]++;g.individual[p.id].shots++;
+  g.message=shot.message;
+  var shotLift=shot.lift;
  }
  b.shotSide=kind==='shot'?p.side:null;b.wall=s?.type==='free'?s.wall.map(i=>g.players[i].id):[];
  if(s?.type==='free')for(const i of s.wall)g.players[i].anim=.55;
  const dist=Math.max(.1,Math.hypot(x-p.x,y-p.y));b.owner=-1;b.x=p.x+dir*.9;b.y=p.y;b.z=.2;
  b.vx=(x-p.x)/dist*speed;b.vy=(y-p.y)/dist*speed;
- b.vz=kind==='pass'?0:kind==='through'?.2:s?.type==='free'?5+power*2:2+power;
+ b.vz=kind==='pass'?0:kind==='through'?.2:kind==='shot'?shotLift:s?.type==='free'?5+power*2:2+power;
  b.spin=kind==='shot'?(fieldRandom(g)-.5)*(p.technique/99)*1.1:0;
- b.kind=kind;b.bounces=0;
+ b.kind=kind;b.bounces=0;b.onTargetCounted=false;
  b.last=index;b.lock=.18;p.cool=.5;p.anim=.28;g.setPiece=null;
  if(s?.type==='goal'&&p.side===0&&!isPro()&&Number.isInteger(target))g.control=target;
- g.message=kind==='through'?'ARA PAS · KOŞU':kind==='pass'?'PAS':'ŞUT';
+ g.message=kind==='through'?'ARA PAS · KOŞU':kind==='pass'?'PAS':g.message;
  // Follow the receiver automatically in manager mode. Pro career always stays with its chosen footballer.
  if(p.side===0&&!isPro()&&(kind==='pass'||kind==='through')&&index===g.control&&Number.isInteger(target)){
    g.control=target;
@@ -2553,8 +2768,147 @@ function fieldSupport(g,p,possession){
  if(role==='runner'&&own){x+=dir*13;y=p.by+(b.y-34)*.1;const line=g.players.filter(q=>q.side!==p.side&&fieldEligible(g,q)).map(q=>dir*q.x).sort((a,b)=>b-a)[1];if(Number.isFinite(line))x=dir*Math.min(dir*x,Math.max(dir*52.5,dir*b.x,line)-1);}
  return {x:clamp(x,5,100),y:clamp(y,4,64)};
 }
+// V4.38 — Savunma zekasi: tek presci, arkasinda kademe ve farkli adamlara markaj.
+// Sadece top rakipteyken calisir; kullanicinin manuel kontrolunu ezmez.
+function fieldDefenseShape(g,side){
+ const result=new Map(),b=g.ball;
+ if(b.owner<0||g.players[b.owner].side===side)return result;
+ const carrier=g.players[b.owner],dir=fieldDirection(g,side),home=dir===1?0:105;
+ const towardHome=dir===1?-1:1;
+ const available=g.players.map((p,i)=>({p,i})).filter(({p,i})=>
+   p.side===side&&p.role!=='GK'&&fieldEligible(g,p)&&
+   !(side===0&&i===g.control&&!fieldAssistAllowed(g)));
+ if(!available.length)return result;
+ const goalDist=Math.abs(carrier.x-home);
+ const safe=(x,y)=>({x:clamp(x,5,100),y:clamp(y,4,64)});
+ const dist=(p,x,y)=>Math.hypot(p.x-x,p.y-y);
+ // Ayni anda iki oyuncunun topa kontrolsuz kosmasini onle.
+ const pressing=available.slice().sort((a,b)=>{
+  const score=t=>dist(t.p,carrier.x,carrier.y)+(t.p.role==='DF'&&goalDist>35?3.5:0);
+  return score(a)-score(b);
+ })[0];
+ result.set(pressing.i,{...safe(carrier.x+towardHome*.65,carrier.y),task:'press'});
+ const rest=available.filter(x=>x.i!==pressing.i);
+ // Pres kirilirsa topun ve kalenin arasindaki kademe oyuncusu.
+ const coverX=clamp(carrier.x+towardHome*(goalDist<33?5.8:7.8),7,98);
+ const coverY=clamp(carrier.y+(34-carrier.y)*.23,6,62);
+ const options=rest.filter(x=>x.p.role==='DF'||x.p.role==='MF');
+ const covering=(options.length?options:rest).slice().sort((a,b)=>{
+  const score=t=>dist(t.p,coverX,coverY)+(t.p.role==='DF'?-1.6:2.4);
+  return score(a)-score(b);
+ })[0];
+ if(covering){result.set(covering.i,{...safe(coverX,coverY),task:'cover'});}
+ // Tehlikeli rakiplere bire bir gorev: ayni rakibe iki defans oyuncusu atanmasin.
+ const uncovered=g.players.map((p,i)=>({p,i})).filter(({p,i})=>
+   p.side!==side&&i!==b.owner&&p.role!=='GK'&&fieldEligible(g,p)&&Math.abs(p.x-home)<61)
+   .sort((a,b)=>{
+    const threat=t=> (60-Math.abs(t.p.x-home))*.50+(t.p.role==='FW'?12:t.p.role==='MF'?5:0)
+      +(20-Math.min(20,Math.abs(t.p.y-carrier.y)))*.12;
+    return threat(b)-threat(a);
+   });
+ const used=new Set();
+ for(const item of rest.filter(t=>t.p.role==='DF'&&t.i!==covering?.i)){
+  const p=item.p;
+  let best=null,bestScore=Infinity;
+  for(const o of uncovered){if(used.has(o.i))continue;
+   const t=safe(o.p.x+towardHome*2.2,o.p.y+(p.by-o.p.y)*.10);
+   const score=dist(p,t.x,t.y)+Math.abs(o.p.y-p.by)*.13;
+   if(score<bestScore){best={o,t};bestScore=score;}
+  }
+  if(best&&bestScore<38){
+   used.add(best.o.i);
+   // Stoperi rakip ceza sahasina surukleme; kendi yari alani korunsun.
+   const limit=home===0?Math.min(70,Math.max(41,carrier.x+7)):Math.max(35,Math.min(64,carrier.x-7));
+   const x=home===0?Math.min(best.t.x,limit):Math.max(best.t.x,limit);
+   result.set(item.i,{...safe(x,best.t.y),task:'mark',opponent:best.o.i});
+  }else{
+   const fallback=fieldSupport(g,p,1-side);
+   result.set(item.i,{...fallback,task:'shape'});
+  }
+ }
+ // Orta saha oyunculari topun gerisinde pas aralarini kapatir.
+ for(const item of rest){if(result.has(item.i))continue;
+  const p=item.p;
+  if(p.role==='MF'){
+   const homeDepth=p.bx+(carrier.x-p.bx)*.34+towardHome*2.5;
+   const laneY=p.by+(carrier.y-p.by)*.30;
+   result.set(item.i,{...safe(homeDepth,laneY),task:'lane'});
+  }
+ }
+ return result;
+}
+// V4.38 — 2. asama: topsuz hucum organizasyonu (savunma zekasina dokunma).
+// Top tasiyan oyuncunun etrafinda iki farkli pas ucgeni ve savunma arkasina
+// ofsayta dusmeden hareket eden oyuncular hedeflenir. Bu yalnizca saha
+// konumu uretir: pas, top fizigi, mudahale ve AI pas karari degismez.
+function fieldAttackShape(g,side){
+ const result=new Map(),b=g.ball;
+ if(b.owner<0||g.players[b.owner].side!==side)return result;
+ const carrier=g.players[b.owner],dir=fieldDirection(g,side),plan=fieldPlan(g,side);
+ const safe=(x,y)=>({x:clamp(x,3,102),y:clamp(y,3,65)});
+ const mates=g.players.map((p,i)=>({p,i})).filter(({p,i})=>p.side===side&&i!==b.owner&&p.role!=='GK'&&fieldEligible(g,p));
+ // Atagin yonundeki en gerideki ikinci rakip, ofsayt cizgisini belirler.
+ const opponents=g.players.filter(p=>p.side!==side&&fieldEligible(g,p)).map(p=>dir*p.x).sort((a,b)=>b-a);
+ const secondLast=Number.isFinite(opponents[1])?opponents[1]:dir*52.5;
+ const onside=Math.max(dir*b.x,secondLast)-1.6;
+ const lane=(p)=>p.by<29?-1:p.by>39?1:0;
+ const advance=(x)=>dir*x;
+ const push=(p,x,y,task)=>{
+  // Hareketi bir karede birden degil, fizik motorunun hedef-hiz sistemiyle yap.
+  const t=safe(x,y);result.set(g.players.indexOf(p),{...t,task});
+ };
+ const mf=mates.filter(q=>q.p.role==='MF').sort((a,b)=>a.p.by-b.p.by);
+ // Ucgen: bir futbolcu geride emniyet pasi, diger ikisi capraz cikis saglar.
+ for(let j=0;j<mf.length;j++){
+  const {p}=mf[j],sideLane=j%2===0?-1:1;
+  let x,y;
+  if(j===0){x=b.x-dir*10;y=b.y+sideLane*7;}
+  else if(j===1){x=b.x+dir*(plan==='attack'?7:4);y=b.y+sideLane*10;}
+  else if(j===2){x=b.x-dir*5;y=b.y+sideLane*13;}
+  else{x=b.x-dir*(7+(j%2)*3);y=b.y+sideLane*(8+2*(j%3));}
+  // Orta sahanin iki forvet gibi ofsayt cizgisine yigilmasini engelle.
+  // Kaleci / gerideki stoper topu tasiyorsa butun ortasaha kendi kalesine
+  // dolusmasin. Her futbolcunun kendi hat konumuna gore emniyet siniri var.
+  const floor=advance(p.bx)-10;
+  x=dir*Math.min(Math.max(advance(x),floor),onside);
+  // Top kaleye cok yakin ve kanattaysa destek noktasini saha icine cek.
+  y=clamp(y,5,63);if(b.y<12)y=Math.max(y,9+j*5);if(b.y>56)y=Math.min(y,59-j*5);
+  push(p,x,y,'midfield-support');
+ }
+ const fws=mates.filter(q=>q.p.role==='FW').sort((a,b)=>a.p.by-b.p.by);
+ for(let j=0;j<fws.length;j++){
+  const {p}=fws[j];const wing=lane(p);
+  // Kanat genisligini koru, merkez forvet defans hattinin onunde yer bulsun.
+  const y=wing===0?34+(b.y-34)*.12:
+    wing<0?clamp(Math.min(p.by,17)+(b.y-34)*.09,7,26):clamp(Math.max(p.by,51)+(b.y-34)*.09,42,61);
+  const wantX=b.x+dir*(wing===0?15:11);
+  const startX=p.bx+dir*(plan==='attack'?14:plan==='defense'?3:9);
+  const x=dir*Math.min(Math.max(advance(wantX),advance(startX)),onside);
+  push(p,x,y,'forward-run');
+ }
+ // Stoperlerden biri emniyette, digeri geriye pas secenegi. Derin yerlesimi
+ // koruyarak onceki V4.38 savunma gorevleriyle celismeyi onle.
+ const dfs=mates.filter(q=>q.p.role==='DF').sort((a,b)=>a.p.by-b.p.by);
+ for(let j=0;j<dfs.length;j++){
+  const {p}=dfs[j];
+  const shift=clamp((b.x-52.5)*.22,-11,11);
+  const x=p.bx+shift+dir*(j===0?5:1);
+  const y=p.by+(b.y-p.by)*(j===0?.26:.14);
+  push(p,x,y,'rest-defense');
+ }
+ return result;
+}
+// V4.42 — Zorluk modeli: kariyerde oyuncunun yetenekleri sabit kalır;
+// yalnızca rakibin karar seçimi, pres zamanlaması ve kaleci algısı değişir.
+const FIELD_AI_LEVELS={
+ easy:{passNoise:5.6,pressRate:1.75,keeperDelay:.19,readiness:.72,shotRate:.70},
+ normal:{passNoise:2.0,pressRate:3.25,keeperDelay:.075,readiness:.88,shotRate:.91},
+ hard:{passNoise:.38,pressRate:7.5,keeperDelay:0,readiness:1,shotRate:1.08}
+};
+const FIELD_AI_BASE={passNoise:0,pressRate:99,keeperDelay:0,readiness:1,shotRate:1};
+function fieldAILevel(g,side){return side===1?(FIELD_AI_LEVELS[c?.difficulty]||FIELD_AI_LEVELS.normal):FIELD_AI_BASE;}
 function fieldAIChoice(g,index){
- const p=g.players[index],dir=fieldDirection(g,p.side),defenders=g.players.filter(q=>q.side!==p.side&&fieldEligible(g,q)&&q.role!=='GK');
+ const p=g.players[index],dir=fieldDirection(g,p.side),defenders=g.players.filter(q=>q.side!==p.side&&fieldEligible(g,q)&&q.role!=='GK'),ai=fieldAILevel(g,p.side);
  let best=null;
  for(let i=0;i<g.players.length;i++){
   const q=g.players[i];if(i===index||q.side!==p.side||q.role==='GK'||!fieldEligible(g,q)||fieldOffside(g,p,q))continue;
@@ -2567,8 +2921,9 @@ function fieldAIChoice(g,index){
   }
   const mark=defenders.reduce((v,d)=>Math.min(v,Math.hypot(d.x-q.x,d.y-q.y)),30);
   const advancement=dir*dx;
-  const score=advancement*.33-Math.abs(dist-15)*.18-block+(Math.min(5,mark)*.74)
-    +(q.role==='FW'?1.4:0)+(q.technique-p.technique)*.018;
+  const score=advancement*.53-(advancement< -3?4:0)-Math.abs(dist-15)*.18-block+(Math.min(5,mark)*.74)
+    +(q.role==='FW'?1.4:0)+(q.technique-p.technique)*.018
+    +(p.side===1?(fieldRandom(g)-.5)*2*ai.passNoise:0);
   if(!best||score>best.score)best={target:i,score,advancement,mark,block};
  }
  if(!best)return null;
@@ -2576,16 +2931,19 @@ function fieldAIChoice(g,index){
  return {target:best.target,kind:through?'through':'pass'};
 }
 function fieldKeeperAI(g,p){
- const b=g.ball,dir=fieldDirection(g,p.side),ownGoal=dir===1?0:105;
- let x=dir===1?4:101,y=clamp(34+(b.y-34)*.38,27.5,40.5);
- const attack=dir===1?b.vx<-.1:b.vx>.1;
- if(b.owner<0&&attack&&b.shotSide===1-p.side){
-  const time=(x-b.x)/b.vx,hitY=b.y+b.vy*time;
-  if(time>0&&time<1.1&&hitY>25&&hitY<43){
-   y=clamp(hitY,26,42);
-   if(time<.55&&p.cool<=0&&b.z<4&&Math.abs(hitY-p.y)>1){
-    const dx=x-p.x,dy=hitY-p.y,len=Math.hypot(dx,dy)||1;p.dive=.55;p.diveX=dx/len;p.diveY=dy/len;p.cool=1.2;p.anim=.55;p.energy=Math.max(0,p.energy-1);
-   }
+ const b=g.ball,dir=fieldDirection(g,p.side),ownGoal=dir===1?0:105,ai=fieldAILevel(g,p.side);
+ const baseX=ownGoal+dir*3.0;
+ let x=baseX,y=clamp(34+(b.y-34)*.27,28.5,39.5);
+ const approaching=(b.owner<0&&b.shotSide===1-p.side);
+ const projection=approaching?fieldShotProjection(g,b,p.side):null;
+ if(projection&&projection.time<1.65&&projection.z<=2.8&&projection.y>24&&projection.y<44){
+  const reflex=clamp(.31-p.keeping*.0018+ai.keeperDelay,.12,.50);
+  if(projection.time>reflex){
+   y=clamp(34+(projection.y-34)*ai.readiness,26.3,41.7);
+  }else if(p.cool<=0&&Math.abs(projection.y-p.y)>.95&&projection.time>Math.max(.07,reflex*.77)){
+   const vy=projection.y-p.y;
+   p.dive=.55;p.diveX=dir*.16;p.diveY=Math.sign(vy)*Math.sqrt(1-.16*.16);
+   p.cool=1.12;p.anim=.55;p.energy=Math.max(0,p.energy-1);
   }
  }else if(fieldRole(p)==='sweeper'&&b.owner<0&&b.z<1&&Math.abs(b.x-ownGoal)<22&&b.y>18&&b.y<50){
   const distance=Math.hypot(b.x-p.x,b.y-p.y),enemy=g.players.filter(q=>q.side!==p.side&&fieldEligible(g,q)).reduce((m,q)=>Math.min(m,Math.hypot(q.x-b.x,q.y-b.y)),Infinity);
@@ -2595,22 +2953,60 @@ function fieldKeeperAI(g,p){
 }
 
 function fieldDive(g){const p=g.players[g.control];if(p.role!=='GK'||p.cool>0||g.setPiece||g.restart>0||g.ball.owner===g.control)return false;let x=Number(fieldHeld.has('right'))-Number(fieldHeld.has('left')),y=Number(fieldHeld.has('down'))-Number(fieldHeld.has('up'));if(!x&&!y){x=g.ball.x-p.x;y=g.ball.y-p.y;}const length=Math.hypot(x,y)||1;p.dive=.55;p.diveX=x/length;p.diveY=y/length;p.cool=1.2;p.anim=.55;p.energy=Math.max(0,p.energy-1);g.message='KALECİ DALIŞI';return true;}
-function fieldTackle(g,index){const p=g.players[index],owner=g.ball.owner;if(g.setPiece||!fieldEligible(g,p)||p.role==='GK'||owner<0||g.players[owner].side===p.side||p.cool>0||g.restart>0)return false;const q=g.players[owner];if(Math.hypot(p.x-q.x,p.y-q.y)>2.8)return false;if(index!==g.control&&g.cards[p.id]?.yellow&&fieldRandom(g)<.45){p.cool=.4;return false;}p.cool=.9;p.anim=.4;
- const aa=fieldAbility(p),bb=fieldAbility(q),gap=Math.hypot(p.x-q.x,p.y-q.y)||1;
- const headOn=clamp((p.dx*(q.x-p.x)+p.dy*(q.y-p.y))/gap,-1,1);
- const chance=clamp(.48+(p.defense-q.technique)*.0045+(aa.strength-bb.strength)*.002
-   +(p.energy-q.energy)*.0018+headOn*.075-(q.contact||0)*.04,.16,.86);
- if(fieldRandom(g)<chance){g.ball.owner=index;g.ball.last=index;g.ball.passer=-1;g.ball.lock=.35;
-  g.individual[p.id].tackles++;g.message='TOP KAZANILDI';q.contact=.34;p.contact=.20;
-  q.anim=.42;return true;}
- q.contact=.18;p.contact=.15;
- if(fieldRandom(g)<clamp(.14+(headOn<-.2?.08:0)+(bb.strength-aa.strength)*.001, .07,.27)){
-  g.stats.fouls[p.side]++;const card=fieldRandom(g);
-  fieldRestart(g,q.side,q.x,q.y,'FAUL · SERBEST VURUŞ');
-  if(card<.045)fieldCard(g,index,'red');else if(card<.35)fieldCard(g,index,'yellow');
+// V4.39 — 4. aşama: savunmada zamanlama, açı, güç ve top koruma.
+// Hesaplama ayrı tutuldu: elle ve yapay zekâyla müdahale aynı kuralları kullanır.
+function fieldDuelAnalysis(g,index){
+ const p=g.players[index],q=g.players[g.ball.owner];
+ if(!p||!q)return null;
+ const a=fieldAbility(p),b=fieldAbility(q),distance=Math.hypot(p.x-q.x,p.y-q.y);
+ const reach=2.23+clamp(p.defense/99,0,1)*.25;
+ const ux=(q.x-p.x)/Math.max(.01,distance),uy=(q.y-p.y)/Math.max(.01,distance);
+ const facing=clamp(p.dx*ux+p.dy*uy,-1,1);
+ const relativeVx=(p.vx||0)-(q.vx||0),relativeVy=(p.vy||0)-(q.vy||0);
+ const closing=clamp((relativeVx*ux+relativeVy*uy)/9,-1,1);
+ // Rakibin arkasından gelen mücadele hem zor hem de daha risklidir.
+ const fromBehind=clamp((q.dx*ux+q.dy*uy),0,1);
+ const shielding=fromBehind*clamp((b.strength-a.strength+50)/100,.2,.85);
+ const timing=clamp((reach-distance)/reach,0,1);
+ const chance=clamp(.40+(p.defense-q.technique)*.0043+(a.strength-b.strength)*.0023
+  +(p.energy-q.energy)*.0012+facing*.10+closing*.055+timing*.16
+  -fromBehind*.14-shielding*.10-(q.contact||0)*.045,.08,.88);
+ const reckless=clamp(.055+fromBehind*.18+Math.max(0,closing)*.075
+  +Math.max(0,b.strength-a.strength)*.0015-Math.max(0,p.defense-65)*.0008,.03,.41);
+ return {distance,reach,chance,reckless,facing,fromBehind,closing};
+}
+function fieldTackle(g,index){
+ const p=g.players[index],owner=g.ball.owner;
+ if(g.setPiece||!fieldEligible(g,p)||p.role==='GK'||owner<0||g.players[owner].side===p.side||p.cool>0||g.restart>0)return false;
+ const q=g.players[owner],duel=fieldDuelAnalysis(g,index);
+ if(!duel)return false;
+ // Gerçekçi müdahale mesafesini aşan buton basışları topu çalamaz.
+ if(duel.distance>duel.reach){
+  if(index===g.control){p.cool=.18;g.message='TOP KAPMAK İÇİN RAKİBE YAKLAŞ';}
+  return false;
  }
- return false;}
-// FeFa 2026 V4.32 - momentum, contacts, AI, flight and animation.
+ if(g.ball.lock>.23){if(index===g.control)g.message='TOP HENÜZ KORUNUYOR';return false;}
+ if(index!==g.control&&g.cards[p.id]?.yellow&&fieldRandom(g)<.4){p.cool=.35;return false;}
+ p.cool=.76;p.anim=.42;p.energy=Math.max(0,p.energy-.25);
+ if(fieldRandom(g)<duel.chance){
+  g.ball.owner=index;g.ball.last=index;g.ball.passer=-1;g.ball.lock=.32;
+  g.ball.vx=0;g.ball.vy=0;g.ball.vz=0;g.ball.z=.1;g.run=null;
+  g.individual[p.id].tackles++;g.message='TEMİZ TOP KAPMA';
+  q.contact=.32;q.cool=Math.max(q.cool,.32);p.contact=.14;q.anim=.38;
+  return true;
+ }
+ q.contact=.16;p.contact=.20;
+ if(fieldRandom(g)<duel.reckless){
+  g.stats.fouls[p.side]++;
+  // Başarısız ve arkadan yapılan müdahaleler kart ihtimalini artırır.
+  const card=fieldRandom(g),cardRisk=clamp(.06+duel.fromBehind*.19+Math.max(0,duel.closing)*.075,.06,.31);
+  fieldRestart(g,q.side,q.x,q.y,'FAUL · SERBEST VURUŞ');
+  if(card<cardRisk*.07)fieldCard(g,index,'red');
+  else if(card<cardRisk)fieldCard(g,index,'yellow');
+ }else if(index===g.control)g.message='MÜDAHALE BAŞARISIZ';
+ return false;
+}
+// FeFa 2026 V4.33 - momentum, contacts, AI, flight and animation.
 // World metres: x 0..105, y 0..68, z vertical. Camera is player-locked.
 const fieldCamera={mode:'third',turn:0,tilt:0,zoom:0,lastPointer:null};
 const playerLooksCache=new Map();
@@ -2757,7 +3153,9 @@ function fieldHuman3D(c2,cam,p,index,g){
  const phase=(Number.isFinite(p.gait)?p.gait:g.elapsed*4+index*1.81);
  const contact=clamp((p.contact||0)*2.3,0,.7);
  const kick=clamp((p.anim||0)*2.2,0,.85);
+ const keeperDive=p.role==='GK'?clamp((p.dive||0)*1.8,0,1):0;
  const walk=moving?Math.sin(phase)*(.10+.26*speedFactor):0;
+ const armDive=keeperDive*.27;
  const vertical=moving?Math.abs(Math.sin(phase))*.035*speedFactor:0;
  const point=(forward,side,z)=>fieldProjected(cam,[p.x+face[0]*forward+normal[0]*side,p.y+face[1]*forward+normal[1]*side,z+vertical]);
  const kit=p.role==='GK'?'#e9a93d':p.side===0?(team().color||'#c9e665'):'#df4b68';
@@ -2775,8 +3173,8 @@ function fieldHuman3D(c2,cam,p,index,g){
  fieldJoint(c2,ankleL,bootL,scale*.21,look.boots);
  fieldJoint(c2,ankleR,bootR,scale*.21,look.boots);
  const shoulderL=point(0,-.275*look.stock,height*.80),shoulderR=point(0,.275*look.stock,height*.80);
- const elbowL=point(-walk*.6-contact*.2,-.41*look.stock,height*.62),elbowR=point(walk*.6+contact*.2,.41*look.stock,height*.62);
- const handL=point(-walk*.87-contact*.24,-.40*look.stock,height*.50),handR=point(walk*.87+contact*.24,.40*look.stock,height*.50);
+ const elbowL=point(-walk*.6-contact*.2+armDive,-.41*look.stock,height*.62+armDive),elbowR=point(walk*.6+contact*.2+armDive,.41*look.stock,height*.62+armDive);
+ const handL=point(-walk*.87-contact*.24+armDive*1.7,-.40*look.stock,height*.50+armDive*1.65),handR=point(walk*.87+contact*.24+armDive*1.7,.40*look.stock,height*.50+armDive*1.65);
  fieldJoint(c2,shoulderL,elbowL,scale*.20*look.stock,kit);
  fieldJoint(c2,shoulderR,elbowR,scale*.20*look.stock,kit);
  fieldJoint(c2,elbowL,handL,scale*.125,look.skin);
@@ -2852,7 +3250,7 @@ function fieldOverlay3D(c2,g){
  if(g.run){const u=fieldProjected(fieldPerspectiveCamera(g),[g.run.x,g.run.y,.04]);if(u&&u.x>0&&u.x<480&&u.y>0&&u.y<300){c2.strokeStyle='#ffe08e';c2.lineWidth=2;c2.beginPath();c2.arc(u.x,u.y,9,0,2*Math.PI);c2.stroke();}}
  if(g.stage!=='play'){
   c2.fillStyle='#09262be8';c2.fillRect(80,107,320,78);c2.textAlign='center';c2.font='bold 17px Arial';c2.fillStyle='#ffe3a4';c2.fillText(g.stage==='half'?'DEVRE ARASI':g.stage==='extra'?'UZATMA DEVRESİ':g.stage==='paused'?'MAÇ DURAKLATILDI':'MAÇ',240,140);
-  c2.font='10px Arial';c2.fillText('P / DEVAM TUŞUNA BAS',240,164);
+  c2.font='10px Arial';c2.fillText('EKRANDAKİ DEVAM DÜĞMESİNE DOKUN',240,164);
  }
  if(g.message&&g.message!=='OYUNDA'&&g.stage==='play'){
   c2.fillStyle='#0b2b31cc';c2.fillRect(158,61,165,19);c2.textAlign='center';c2.fillStyle='#fbe5a3';c2.font='bold 9px Arial';c2.fillText(g.message.slice(0,31),240,70);
@@ -2910,13 +3308,15 @@ function fieldAction(action,down=true){if(fullActive&&c?.academyGame?.mode==='ru
    else fieldCamera.turn=Math.atan2(Math.sin(fieldCamera.turn+(action==='camera-left'?-.23:.23)),Math.cos(fieldCamera.turn+(action==='camera-left'?-.23:.23)));
    syncMatchTactics();return;
  }
+ if(down&&action==='assist'&&!isPro()&&!c.academyGame&&!g.keeperSeries){fieldAssistEnabled=!fieldAssistEnabled;fieldInactiveSeconds=0;g.message='TAKIM DESTEĞİ · '+(fieldAssistEnabled?'AÇIK':'KAPALI');fieldHUD();return;}
  if(down&&action==='radar'&&!c.academyGame&&!g.keeperSeries){fieldRadarVisible=!fieldRadarVisible;syncMatchTactics();return;}
  if(down&&action.startsWith('tactic-')&&!isPro()&&!c.academyGame&&!g.keeperSeries){
    const mode=action.slice(7);if(!['defense','balanced','attack'].includes(mode))return;
    if(c.tactic!==mode){c.tactic=mode;g.message='TAKTİK DEĞİŞTİ · '+({defense:'SAVUNMA',balanced:'DENGELİ',attack:'HÜCUM'}[mode]);save();}
    fieldHUD();return;
  }
- if(g.keeperSeries&&!['exit','bench'].includes(action)){keeperSeriesAction(g,action,down);return;}if(fieldProStatus(g)!=='playing'&&!['exit','bench','pause'].includes(action))return;if(['up','down','left','right','sprint'].includes(action)){if(down)fieldHeld.add(action);else fieldHeld.delete(action);return;}
+ if(down&&['up','down','left','right','pass','through','shot','cross','tackle','switch','skill','sprint'].includes(action))fieldInactiveSeconds=0;
+ if(g.keeperSeries&&!['exit','bench'].includes(action)){keeperSeriesAction(g,action,down);if(down&&action==='pause')fieldHUD();return;}if(fieldProStatus(g)!=='playing'&&!['exit','bench','pause'].includes(action))return;if(['up','down','left','right','sprint'].includes(action)){if(down)fieldHeld.add(action);else fieldHeld.delete(action);return;}
  if((action==='exit'||action==='bench')&&down){save();stopMatchView();screen='club';tab='office';render();return;}
  if(action==='skill'&&down&&g.stage==='play'&&!g.setPiece){
    const p=g.players[g.control],a=fieldAbility(p);
@@ -2942,7 +3342,7 @@ function fieldAction(action,down=true){if(fullActive&&c?.academyGame?.mode==='ru
  if(action==='tackle'){if(g.players[g.control].role==='GK')fieldDive(g);else fieldTackle(g,g.control);}
  if(action==='pass'||action==='through'){const type=action==='through'?'through':'pass';if(g.ball.owner===g.control)fieldKick(g,g.control,type);else if(isPro()&&g.ball.owner>=0&&g.players[g.ball.owner].side===0)fieldKick(g,g.ball.owner,type,g.control);}
 }
-// V4.32: prevent body overlap without converting every touch into a foul.
+// V4.33: prevent body overlap without converting every touch into a foul.
 function fieldPhysicalContact(g,dt){
  for(let i=0;i<g.players.length;i++){
   const a=g.players[i];if(!fieldEligible(g,a))continue;
@@ -2950,13 +3350,21 @@ function fieldPhysicalContact(g,dt){
   for(let j=i+1;j<g.players.length;j++){
    const b=g.players[j];if(!fieldEligible(g,b))continue;
    const dx=a.x-b.x,dy=a.y-b.y,d=Math.hypot(dx,dy);
-   const minGap=a.side===b.side?.43:.68;
+   const minGap=a.side===b.side?.43:.70;
    if(d>=minGap)continue;
    const nx=d>.0001?dx/d:(i%2?1:-1),ny=d>.0001?dy/d:0;
-   const gap=(minGap-d)*.5;
-   a.x=clamp(a.x+nx*gap,.8,104.3);a.y=clamp(a.y+ny*gap,.8,67.2);
-   b.x=clamp(b.x-nx*gap,.8,104.3);b.y=clamp(b.y-ny*gap,.8,67.2);
-   if(a.side!==b.side){a.contact=Math.max(a.contact,.12);b.contact=Math.max(b.contact,.12);}
+   const strengthA=fieldAbility(a).strength,strengthB=fieldAbility(b).strength;
+   // Güçlü oyuncu omuz omuza mücadelede daha az geri itilir; aynı takımdakiler eşit hareket eder.
+   const bias=a.side===b.side?.5:clamp(.5+(strengthB-strengthA)*.0025,.36,.64);
+   const gap=minGap-d;
+   a.x=clamp(a.x+nx*gap*bias,.8,104.3);a.y=clamp(a.y+ny*gap*bias,.8,67.2);
+   b.x=clamp(b.x-nx*gap*(1-bias),.8,104.3);b.y=clamp(b.y-ny*gap*(1-bias),.8,67.2);
+   // Karakterlerin birbirini delip geçmesini önlemek için içe doğru hızı azalt.
+   const va=(a.vx||0)*nx+(a.vy||0)*ny;
+   const vb=(b.vx||0)*nx+(b.vy||0)*ny;
+   if(va<0){a.vx=(a.vx||0)-va*nx*.65;a.vy=(a.vy||0)-va*ny*.65;}
+   if(vb>0){b.vx=(b.vx||0)-vb*nx*.65;b.vy=(b.vy||0)-vb*ny*.65;}
+   if(a.side!==b.side){a.contact=Math.max(a.contact,.14);b.contact=Math.max(b.contact,.14);}
   }
  }
 }
@@ -2978,7 +3386,7 @@ function fieldUpdateMomentum(p,dx,dy,targetSpeed,dt){
 }
 function fieldStepBallPhysics(g,dt){
  const b=g.ball,wind=c.pending?.weather==='wind',wet=c.pending?.weather==='rain';
- const oldX=b.x,oldY=b.y,oldZ=b.z;
+ const oldX=b.x,oldY=b.y,oldZ=b.z,oldVz=b.vz;
  const air=b.z>.08;
  if(air&&Number.isFinite(b.spin)){
   // Curved shots slow their swerve as the ball falls.
@@ -2999,13 +3407,15 @@ function fieldStepBallPhysics(g,dt){
    b.vx*=wet?.67:.78;b.vy*=wet?.67:.78;
   }else{b.vz=0;if(Math.hypot(b.vx,b.vy)<.07){b.vx=0;b.vy=0;}}
  }
- return {oldX,oldY};
+ return {oldX,oldY,oldZ,oldVz};
 }
-function fullStep(dt){if(c?.academyGame?.mode==='rush'){rushStep(dt);return;}const g=c.pending?.pitchGame;if(!fullActive||!g||document.hidden)return;if(g.keeperSeries){keeperSeriesStep(g,Math.min(.025,Math.max(0,dt)));return;}if(g.stage!=='play')return;dt=Math.min(.025,Math.max(0,dt));fieldSkillTimer=Math.max(0,fieldSkillTimer-dt);fieldSkillCooldown=Math.max(0,fieldSkillCooldown-dt);if(g.setPiece){fieldPieceStep(g,dt);return;}if(g.run){g.run.remaining=Math.max(0,g.run.remaining-dt);if(!g.run.remaining||g.ball.owner>=0)g.run=null;}const previous=g.elapsed;g.elapsed=Math.min([0,90,180,210,240][g.half],g.elapsed+dt);for(const p of g.players)if(fieldEligible(g,p)&&Number.isFinite(g.individual[p.id]?.seconds))g.individual[p.id].seconds=Math.min(240,g.individual[p.id].seconds+g.elapsed-previous);if(fieldHeld.has('shot'))fieldCharge=Math.min(1.2,fieldCharge+dt);if((g.elapsed>=90&&g.half===1)||(g.elapsed>=210&&g.half===3)){g.elapsed=g.half===1?90:210;g.stage='half';fieldCoach(g);fieldSound('whistle');g.message='DEVRE ARASI · DEVAM düğmesine bas';clearFieldInput();save();fieldHUD();return;}if((g.elapsed>=180&&g.half===2)||(g.elapsed>=240&&g.half===4)){finishField();return;}
+function fullStep(dt){if(c?.academyGame?.mode==='rush'){rushStep(dt);return;}const g=c.pending?.pitchGame;if(!fullActive||!g||document.hidden)return;if(g.keeperSeries){keeperSeriesStep(g,Math.min(.025,Math.max(0,dt)));return;}if(g.stage!=='play')return;dt=Math.min(.025,Math.max(0,dt));fieldSkillTimer=Math.max(0,fieldSkillTimer-dt);fieldSkillCooldown=Math.max(0,fieldSkillCooldown-dt);if(g.setPiece){fieldPieceStep(g,dt);return;}if(g.run){g.run.remaining=Math.max(0,g.run.remaining-dt);if(!g.run.remaining||g.ball.owner>=0)g.run=null;}fieldInactiveSeconds=Math.min(20,fieldInactiveSeconds+dt);const previous=g.elapsed;g.elapsed=Math.min([0,90,180,210,240][g.half],g.elapsed+dt);for(const p of g.players)if(fieldEligible(g,p)&&Number.isFinite(g.individual[p.id]?.seconds))g.individual[p.id].seconds=Math.min(240,g.individual[p.id].seconds+g.elapsed-previous);if(fieldHeld.has('shot'))fieldCharge=Math.min(1.2,fieldCharge+dt);if((g.elapsed>=90&&g.half===1)||(g.elapsed>=210&&g.half===3)){g.elapsed=g.half===1?90:210;g.stage='half';fieldCoach(g);fieldSound('whistle');g.message='DEVRE ARASI · DEVAM düğmesine bas';clearFieldInput();save();fieldHUD();return;}if((g.elapsed>=180&&g.half===2)||(g.elapsed>=240&&g.half===4)){finishField();return;}
  fieldCoach(g);if(g.restart>0){g.restart=Math.max(0,g.restart-dt);return;}const b=g.ball;const possession=b.owner>=0?g.players[b.owner].side:-1;if(possession>=0)g.stats.possession[possession]+=dt;
  const closest=[0,1].map(side=>g.players.map((p,i)=>({p,i,d:Math.hypot(p.x-b.x,p.y-b.y)})).filter(x=>x.p.side===side&&x.p.role!=='GK'&&fieldEligible(g,x.p)).sort((a,b)=>a.d-b.d).slice(0,fieldPlan(g,side)==='attack'?3:2).map(x=>x.i));
+ const defensivePlans=[fieldDefenseShape(g,0),fieldDefenseShape(g,1)];
+ const attackingPlans=[fieldAttackShape(g,0),fieldAttackShape(g,1)];
  for(let i=0;i<g.players.length;i++){const p=g.players[i],dir=fieldDirection(g,p.side);if(!fieldEligible(g,p))continue;p.cool=Math.max(0,p.cool-dt);p.anim=Math.max(0,p.anim-dt);p.dive=Math.max(0,(p.dive||0)-dt);let dx=0,dy=0,sprint=false;
- if(i===g.control&&fieldProStatus(g)==='playing'){
+ if(i===g.control&&fieldProStatus(g)==='playing'&&!fieldAssistAllowed(g)){
   const h=fieldStick.id!==null?fieldStick.x:Number(fieldHeld.has('right'))-Number(fieldHeld.has('left'));
   const v=-(fieldStick.id!==null?fieldStick.y:Number(fieldHeld.has('down'))-Number(fieldHeld.has('up')));
   const world=fieldMoveVector(g,h,v);dx=world.x;dy=world.y;sprint=fieldHeld.has('sprint');
@@ -3014,18 +3424,35 @@ function fullStep(dt){if(c?.academyGame?.mode==='rush'){rushStep(dt);return;}con
  else if(b.owner===i){
   tx=dir===1?103:2;ty=34+(p.by-34)*.15;
   if(p.cool<=0){
+   const ai=fieldAILevel(g,p.side);
    const distance=Math.abs((dir===1?105:0)-p.x);
    const pressure=g.players.filter(q=>q.side!==p.side&&fieldEligible(g,q)&&q.role!=='GK')
      .reduce((best,q)=>Math.min(best,Math.hypot(q.x-p.x,q.y-p.y)),Infinity);
-   if((distance<20||distance<42&&p.role==='FW'&&p.shot>54&&(pressure>2||fieldRandom(g)<dt*.85))&&Math.abs(p.y-34)<20)fieldKick(g,i,'shot',null,clamp(.45+p.shot/190,.45,.98));
-   else if(pressure<6||fieldRandom(g)<dt*(p.role==='MF'?.31:.19)){
+   // V4.42: erken ama kontrollü bitiricilik. Kanatta ve dar açıdaysa gereksiz şutu ertele.
+   const laneAngle=Math.abs(p.y-34)/Math.max(8,distance);
+   const shootZone=distance<40&&p.shot>54&&laneAngle<.64;
+   const strikerChance=distance<46&&p.role==='FW'&&p.shot>62&&laneAngle<.49&&pressure>2.1;
+   const freeShot=shootZone||strikerChance;
+   if(freeShot&&(p.side!==1||fieldRandom(g)<ai.shotRate))fieldKick(g,i,'shot',null,clamp(.40+p.shot/210,.43,.90));
+   else if((pressure<4.8||fieldRandom(g)<dt*(p.role==='MF'?.30:.20))&&(p.side!==1||fieldRandom(g)<ai.readiness)){
     const choice=fieldAIChoice(g,i);
     if(choice)fieldKick(g,i,choice.kind,choice.target);
    }
   }
  }
  else if(g.run&&g.run.id===p.id&&possession===-1){tx=g.run.x;ty=g.run.y;sprint=p.energy>20;}
- else if((possession!==p.side||possession===-1)&&closest[p.side].includes(i)){tx=b.x;ty=b.y;if(b.owner>=0&&p.cool<=0){fieldTackle(g,i);if(!fullActive||g.finished||b!==g.ball)return;}}
+ else if(defensivePlans[p.side].has(i)){
+  const assignment=defensivePlans[p.side].get(i);tx=assignment.x;ty=assignment.y;
+  // Kendi yari alaninda baskiya zamaninda yetis; gereksiz kosup kondisyonu bitirme.
+  const danger=Math.abs(b.x-(fieldDirection(g,p.side)===1?0:105));
+  if(assignment.task==='press'&&danger<58&&p.energy>26)sprint=true;
+  if(assignment.task==='cover'&&danger<25&&p.energy>35&&Math.hypot(p.x-tx,p.y-ty)>3)sprint=true;
+  if(p.cool<=0&&(assignment.task==='press'||(assignment.task==='cover'&&Math.hypot(p.x-b.x,p.y-b.y)<2.35))){
+   if(p.side!==1||fieldRandom(g)<Math.min(1,dt*fieldAILevel(g,p.side).pressRate)){fieldTackle(g,i);if(!fullActive||g.finished||b!==g.ball)return;}
+  }
+ }
+ else if(attackingPlans[p.side].has(i)){const assignment=attackingPlans[p.side].get(i);tx=assignment.x;ty=assignment.y;}
+ else if(possession===-1&&closest[p.side].includes(i)){tx=b.x;ty=b.y;}
  else{const target=fieldSupport(g,p,possession);tx=target.x;ty=target.y;}
  dx=tx-p.x;dy=ty-p.y;const len=Math.hypot(dx,dy);if(len<.3){dx=0;dy=0;}}
  if(p.dive>0){dx=p.diveX;dy=p.diveY;}
@@ -3044,12 +3471,27 @@ function fullStep(dt){if(c?.academyGame?.mode==='rush'){rushStep(dt);return;}con
   b.x=p.x+p.dx*(.53+step);b.y=p.y+p.dy*(.53+step);
   b.z=.09+Math.abs(step)*.4;
   if(p.role==='GK'&&p.cool<=0&&b.owner!==g.control)fieldKick(g,b.owner,'pass');}
- else{const {oldX,oldY}=fieldStepBallPhysics(g,dt);
- if(b.x<0||b.x>105){const fraction=((b.x<0?0:105)-oldX)/(b.x-oldX),crossY=oldY+(b.y-oldY)*fraction;const attacking=g.players.find(p=>fieldDirection(g,p.side)===(b.x>105?1:-1)).side;
- if(crossY>=29&&crossY<=39&&b.z<=2.44){const last=g.players[b.last],scorer=last.side===attacking?last:null;if(g.scores[attacking]>=20){finishField();return;}g.scores[attacking]++;const pid=scorer?.id||null;g.goals.push({minute:fieldMinute(g),side:attacking,id:pid,ownGoal:!scorer});if(pid)g.individual[pid].goals++;if(b.passer>=0&&g.players[b.passer].side===attacking&&g.players[b.passer].id!==pid)g.individual[g.players[b.passer].id].assists++;fieldPlace(g,1-attacking);g.message='GOL!';fieldSound('goal');save();}
+ else{const {oldX,oldY,oldZ,oldVz}=fieldStepBallPhysics(g,dt);
+ if(b.x<0||b.x>105){const fraction=clamp(((b.x<0?0:105)-oldX)/(b.x-oldX),0,1),crossY=oldY+(b.y-oldY)*fraction;const attacking=g.players.find(p=>fieldDirection(g,p.side)===(b.x>105?1:-1)).side;
+ const crossTime=dt*fraction,crossZ=Math.max(0,oldZ+oldVz*crossTime-4.9*crossTime*crossTime);
+ if(crossY>=34-7.32/2&&crossY<=34+7.32/2&&crossZ<=2.44){if(b.shotSide===attacking)fieldOnTarget(g,b);const last=g.players[b.last],scorer=last.side===attacking?last:null;if(g.scores[attacking]>=20){finishField();return;}g.scores[attacking]++;const pid=scorer?.id||null;g.goals.push({minute:fieldMinute(g),side:attacking,id:pid,ownGoal:!scorer});if(pid)g.individual[pid].goals++;if(b.passer>=0&&g.players[b.passer].side===attacking&&g.players[b.passer].id!==pid)g.individual[g.players[b.passer].id].assists++;fieldPlace(g,1-attacking);g.message='GOL!';fieldSound('goal');save();}
  else{const lastSide=g.players[b.last].side;if(lastSide!==attacking)fieldRestart(g,attacking,b.x<0?1:104,crossY<34?1:67,'KORNER');else fieldRestart(g,1-attacking,b.x<0?5:100,34,'KALE VURUŞU');}return;}
  if(b.y<0||b.y>68){fieldRestart(g,1-g.players[b.last].side,b.x,b.y<0?1:67,'TAÇ ATIŞI');return;}
- if(b.lock<=0){const candidates=g.players.map((p,i)=>({p,i,d:Math.hypot(p.x-b.x,p.y-b.y)})).filter(x=>fieldEligible(g,x.p)&&x.d<(fieldHands(g,x.p)?x.p.dive>0?3.2:2.2:1.1)&&b.z<(fieldHands(g,x.p)?2.5:b.wall?.includes(x.p.id)&&x.p.anim>0?2:.75)).sort((a,b)=>a.d-b.d);for(const q of candidates){if(q.p.role==='GK'&&q.p.cool>0&&!q.p.dive)continue;if(fieldHands(g,q.p)&&Math.hypot(b.vx,b.vy)>18&&fieldRandom(g)>clamp(.60+q.p.keeping*.003+(q.p.dive>0?.08:0),.6,.97)){q.p.cool=.35;q.p.anim=.35;continue;}if(fieldHands(g,q.p)&&b.owner<0&&b.shotSide===1-q.p.side)g.individual[q.p.id].saves=(g.individual[q.p.id].saves||0)+1;b.shotSide=null;q.p.dive=0;if(b.passer>=0&&g.players[b.passer].side!==q.p.side)b.passer=-1;g.run=null;b.owner=q.i;b.last=q.i;b.wall=[];b.lock=.35;b.vx=0;b.vy=0;b.vz=0;b.z=0;q.p.cool=q.p.role==='GK'?.8:.2;if(q.p.role==='GK'){q.p.anim=.65;fieldSound('save');}g.message=q.p.role==='GK'?'KALECİ KONTROL ETTİ':'OYUNDA';break;}}
+ if(b.lock<=0){const candidates=g.players.map((p,i)=>({p,i,d:Math.hypot(p.x-b.x,p.y-b.y)})).filter(x=>fieldEligible(g,x.p)&&x.d<(fieldHands(g,x.p)?(x.p.dive>0?3:2.4):1.1)&&b.z<(fieldHands(g,x.p)?2.55:b.wall?.includes(x.p.id)&&x.p.anim>0?2:.75)).sort((a,b)=>a.d-b.d);for(const q of candidates){
+  if(q.p.role==='GK'){
+   if(q.p.cool>0&&!q.p.dive)continue;
+   if(!fieldHands(g,q.p))continue;
+   const outcome=fieldKeeperTouch(g,q.p,b,q.d);
+   if(outcome==='none'||outcome==='miss')continue;
+   if(outcome==='parry')break;
+  }
+  b.shotSide=null;q.p.dive=0;
+  if(b.passer>=0&&(b.kind==='pass'||b.kind==='through')&&g.players[b.passer].side===q.p.side&&b.passer!==q.i){
+   g.stats.completed??=[0,0];g.stats.completed[q.p.side]++;
+  }
+  if(b.passer>=0&&g.players[b.passer].side!==q.p.side)b.passer=-1;
+  g.run=null;b.owner=q.i;b.last=q.i;b.wall=[];b.lock=.35;b.vx=0;b.vy=0;b.vz=0;b.z=0;q.p.cool=q.p.role==='GK'?.8:.2;if(q.p.role==='GK'){q.p.anim=.65;fieldSound('save');}g.message=q.p.role==='GK'?'KALECİ KONTROL ETTİ':'OYUNDA';break;}}
+
  }
  fieldUIClock+=dt;fieldSaveClock+=dt;if(fieldUIClock>.2){fieldHUD();fieldUIClock=0;}if(fieldSaveClock>10){save();fieldSaveClock=0;}
 }
@@ -3077,7 +3519,7 @@ function drawField(c2){if(c?.academyGame?.mode==='rush'){fieldDrawRush3D(c2);ret
   c2.save();c2.lineWidth=1.5;c2.strokeStyle='#fae681';c2.setLineDash([4,3]);
   c2.beginPath();c2.moveTo(X(runner.x),Y(runner.y));c2.lineTo(X(g.run.x),Y(g.run.y));c2.stroke();
   c2.setLineDash([]);c2.fillStyle='#fae681';c2.beginPath();c2.arc(X(g.run.x),Y(g.run.y),3,0,Math.PI*2);c2.fill();c2.restore();
- }}drawFieldPiece(g,c2,X,Y);const b=g.ball,bx=Math.round(X(b.x)),by=Math.round(Y(b.y));c2.fillStyle='#183c2e';c2.fillRect(bx-2,by+2,5,2);c2.fillStyle='#f4efd7';c2.fillRect(bx-2,by-2-Math.round(b.z*4),4,4);c2.fillStyle='#414b42';c2.fillRect(bx,by-Math.round(b.z*4),2,2);c2.font='bold 10px monospace';c2.fillStyle='#e4eed8';c2.textAlign='center';c2.fillText(g.scores[0]+' – '+g.scores[1]+'   '+fieldMinute(g)+'′   '+(g.half>2?'UZATMA '+(g.half-2):g.half+'. DEVRE'),240,18);c2.fillText(g.message,240,288);if(g.stage==='half'||g.stage==='extra'||g.stage==='paused'){c2.fillStyle='#102b28dd';c2.fillRect(70,112,340,65);c2.fillStyle='#ffe285';c2.fillText(g.stage==='extra'?'UZATMALAR · 2 × 15 DAKİKA':g.stage==='half'?'DEVRE ARASI':'DURAKLATILDI',240,137);c2.fillText('P veya DURAKLAT / DEVAM',240,158);}if(fieldHeld.has('shot')){c2.fillStyle='#24332b';c2.fillRect(150,275,180,5);c2.fillStyle='#f8d65b';c2.fillRect(150,275,Math.round(180*fieldCharge/1.2),5);}drawFieldRadar(g,c2);}
+ }}drawFieldPiece(g,c2,X,Y);const b=g.ball,bx=Math.round(X(b.x)),by=Math.round(Y(b.y));c2.fillStyle='#183c2e';c2.fillRect(bx-2,by+2,5,2);c2.fillStyle='#f4efd7';c2.fillRect(bx-2,by-2-Math.round(b.z*4),4,4);c2.fillStyle='#414b42';c2.fillRect(bx,by-Math.round(b.z*4),2,2);c2.font='bold 10px monospace';c2.fillStyle='#e4eed8';c2.textAlign='center';c2.fillText(g.scores[0]+' – '+g.scores[1]+'   '+fieldMinute(g)+'′   '+(g.half>2?'UZATMA '+(g.half-2):g.half+'. DEVRE'),240,18);c2.fillText(g.message,240,288);if(g.stage==='half'||g.stage==='extra'||g.stage==='paused'){c2.fillStyle='#102b28dd';c2.fillRect(70,112,340,65);c2.fillStyle='#ffe285';c2.fillText(g.stage==='extra'?'UZATMALAR · 2 × 15 DAKİKA':g.stage==='half'?'DEVRE ARASI':'DURAKLATILDI',240,137);c2.fillText('EKRANDAKİ DEVAM DÜĞMESİ',240,158);}if(fieldHeld.has('shot')){c2.fillStyle='#24332b';c2.fillRect(150,275,180,5);c2.fillStyle='#f8d65b';c2.fillRect(150,275,Math.round(180*fieldCharge/1.2),5);}drawFieldRadar(g,c2);}
 function startKeeperSeries(g){
  const p=c.pending.shootout;
  g.keeperSeries={phase:'ready',clock:0,round:p.taken,x:240,diveAge:-1,direction:0,paused:false,targetX:110+fieldRandom(g)*260,targetY:65+fieldRandom(g)*90,ownGoal:fieldRandom(g)<.72,outcome:null};
@@ -3112,24 +3554,32 @@ function validateKeeperSeries(o,fail){const g=o.pending?.pitchGame,k=g?.keeperSe
  if(k.phase!=='result'&&p.decided)fail();if(k.phase==='result'){const last=p.events.at(-1);if(!last||last.goal!==k.ownGoal||last.opponentGoal!==(k.outcome==='goal'))fail();}
 }
 function fieldCoachReport(r){if(!r.coachEvents?.length)return '';const names=id=>esc(c.teams.flatMap(t=>t.players).find(p=>p.id===id)?.name||'Futbolcu'),reasons={card:'Kart riski',fatigue:'Kondisyon',tactical:'Taktik',manual:'Teknik direktör'};return '<h3>Oyuncu değişiklikleri</h3>'+r.coachEvents.map(e=>'<p>'+e.minute+'′ · '+(e.side===0?'Takımın':'Rakip')+' · '+names(e.out)+' → '+names(e.in)+' · '+reasons[e.reason]+'</p>').join('');}
-function fullReport(){const r=c.lastResult;if(!r?.pitchStats)return '';const s=r.pitchStats,cards=Object.entries(r.fieldCards||{}).map(([id,k])=>{const p=c.teams.flatMap(t=>t.players).find(p=>p.id===id);return esc(p?.name||'Futbolcu')+': '+(k.yellow?k.yellow+' sarı ':'')+(k.red?'· kırmızı':'');}).join(' · ');return '<div class="c-card"><h3>Tam saha maç istatistikleri</h3><p>Şutlar: '+s.shots[0]+' – '+s.shots[1]+' · Pas girişimleri: '+s.passes[0]+' – '+s.passes[1]+' · Ara paslar: '+(s.through?.[0]??0)+' – '+(s.through?.[1]??0)+' · Fauller: '+s.fouls[0]+' – '+s.fouls[1]+' · Ofsayt: '+s.offsides[0]+' – '+s.offsides[1]+'</p>'+(r.abandoned?'<p>Yedi oyuncunun altına düşüldü: hükmen sonuç.</p>':r.extraTime?'<p>Uzatmalar oynandı · 120 dakika</p>':'')+(cards?'<p>'+cards+'</p>':'')+fieldCoachReport(r)+'</div>';}
-function validatePitch(o,fail){const ce=o.lastResult?.coachEvents;if(ce!==undefined&&(!Array.isArray(ce)||ce.length>10||ce.some(e=>!e||![0,1].includes(e.side)||typeof e.out!=='string'||typeof e.in!=='string'||!Number.isInteger(e.minute)||e.minute<0||e.minute>120||!['card','fatigue','tactical','manual'].includes(e.reason))))fail();if(o.lastResult?.fieldCards){if(typeof o.lastResult.fieldCards!=='object'||Array.isArray(o.lastResult.fieldCards))fail();for(const k of Object.values(o.lastResult.fieldCards))if(!k||!Number.isInteger(k.yellow)||k.yellow<0||k.yellow>2||typeof k.red!=='boolean')fail();}if(o.lastResult?.pitchStats)for(const k of [...['shots','passes','possession','fouls','offsides'],...(o.lastResult.pitchStats.through?['through']:[])]){const a=o.lastResult.pitchStats[k];if(!Array.isArray(a)||a.length!==2||a.some(v=>!Number.isFinite(v)||v<0||v>10000))fail();}const m=o.pending,g=m?.pitchGame;if(!g)return;const num=(v,a,b)=>Number.isFinite(v)&&v>=a&&v<=b,int=(v,a,b)=>Number.isInteger(v)&&num(v,a,b);if(![1,2].includes(g.version)||!num(g.elapsed,0,g.version===2?240:180)||!(g.version===2?[1,2,3,4]:[1,2]).includes(g.half)||!['play','paused','half','extra','finished'].includes(g.stage)||typeof g.finished!=='boolean'||!int(g.rng,0,4294967295)||!Array.isArray(g.players)||g.players.length!==22||!int(g.control,0,21)||!Array.isArray(g.scores)||g.scores.length!==2||g.scores.some(x=>!int(x,0,20))||!num(g.restart,0,2)||typeof g.message!=='string'||g.message.length>100||!Array.isArray(g.goals)||g.goals.length>40)fail();
+function fullReport(){const r=c.lastResult;if(!r?.pitchStats)return '';const s=r.pitchStats,cards=Object.entries(r.fieldCards||{}).map(([id,k])=>{const p=c.teams.flatMap(t=>t.players).find(p=>p.id===id);return esc(p?.name||'Futbolcu')+': '+(k.yellow?k.yellow+' sarı ':'')+(k.red?'· kırmızı':'');}).join(' · ');return '<div class="c-card"><h3>Tam saha maç istatistikleri</h3><p>Şutlar: '+s.shots[0]+' – '+s.shots[1]+' · İsabetli şut: '+(s.onTarget?.[0]??'—')+' – '+(s.onTarget?.[1]??'—')+' · Pas girişimleri: '+s.passes[0]+' – '+s.passes[1]+' · İsabetli pas: '+(s.completed?.[0]??0)+' – '+(s.completed?.[1]??0)+' · Ara paslar: '+(s.through?.[0]??0)+' – '+(s.through?.[1]??0)+' · Fauller: '+s.fouls[0]+' – '+s.fouls[1]+' · Ofsayt: '+s.offsides[0]+' – '+s.offsides[1]+'</p>'+(r.abandoned?'<p>Yedi oyuncunun altına düşüldü: hükmen sonuç.</p>':r.extraTime?'<p>Uzatmalar oynandı · 120 dakika</p>':'')+(cards?'<p>'+cards+'</p>':'')+fieldCoachReport(r)+'</div>';}
+function validatePitch(o,fail){const ce=o.lastResult?.coachEvents;if(ce!==undefined&&(!Array.isArray(ce)||ce.length>10||ce.some(e=>!e||![0,1].includes(e.side)||typeof e.out!=='string'||typeof e.in!=='string'||!Number.isInteger(e.minute)||e.minute<0||e.minute>120||!['card','fatigue','tactical','manual'].includes(e.reason))))fail();if(o.lastResult?.fieldCards){if(typeof o.lastResult.fieldCards!=='object'||Array.isArray(o.lastResult.fieldCards))fail();for(const k of Object.values(o.lastResult.fieldCards))if(!k||!Number.isInteger(k.yellow)||k.yellow<0||k.yellow>2||typeof k.red!=='boolean')fail();}if(o.lastResult?.pitchStats)for(const k of [...['shots','passes','possession','fouls','offsides'],...(o.lastResult.pitchStats.through?['through']:[]),...(o.lastResult.pitchStats.completed?['completed']:[]),...(o.lastResult.pitchStats.onTarget?['onTarget']:[])]){const a=o.lastResult.pitchStats[k];if(!Array.isArray(a)||a.length!==2||a.some(v=>!Number.isFinite(v)||v<0||v>10000))fail();}const m=o.pending,g=m?.pitchGame;if(!g)return;const num=(v,a,b)=>Number.isFinite(v)&&v>=a&&v<=b,int=(v,a,b)=>Number.isInteger(v)&&num(v,a,b);if(![1,2].includes(g.version)||!num(g.elapsed,0,g.version===2?240:180)||!(g.version===2?[1,2,3,4]:[1,2]).includes(g.half)||!['play','paused','half','extra','finished'].includes(g.stage)||typeof g.finished!=='boolean'||!int(g.rng,0,4294967295)||!Array.isArray(g.players)||g.players.length!==22||!int(g.control,0,21)||!Array.isArray(g.scores)||g.scores.length!==2||g.scores.some(x=>!int(x,0,20))||!num(g.restart,0,2)||typeof g.message!=='string'||g.message.length>100||!Array.isArray(g.goals)||g.goals.length>40)fail();
  const fixture=o.week<leagueRounds(o)?o.calendar[o.week].find(p=>p.includes(o.club)):(()=>{const i=o.cup.alive.indexOf(o.club);return i<0?null:[o.cup.alive[i-i%2],o.cup.alive[i-i%2+1]];})();if(!fixture||m.home!==fixture[0]||m.away!==fixture[1]||m.opponent!==(m.home===o.club?m.away:m.home)||m.type!==(o.week<leagueRounds(o)?'league':'cup')||!int(m.count,2,5)||!int(m.index,0,m.count)||m.playedBy!==o.taker||!['clear','rain','wind'].includes(m.weather)||!Array.isArray(m.seeds)||m.seeds.length!==m.count||m.seeds.some(v=>!num(v,0,1)||v===1)||!Array.isArray(m.minutes)||m.minutes.length!==m.count||m.minutes.some(v=>!int(v,1,90))||!Array.isArray(m.events)||m.events.length>20)fail();
  const ids=new Set();for(const p of g.players){if(!p||!int(p.side,0,1)||ids.has(p.id)||!o.teams[p.side===0?o.club:m.opponent].players.some(q=>q.id===p.id&&q.role===p.role)||!num(p.x,0,105)||!num(p.y,0,68)||!num(p.bx,0,105)||!num(p.by,0,68)||!num(p.energy,0,100)||!num(p.dx,-1,1)||!num(p.dy,-1,1)||!num(p.cool,0,2)||!num(p.anim,0,1)||['rating','shot','technique','defense','keeping'].some(k=>!int(p[k],1,99)))fail();if(p.dive!==undefined&&(!num(p.dive,0,.55)||p.dive>0&&(!num(p.diveX,-1,1)||!num(p.diveY,-1,1))))fail();ids.add(p.id);const st=g.individual?.[p.id];if(!st||['goals','assists','shots','passes','tackles'].some(k=>!int(st[k],0,10000)))fail();}if(g.players.filter(p=>p.side===0).length!==11||g.players.some(p=>p.side===0&&!m.participants.includes(p.id))||g.players[g.control].side!==0||o.pro&&g.players.some(p=>p.id===o.pro.id)&&g.players[g.control].id!==o.pro.id)fail();for(const side of [0,1])if(g.scores[side]!==g.goals.filter(e=>e.side===side).length)fail();for(const e of g.goals)if(!int(e.minute,0,120)||!int(e.side,0,1)||typeof e.ownGoal!=='boolean'||!(e.id===null||(e.side===0?m.participants.includes(e.id):(g.coach?.opponentParticipants||g.players.filter(p=>p.side===1).map(p=>p.id)).includes(e.id))))fail();
- if(g.run!==undefined&&g.run!==null){const r=g.run;if(!r||typeof r.id!=='string'||!g.players.some(p=>p.id===r.id)||!num(r.x,0,105)||!num(r.y,0,68)||!num(r.remaining,0,3))fail();}const b=g.ball;if(b?.shotSide!==undefined&&b.shotSide!==null&&![0,1].includes(b.shotSide))fail();if(b?.wall!==undefined&&(!Array.isArray(b.wall)||b.wall.length>3||b.wall.some(id=>!g.players.some(p=>p.id===id))))fail();if(!b||!num(b.x,-2,107)||!num(b.y,-2,70)||!num(b.z,0,10)||!num(b.vx,-50,50)||!num(b.vy,-50,50)||!num(b.vz,-50,20)||!int(b.owner,-1,21)||!int(b.last,0,21)||!int(b.passer,-1,21)||!num(b.lock,0,2))fail();for(const k of [...['shots','passes','possession','fouls','offsides'],...(g.stats?.through?['through']:[])])if(!Array.isArray(g.stats?.[k])||g.stats[k].length!==2||g.stats[k].some(x=>!num(x,0,10000)))fail();validateFieldExtras(o,fail);validateFieldPiece(g,fail);validateKeeperSeries(o,fail);if(g.finished!== (g.stage==='finished'))fail();if(g.finished&&(m.goals!==g.scores[0]||m.against!==g.scores[1]||m.supportGoals!==0||m.index!==m.count))fail();}
+ if(g.run!==undefined&&g.run!==null){const r=g.run;if(!r||typeof r.id!=='string'||!g.players.some(p=>p.id===r.id)||!num(r.x,0,105)||!num(r.y,0,68)||!num(r.remaining,0,3))fail();}const b=g.ball;if(b?.shotSide!==undefined&&b.shotSide!==null&&![0,1].includes(b.shotSide))fail();if(b?.wall!==undefined&&(!Array.isArray(b.wall)||b.wall.length>3||b.wall.some(id=>!g.players.some(p=>p.id===id))))fail();if(!b||!num(b.x,-2,107)||!num(b.y,-2,70)||!num(b.z,0,10)||!num(b.vx,-50,50)||!num(b.vy,-50,50)||!num(b.vz,-50,20)||!int(b.owner,-1,21)||!int(b.last,0,21)||!int(b.passer,-1,21)||!num(b.lock,0,2))fail();for(const k of [...['shots','passes','possession','fouls','offsides'],...(g.stats?.through?['through']:[]),...(g.stats?.completed?['completed']:[]),...(g.stats?.onTarget?['onTarget']:[])])if(!Array.isArray(g.stats?.[k])||g.stats[k].length!==2||g.stats[k].some(x=>!num(x,0,10000)))fail();validateFieldExtras(o,fail);validateFieldPiece(g,fail);validateKeeperSeries(o,fail);if(g.finished!== (g.stage==='finished'))fail();if(g.finished&&(m.goals!==g.scores[0]||m.against!==g.scores[1]||m.supportGoals!==0||m.index!==m.count))fail();}
 for(const type of ['pointerdown','pointermove','pointerup','pointercancel'])canvas.addEventListener(type,e=>{if(fullActive){e.preventDefault();e.stopImmediatePropagation();}},true);
-fieldControls.addEventListener('click',e=>{if(e.detail!==0)return;const b=e.target.closest('[data-field]');if(b){fieldAction(b.dataset.field,true);fieldAction(b.dataset.field,false);}});
-fieldControls.addEventListener('pointerdown',e=>{const b=e.target.closest('[data-field]');if(!b||!fullActive)return;e.preventDefault();b.setPointerCapture?.(e.pointerId);fieldPointerStart(e.pointerId,b.dataset.field);});
+// Dokunmatik tarayicilar pointerdown sonrasi detail=0 olan bir click de uretebilir.
+// Klavye ile yapilan erisilebilirlik tiklamasini koru, ayni parmak hareketini tekrarlama.
+let fieldLastPointerClick={action:null,time:-Infinity};
+fieldControls.addEventListener('click',e=>{
+ if(e.detail!==0)return;
+ const b=e.target.closest('[data-field]');if(!b)return;
+ if(b.dataset.field===fieldLastPointerClick.action&&performance.now()-fieldLastPointerClick.time<650)return;
+ fieldAction(b.dataset.field,true);fieldAction(b.dataset.field,false);
+});
+fieldControls.addEventListener('pointerdown',e=>{const b=e.target.closest('[data-field]');if(!b||!fullActive)return;e.preventDefault();fieldLastPointerClick={action:b.dataset.field,time:performance.now()};try{b.setPointerCapture?.(e.pointerId);}catch{}fieldPointerStart(e.pointerId,b.dataset.field);syncFieldTabletUI();});
 for(const type of ['pointerup','pointercancel','lostpointercapture'])fieldControls.addEventListener(type,e=>{if(fieldPointers.has(e.pointerId)){e.preventDefault();fieldPointerEnd(e.pointerId,type!=='pointerup');}});
-window.addEventListener('keydown',e=>{if(!fullActive)return;const map={ArrowUp:'up',KeyW:'up',ArrowDown:'down',KeyS:'down',ArrowLeft:'left',KeyA:'left',ArrowRight:'right',KeyD:'right',KeyZ:'pass',KeyE:'through',Space:'shot',KeyX:'tackle',KeyC:'cross',KeyQ:'switch',KeyF:'skill',ShiftLeft:'sprint',ShiftRight:'sprint',KeyP:'pause',Digit1:'tactic-defense',Digit2:'tactic-balanced',Digit3:'tactic-attack',KeyM:'radar',KeyV:'camera',BracketLeft:'camera-left',BracketRight:'camera-right',Escape:'exit'};if(map[e.code]){e.preventDefault();e.stopImmediatePropagation();if(!e.repeat)fieldAction(map[e.code],true);}},true);
-window.addEventListener('keyup',e=>{if(!fullActive)return;const map={ArrowUp:'up',KeyW:'up',ArrowDown:'down',KeyS:'down',ArrowLeft:'left',KeyA:'left',ArrowRight:'right',KeyD:'right',KeyZ:'pass',KeyE:'through',Space:'shot',KeyX:'tackle',KeyC:'cross',KeyQ:'switch',KeyF:'skill',ShiftLeft:'sprint',ShiftRight:'sprint',KeyP:'pause',Digit1:'tactic-defense',Digit2:'tactic-balanced',Digit3:'tactic-attack',KeyM:'radar',KeyV:'camera',BracketLeft:'camera-left',BracketRight:'camera-right',Escape:'exit'};if(map[e.code]){e.preventDefault();e.stopImmediatePropagation();fieldAction(map[e.code],false);}},true);
+window.addEventListener('keydown',e=>{if(!fullActive)return;const map={KeyH:'assist',ArrowUp:'up',KeyW:'up',ArrowDown:'down',KeyS:'down',ArrowLeft:'left',KeyA:'left',ArrowRight:'right',KeyD:'right',KeyZ:'pass',KeyE:'through',Space:'shot',KeyX:'tackle',KeyC:'cross',KeyQ:'switch',KeyF:'skill',ShiftLeft:'sprint',ShiftRight:'sprint',KeyP:'pause',Digit1:'tactic-defense',Digit2:'tactic-balanced',Digit3:'tactic-attack',KeyM:'radar',KeyV:'camera',BracketLeft:'camera-left',BracketRight:'camera-right',Escape:'exit'};if(map[e.code]){e.preventDefault();e.stopImmediatePropagation();if(!e.repeat)fieldAction(map[e.code],true);}},true);
+window.addEventListener('keyup',e=>{if(!fullActive)return;const map={KeyH:'assist',ArrowUp:'up',KeyW:'up',ArrowDown:'down',KeyS:'down',ArrowLeft:'left',KeyA:'left',ArrowRight:'right',KeyD:'right',KeyZ:'pass',KeyE:'through',Space:'shot',KeyX:'tackle',KeyC:'cross',KeyQ:'switch',KeyF:'skill',ShiftLeft:'sprint',ShiftRight:'sprint',KeyP:'pause',Digit1:'tactic-defense',Digit2:'tactic-balanced',Digit3:'tactic-attack',KeyM:'radar',KeyV:'camera',BracketLeft:'camera-left',BracketRight:'camera-right',Escape:'exit'};if(map[e.code]){e.preventDefault();e.stopImmediatePropagation();fieldAction(map[e.code],false);}},true);
 window.addEventListener('blur',pauseFieldInput);
 document.addEventListener('visibilitychange',()=>{if(document.hidden)pauseFieldInput();});
 window.addEventListener('orientationchange',pauseFieldInput);
 
 function boot(){screen='modes';render();}
 $('careerButton').addEventListener('click',enterCareer);
-return {fieldAIChoice,fieldPhysicalContact,fieldUpdateMomentum,fieldStepBallPhysics,setPieceDuty,setCornerRoutine,setPieceView,clubSwapCandidates,clubCanNegotiate,clubPlayerQuote,offerClubPlayer,clubMarketPlayers,clubMarketView,loanRecallQuote,recallLoan,loanPurchaseQuote,purchaseLoan,loanActionsView,rosterLoad,loanOut,loanDestinations,loansView,divisionOf,divisionName,leagueSize,leaguePosition,divisionTables,counterSaleOffer,potentialAssessment,potentialView,listForSale,respondSaleOffer,processSaleOffers,saleOffersView,seasonArchiveView,signFreeAgent,freeAgentFee,freeAgentsView,clubCount,leagueRounds,seasonWeeks,cupRounds,schedule,windowOpen,rushUpgrade,rushOffside,rushCard,rushTackle,rushStartDuel,rushDuelEnd,playRush,rushStep,rushAction,rushKick,rushFinish,drawRush,fieldPointerStart,fieldPointerEnd,updateFieldStick,releaseFieldStick,pauseFieldInput,get fieldStick(){return fieldStick;},prepareRetirement,retireToManager,retiredPlayerView,playAcademy,academyShot,academyAdvance,academyFinish,fieldDive,fieldHands,fieldProStatus,fieldSetPiece,fieldCross,fieldKick,fieldRestart,fieldCoach,fieldCoachSwap,fieldPlan,fieldSubstitute,fieldCard,fieldBenchView,playFull,fullStep,fieldAction,drawField,finishField,get fullActive(){return fullActive;},jobOffers,acceptJob,reviewManager,endSeasonOffers,contractChoice,jobBlocked,setRule,setCoachVision,pressAnswer,assignScout,processReport,shortlist,proActivity,equipStyle,availableStyles,setMatchGoal,setAgentTarget,agentProgress,renewPro,familiarLevel,fieldSupport,fieldKeeperAI,setConversion,completeConversion,developmentReport,conversionRate,scopeView,chooseMode,newPlayer,proTrain,spendPoint,proSelect,proOffers,proTransfer,pro,get careerMode(){return careerMode;},enterCareer,taskList,setVision,visionBonus,setPlan,sellerMinimum,offerTransfer,academyTournament,enterTouchline,substitute,changeMatchTaker,stopMatchView,loan,treat,hireMedical,claimObjectives,objectiveRows,weeklyWages,balancedXI,buy,sell,renew,scout,promote,hire,talk,nextFixture,beginShootout,shootoutShot,penaltySeed,forfeit,matchModel,repairLineup,improve,upgrade,financeView,moralEffect,roleEffect,boot,get state(){return c;},get active(){return active;},newCareer,save,load,pack,unpack,validate,simulateMatch,playMatch,settleMatch,nextSeason,train,autoLineup,skipCup,rank,render};
+return {fieldAILevel,fieldShotPlan,fieldShotProjection,fieldKeeperTouch,fieldOnTarget,fieldDuelAnalysis,fieldTackle,fieldPassLane,fieldPassPressure,fieldPassReceiver,fieldAttackShape,fieldDefenseShape,fieldAIChoice,fieldPhysicalContact,fieldUpdateMomentum,fieldStepBallPhysics,setPieceDuty,setCornerRoutine,setPieceView,clubSwapCandidates,clubCanNegotiate,clubPlayerQuote,offerClubPlayer,clubMarketPlayers,clubMarketView,loanRecallQuote,recallLoan,loanPurchaseQuote,purchaseLoan,loanActionsView,rosterLoad,loanOut,loanDestinations,loansView,divisionOf,divisionName,leagueSize,leaguePosition,divisionTables,counterSaleOffer,potentialAssessment,potentialView,listForSale,respondSaleOffer,processSaleOffers,saleOffersView,seasonArchiveView,signFreeAgent,freeAgentFee,freeAgentsView,clubCount,leagueRounds,seasonWeeks,cupRounds,schedule,windowOpen,rushUpgrade,rushOffside,rushCard,rushTackle,rushStartDuel,rushDuelEnd,playRush,rushStep,rushAction,rushKick,rushFinish,drawRush,fieldPointerStart,fieldPointerEnd,updateFieldStick,releaseFieldStick,pauseFieldInput,get fieldStick(){return fieldStick;},prepareRetirement,retireToManager,retiredPlayerView,playAcademy,academyShot,academyAdvance,academyFinish,fieldDive,fieldHands,fieldProStatus,fieldSetPiece,fieldCross,fieldKick,fieldRestart,fieldCoach,fieldCoachSwap,fieldPlan,fieldSubstitute,fieldCard,fieldBenchView,playFull,fullStep,fieldAction,drawField,finishField,get fullActive(){return fullActive;},jobOffers,acceptJob,reviewManager,endSeasonOffers,contractChoice,jobBlocked,setRule,setCoachVision,pressAnswer,assignScout,processReport,shortlist,proActivity,equipStyle,availableStyles,setMatchGoal,setAgentTarget,agentProgress,renewPro,familiarLevel,fieldSupport,fieldKeeperAI,setConversion,completeConversion,developmentReport,conversionRate,scopeView,chooseMode,newPlayer,proTrain,spendPoint,proSelect,proOffers,proTransfer,pro,get careerMode(){return careerMode;},enterCareer,taskList,setVision,visionBonus,setPlan,sellerMinimum,offerTransfer,academyTournament,enterTouchline,substitute,changeMatchTaker,stopMatchView,loan,treat,hireMedical,claimObjectives,objectiveRows,weeklyWages,balancedXI,buy,sell,renew,scout,promote,hire,talk,nextFixture,beginShootout,shootoutShot,penaltySeed,forfeit,matchModel,repairLineup,improve,upgrade,financeView,moralEffect,roleEffect,boot,get state(){return c;},get active(){return active;},newCareer,save,load,pack,unpack,validate,simulateMatch,playMatch,settleMatch,nextSeason,train,autoLineup,skipCup,rank,render};
 })();
 
 const legacyTick=tick,legacyRender=render;
